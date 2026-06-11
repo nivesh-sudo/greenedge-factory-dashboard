@@ -120,8 +120,12 @@ async function loadData(){
   try{
     const [mRes,dRes]=await Promise.all([fetch(MASTER_URL),fetch(DATA_URL)]);
     if(!mRes.ok||!dRes.ok) throw new Error("Failed to fetch data files");
-    const mJson=await mRes.json();
-    const dJson=await dRes.json();
+    const mTxt=await mRes.text();
+    const dTxt=await dRes.text();
+    console.log("master.json first 200:", mTxt.substring(0,200));
+    console.log("data.json first 200:", dTxt.substring(0,200));
+    const mJson=JSON.parse(mTxt);
+    const dJson=JSON.parse(dTxt);
     MASTER     = mJson.products||{};
     PKG_RATES  = mJson.PKG_RATES||{hanger:0.60,pouch:0.10,loose:0.05,dispenser:0.75};
     PRINT_RATE = mJson.PRINT_RATE||0.10;
