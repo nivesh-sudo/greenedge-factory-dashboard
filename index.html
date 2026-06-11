@@ -157,11 +157,14 @@ function calcLabour(att){
   const moulding=m12*WAGE.hr12+m8*WAGE.hr8;
   const tufting=t12*WAGE.hr12+t8*WAGE.hr8;
   const checking=att.checking.hr12*WAGE.hr12+att.checking.hr8*WAGE.hr8;
-  const packaging=att.packaging.day12*WAGE.hr12+att.packaging.hr8*WAGE.hr8+att.packaging.night12*WAGE.hr12;
+  const pkgDay12=typeof att.packaging.day12==='object'?sumObj(att.packaging.day12):att.packaging.day12;
+  const pkgHr8=typeof att.packaging.hr8==='object'?sumObj(att.packaging.hr8):att.packaging.hr8;
+  const pkgNight12=typeof att.packaging.night12==='object'?sumObj(att.packaging.night12):att.packaging.night12;
+  const packaging=pkgDay12*WAGE.hr12+pkgHr8*WAGE.hr8+pkgNight12*WAGE.hr12;
   const overhead=att.overhead.cleaning_8hr*WAGE.hr8+att.overhead.store_12hr*WAGE.hr12+att.overhead.qc_12hr*WAGE.hr12;
   return{moulding,tufting,checking,tuftingTotal:tufting+checking,packaging,overhead,
     mW:m12+m8,tW:t12+t8+att.checking.hr12+att.checking.hr8,
-    pW:att.packaging.day12+att.packaging.hr8+att.packaging.night12,
+    pW:pkgDay12+pkgHr8+pkgNight12,
     oW:att.overhead.cleaning_8hr+att.overhead.store_12hr+att.overhead.qc_12hr};
 }
 function calcHandles(prod,labourCost){
