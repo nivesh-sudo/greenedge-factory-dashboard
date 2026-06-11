@@ -135,7 +135,14 @@ async function loadData(){
     selDate=dates[0]||"";
     render();
   }catch(e){
-    document.getElementById("app").innerHTML=`<div class="error"><b>Could not load data</b><br/>${e.message}<br/><br/>Make sure data.json and master.json exist in your GitHub repo.</div>`;
+    document.getElementById("app").innerHTML=`<div class="error"><b>Could not load data</b><br/>${e.message}<br/><br/>Make sure data.json and master.json exist in your GitHub repo.<br/><br/><small style="color:#6b7280">Check browser console (F12) for details.</small></div>`;
+    console.error("Dashboard load error:", e);
+    // Try fetching data.json directly to debug
+    try{
+      const r=await fetch(DATA_URL);
+      const txt=await r.text();
+      console.log("data.json raw (first 500 chars):", txt.substring(0,500));
+    }catch(e2){console.error("Could not fetch data.json:", e2);}
   }
 }
 
