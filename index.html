@@ -122,10 +122,11 @@ async function loadData(){
     if(!mRes.ok||!dRes.ok) throw new Error("Failed to fetch data files");
     const mTxt=await mRes.text();
     const dTxt=await dRes.text();
-    console.log("master.json first 200:", mTxt.substring(0,200));
-    console.log("data.json first 200:", dTxt.substring(0,200));
-    const mJson=JSON.parse(mTxt);
-    const dJson=JSON.parse(dTxt);
+    console.log("master last 100:", mTxt.slice(-100));
+    console.log("data last 100:", dTxt.slice(-100));
+    let mJson,dJson;
+    try{mJson=JSON.parse(mTxt);}catch(e){throw new Error("MASTER FAILED: "+e.message);}
+    try{dJson=JSON.parse(dTxt);}catch(e){throw new Error("DATA FAILED: "+e.message);}
     MASTER     = mJson.products||{};
     PKG_RATES  = mJson.PKG_RATES||{hanger:0.60,pouch:0.10,loose:0.05,dispenser:0.75};
     PRINT_RATE = mJson.PRINT_RATE||0.10;
