@@ -176,7 +176,50 @@
             "night": 8300
           }
         ],
-        "trimming": [],
+        "trimming": [
+          {
+            "client": "Dabur",
+            "model": "Promise",
+            "day": 10000,
+            "night": 8400
+          },
+          {
+            "client": "MKJ",
+            "model": "8 Pack",
+            "day": 9900,
+            "night": 0
+          },
+          {
+            "client": "WNF",
+            "model": "Junior",
+            "day": 7000,
+            "night": 5000
+          },
+          {
+            "client": "KPN",
+            "model": "Classique Loose",
+            "day": 12150,
+            "night": 0
+          },
+          {
+            "client": "Dabur",
+            "model": "Prima",
+            "day": 26300,
+            "night": 22610
+          },
+          {
+            "client": "Dabur",
+            "model": "Basica",
+            "day": 19200,
+            "night": 14200
+          },
+          {
+            "client": "WNF",
+            "model": "Luxuria",
+            "day": 0,
+            "night": 5350
+          }
+        ],
         "packaging": {
           "sealing": [],
           "pouch": [],
