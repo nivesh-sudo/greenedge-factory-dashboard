@@ -5,10 +5,10 @@
         "handles": {
           "vertical": [
             {
-              "client": "Assure",
-              "model": "Delta Disp",
-              "day": 100,
-              "night": 100
+              "client": "Dabur",
+              "model": "Basica",
+              "day": 26000,
+              "night": 32000
             }
           ],
           "horizontal": []
