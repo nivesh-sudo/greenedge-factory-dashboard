@@ -16,6 +16,9 @@ body{background:#0d0d1a;color:#e2e8f0;font-family:'Inter','Segoe UI',sans-serif;
 .header-sub{font-size:10px;color:#4b5563;letter-spacing:2px;text-transform:uppercase;margin-bottom:4px}
 .header-title{font-size:24px;font-weight:700;font-family:'DM Mono',monospace;color:#f1f5f9}
 .header-right{display:flex;flex-direction:column;align-items:flex-end;gap:6px}
+.entry-link{color:#00b4d8;font-family:'DM Mono',monospace;font-size:12px;text-decoration:none;border:1px solid rgba(0,180,216,0.3);border-radius:8px;padding:8px 12px}
+.entry-link:hover{background:rgba(0,180,216,0.08)}
+.last-refresh{font-size:10px;color:#4b5563}
 .date-select{background:rgba(0,180,216,0.1);border:1px solid rgba(0,180,216,0.3);border-radius:8px;padding:8px 12px;color:#00b4d8;font-family:'DM Mono',monospace;font-size:14px;font-weight:700;cursor:pointer;outline:none}
 .date-select option{background:#1a1a2e;color:#e2e8f0}
 .days-count{font-size:10px;color:#4b5563}
@@ -107,8 +110,9 @@ tr.total-row td{font-weight:700;color:#e2e8f0;font-family:'DM Mono',monospace}
 // ─── CONFIG ──────────────────────────────────────────────────────────────────
 const REPO   = "nivesh-sudo/greenedge-factory-dashboard";
 const BRANCH = "main";
-const DATA_URL   = `https://raw.githubusercontent.com/${REPO}/${BRANCH}/data.json`;
-const MASTER_URL = `https://raw.githubusercontent.com/${REPO}/${BRANCH}/master.json`;
+const DATA_URL   = () => `https://raw.githubusercontent.com/${REPO}/${BRANCH}/data.json?t=${Date.now()}`;
+const MASTER_URL = () => `https://raw.githubusercontent.com/${REPO}/${BRANCH}/master.json?t=${Date.now()}`;
+const REFRESH_MS = 30000;
 
 // ─── STATE ───────────────────────────────────────────────────────────────────
 let MASTER={}, PKG_RATES={}, PRINT_RATE=0, H_RATES={}, TUFT_RATE=0, WAGE={}, ELEC={}, FIXED_OH={};
@@ -116,14 +120,13 @@ let HISTORICAL={};
 let selDate="", activeTab="summary";
 
 // ─── FETCH ───────────────────────────────────────────────────────────────────
-async function loadData(){
+let lastRefresh=null;
+async function loadData(isBackground){
   try{
-    const [mRes,dRes]=await Promise.all([fetch(MASTER_URL),fetch(DATA_URL)]);
+    const [mRes,dRes]=await Promise.all([fetch(MASTER_URL()),fetch(DATA_URL())]);
     if(!mRes.ok||!dRes.ok) throw new Error("Failed to fetch data files");
     const mTxt=await mRes.text();
     const dTxt=await dRes.text();
-    console.log("master last 100:", mTxt.slice(-100));
-    console.log("data last 100:", dTxt.slice(-100));
     let mJson,dJson;
     try{mJson=JSON.parse(mTxt);}catch(e){throw new Error("MASTER FAILED: "+e.message);}
     try{dJson=JSON.parse(dTxt);}catch(e){throw new Error("DATA FAILED: "+e.message);}
@@ -137,19 +140,17 @@ async function loadData(){
     FIXED_OH   = mJson.FIXED_OH||{staffing:30000,capRepayment:78333,maintenance:16667};
     HISTORICAL = dJson.reports||{};
     const dates=Object.keys(HISTORICAL).sort().reverse();
-    selDate=dates[0]||"";
+    if(!selDate||!HISTORICAL[selDate]) selDate=dates[0]||"";
+    lastRefresh=new Date();
     render();
   }catch(e){
-    document.getElementById("app").innerHTML=`<div class="error"><b>Could not load data</b><br/>${e.message}<br/><br/>Make sure data.json and master.json exist in your GitHub repo.<br/><br/><small style="color:#6b7280">Check browser console (F12) for details.</small></div>`;
+    if(!isBackground){
+      document.getElementById("app").innerHTML=`<div class="error"><b>Could not load data</b><br/>${e.message}<br/><br/>Make sure data.json and master.json exist in your GitHub repo.<br/><br/><small style="color:#6b7280">Check browser console (F12) for details.</small></div>`;
+    }
     console.error("Dashboard load error:", e);
-    // Try fetching data.json directly to debug
-    try{
-      const r=await fetch(DATA_URL);
-      const txt=await r.text();
-      console.log("data.json raw (first 500 chars):", txt.substring(0,500));
-    }catch(e2){console.error("Could not fetch data.json:", e2);}
   }
 }
+setInterval(()=>loadData(true), REFRESH_MS);
 
 // ─── HELPERS ─────────────────────────────────────────────────────────────────
 const fmt  = n=>`₹${Math.round(n).toLocaleString("en-IN")}`;
@@ -436,7 +437,7 @@ function tabClients(H,TT,PK,deptRev){
 function render(){
   const dates=Object.keys(HISTORICAL).sort().reverse();
   if(!dates.length){
-    document.getElementById("app").innerHTML=`<div class="error">No production data found in data.json yet. Data will appear here once Make.com processes the first batch of supervisor photos.</div>`;
+    document.getElementById("app").innerHTML=`<div class="error">No production data found in data.json yet. Use <a href="entry.html" style="color:#ff4d6d">Enter Today's Data</a> to submit the first day's numbers.</div>`;
     return;
   }
   if(!selDate||!HISTORICAL[selDate]) selDate=dates[0];
@@ -476,12 +477,14 @@ function render(){
           <div class="header-sub">Greenedge Ventures — Factory</div>
           <div class="header-title mono">Daily P&L Dashboard</div>
         </div>
+        <a class="entry-link" href="entry.html">+ Enter Today's Data</a>
       </div>
       <div class="header-right">
         <select class="date-select" onchange="changeDate(this.value)">
           ${dates.map(d=>`<option value="${d}"${d===selDate?" selected":""}>${d}</option>`).join("")}
         </select>
         <div class="days-count">${dates.length} days on record</div>
+        <div class="last-refresh">${lastRefresh?`Updated ${lastRefresh.toLocaleTimeString("en-IN")} · auto-refreshes every 30s`:""}</div>
       </div>
     </div>
     <div class="status-bar ${clears?"green":"red"}">
