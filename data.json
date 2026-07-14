@@ -16,10 +16,10 @@
         "printing": [],
         "tufting": [
           {
-            "client": "Dabur Int",
-            "model": "Power Clean",
-            "day": 10000,
-            "night": 0
+            "client": "Dabur",
+            "model": "Prima",
+            "day": 24000,
+            "night": 25000
           }
         ],
         "trimming": [],
