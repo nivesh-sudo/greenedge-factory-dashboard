@@ -80,7 +80,7 @@ const MASTER_URL = () => `https://raw.githubusercontent.com/${REPO}/${BRANCH}/ma
 const DEPT_LABEL = {handles:"Handles",printing:"Printing",tufting:"Tufting",trimming:"Trimming",packaging:"Packaging"};
 const FIELD_DEF = {
   w:{type:"number",label:"Weight (g/unit)",step:"0.01"},
-  h:{type:"number",label:"Height (cm)",step:"0.1"},
+  h:{type:"number",label:"Number of Holes",step:"1"},
   pkg:{type:"select",label:"Packaging type",options:[["hanger","Hanger"],["dispenser","Dispenser"],["pouch","Pouch"],["loose","Loose"]]},
   bps:{type:"number",label:"BPS (brushes/shot)",step:"0.01"}
 };
@@ -250,7 +250,7 @@ function onClientChange(prefix,dept){
   refreshMissingFields(prefix,dept);
 }
 async function confirmAndRegister(client,model,fields){
-  const labels={m:"Category",w:"Weight (g/unit)",h:"Height (cm)",pkg:"Packaging type",bps:"BPS"};
+  const labels={m:"Category",w:"Weight (g/unit)",h:"Number of Holes",pkg:"Packaging type",bps:"BPS"};
   const summary=Object.entries(fields).map(([k,v])=>{
     const display=k==="m"?(v==="two"?"Vertical (Two Colour)":"Horizontal (Single/Ancillary)"):v;
     return `${labels[k]||k}: ${display}`;
@@ -528,7 +528,7 @@ function render(){
   let tabContent="";
   if(activeTab==="handles") tabContent=tabHandles();
   else if(activeTab==="printing") tabContent=tabSimpleRows("printing","Printing","₹0.10 per brush — enter units printed.","#fbbf24");
-  else if(activeTab==="tufting") tabContent=tabSimpleRows("tufting","Tufting","Rate depends on model height.","#a78bfa");
+  else if(activeTab==="tufting") tabContent=tabSimpleRows("tufting","Tufting","Rate depends on the model's number of holes.","#a78bfa");
   else if(activeTab==="trimming") tabContent=tabSimpleRows("trimming","Trimming","Included in tufting charge — units only, no separate revenue.","#f59e0b");
   else if(activeTab==="packaging") tabContent=tabPackaging();
   else if(activeTab==="attendance") tabContent=tabAttendance();
