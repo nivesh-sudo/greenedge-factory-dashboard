@@ -5,43 +5,47 @@
 <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
 <title>Greenedge Ventures — Reports</title>
 <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet"/>
-<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.4/dist/chart.umd.min.js"></script>
 <style>
 *{box-sizing:border-box;margin:0;padding:0}
 body{background:#0d0d1a;color:#e2e8f0;font-family:'Inter','Segoe UI',sans-serif;min-height:100vh;padding:22px 14px}
 .mono{font-family:'DM Mono',monospace}
-.container{max-width:1040px;margin:0 auto}
+.container{max-width:1080px;margin:0 auto}
 .header{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:18px;flex-wrap:wrap;gap:12px}
 .header-sub{font-size:10px;color:#4b5563;letter-spacing:2px;text-transform:uppercase;margin-bottom:4px}
 .header-title{font-size:24px;font-weight:700;font-family:'DM Mono',monospace;color:#f1f5f9}
 .nav-links{display:flex;gap:8px}
 .nav-link{color:#00b4d8;font-family:'DM Mono',monospace;font-size:12px;text-decoration:none;border:1px solid rgba(0,180,216,0.3);border-radius:8px;padding:8px 12px;height:fit-content}
 .nav-link:hover{background:rgba(0,180,216,0.08)}
-.filter-bar{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.08);border-radius:12px;padding:12px 16px;margin-bottom:18px}
+.filter-bar{display:flex;justify-content:space-between;align-items:flex-end;flex-wrap:wrap;gap:14px;background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.08);border-radius:12px;padding:14px 16px;margin-bottom:18px}
+.filter-group{display:flex;flex-wrap:wrap;gap:12px;align-items:flex-end}
+.filter-field{display:flex;flex-direction:column;gap:5px}
+.filter-field label{font-size:10px;color:#6b7280;letter-spacing:1px;text-transform:uppercase}
+.filter-field select,.filter-field input{background:#111827;border:1px solid rgba(255,255,255,0.12);border-radius:7px;padding:8px 10px;color:#e2e8f0;font-family:'DM Mono',monospace;font-size:12.5px;outline:none}
+.filter-field select:focus,.filter-field input:focus{border-color:#00b4d8}
 .preset-group{display:flex;gap:6px}
 .preset-btn{padding:7px 13px;border-radius:7px;border:none;cursor:pointer;font-size:11.5px;font-weight:600;font-family:'DM Mono',monospace;background:rgba(255,255,255,0.05);color:#6b7280}
 .preset-btn.active{background:#00b4d8;color:#0d0d1a}
-.custom-range{display:flex;align-items:center;gap:8px;font-size:11.5px;color:#6b7280}
-.custom-range input{background:#111827;border:1px solid rgba(255,255,255,0.12);border-radius:7px;padding:7px 9px;color:#e2e8f0;font-family:'DM Mono',monospace;font-size:12px;outline:none}
+.export-btn{background:#06d6a0;color:#0d0d1a;border:none;border-radius:8px;padding:10px 16px;font-weight:700;font-size:12px;cursor:pointer;font-family:'DM Mono',monospace;white-space:nowrap}
+.export-btn:hover{background:#05c090}
 .kpi-strip{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:10px;margin-bottom:18px}
 .kpi-card{background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.08);border-left:3px solid rgba(255,255,255,0.15);border-radius:10px;padding:14px 16px}
 .kpi-card.warn{border-left-color:#fbbf24}
 .kpi-label{font-size:10px;color:#6b7280;letter-spacing:1px;text-transform:uppercase;margin-bottom:6px}
 .kpi-val{font-size:22px;font-family:'DM Mono',monospace;font-weight:700}
-.chart-row{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:18px}
-.chart-card{background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.08);border-radius:12px;padding:16px;min-height:280px}
-.chart-title{font-size:11px;color:#6b7280;letter-spacing:1px;text-transform:uppercase;margin-bottom:12px}
 .panel{background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.08);border-radius:12px;padding:16px;margin-bottom:14px}
-.panel-title{font-size:11px;color:#6b7280;letter-spacing:1px;text-transform:uppercase;margin-bottom:10px;font-family:'DM Mono',monospace;font-weight:700}
+.panel-title{font-size:11px;color:#6b7280;letter-spacing:1px;text-transform:uppercase;margin-bottom:4px;font-family:'DM Mono',monospace;font-weight:700}
+.summary-line{font-size:12px;color:#94a3b8;margin-bottom:12px}
+.summary-line b{color:#e2e8f0}
 .hint-text{font-size:11px;color:#6b7280;margin-bottom:10px;font-style:italic}
 .tbl-wrap{overflow-x:auto}
 table{width:100%;border-collapse:collapse;font-size:12px}
 th{padding:6px 9px;color:#6b7280;font-weight:600;font-size:10px;letter-spacing:0.8px;text-transform:uppercase;border-bottom:1px solid rgba(255,255,255,0.07);font-family:'DM Mono',monospace;text-align:right}
-th:first-child,th:nth-child(2){text-align:left}
+th:first-child,th:nth-child(2),th:nth-child(3){text-align:left}
 td{padding:7px 9px;border-bottom:1px solid rgba(255,255,255,0.04);text-align:right;color:#94a3b8;font-family:'DM Mono',monospace}
-td:first-child,td:nth-child(2){text-align:left;color:#cbd5e1;font-family:'Inter',sans-serif}
-.bar-track{background:#111827;border-radius:6px;height:8px;overflow:hidden;min-width:100px}
-.bar-fill{height:100%;background:linear-gradient(90deg,#00b4d8,#06d6a0);border-radius:6px}
+td:first-child,td:nth-child(2),td:nth-child(3){text-align:left;color:#cbd5e1;font-family:'Inter',sans-serif}
+tr.subtotal-row td{font-weight:700;color:#cbd5e1;background:rgba(255,255,255,0.03);font-family:'DM Mono',monospace}
+tr.total-row td{font-weight:700;color:#0d0d1a;background:#06d6a0;font-family:'DM Mono',monospace}
+.dept-pill{display:inline-block;padding:3px 9px;border-radius:20px;font-size:10.5px;font-family:'DM Mono',monospace}
 .pill{display:inline-block;background:rgba(251,191,36,0.12);border:1px solid rgba(251,191,36,0.3);color:#fbbf24;border-radius:20px;padding:3px 9px;font-size:10.5px;font-family:'DM Mono',monospace;margin-right:4px}
 .mini-link{color:#00b4d8;font-size:11.5px;font-family:'DM Mono',monospace;text-decoration:none}
 .mini-link:hover{text-decoration:underline}
@@ -49,7 +53,6 @@ td:first-child,td:nth-child(2){text-align:left;color:#cbd5e1;font-family:'Inter'
 .loading{display:flex;align-items:center;justify-content:center;min-height:60vh;font-size:16px;color:#6b7280;font-family:'DM Mono',monospace}
 .error{background:rgba(255,77,109,0.08);border:1px solid rgba(255,77,109,0.25);border-radius:10px;padding:20px;text-align:center;color:#ff4d6d;margin:40px 0}
 .footer{margin-top:28px;font-size:10.5px;color:#374151;text-align:center;padding-bottom:16px}
-@media (max-width:720px){.chart-row{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
@@ -64,13 +67,16 @@ const BRANCH = "main";
 const DATA_URL   = () => `https://raw.githubusercontent.com/${REPO}/${BRANCH}/data.json?t=${Date.now()}`;
 const MASTER_URL = () => `https://raw.githubusercontent.com/${REPO}/${BRANCH}/master.json?t=${Date.now()}`;
 const DEPT_LABEL = {handles:"Handles",tufting:"Tufting",packaging:"Packaging"};
+const DEPT_COLOR = {Handles:"#06d6a0",Printing:"#fbbf24",Tufting:"#a78bfa",Trimming:"#f59e0b",Packaging:"#f97316"};
 
 // ─── STATE ───────────────────────────────────────────────────────────────────
 let MASTER={}, PKG_RATES={}, PRINT_RATE=0, H_RATES={}, TUFT_RATE=0, WAGE={}, ELEC={}, FIXED_OH={};
 let HISTORICAL={};
 let rangePreset="30";
 let customFrom="", customTo="";
-let profitChart=null, deptChart=null;
+let deptFilter="all";
+let clientFilter="all";
+let groupBy="flat";
 
 // ─── FETCH ───────────────────────────────────────────────────────────────────
 async function loadData(){
@@ -126,117 +132,108 @@ function calcLabour(att){
   const overhead=att.overhead.cleaning_8hr*WAGE.hr8+att.overhead.store_12hr*WAGE.hr12+att.overhead.qc_12hr*WAGE.hr12;
   return{moulding,tufting,checking,tuftingTotal:tufting+checking,packaging,overhead};
 }
-function calcHandles(prod,labourCost){
-  const elec=dailyElec();
-  let revV=0,revH=0,unitsV=0,unitsH=0;
-  const clientRev={};
+// ─── LINE ITEMS (one row per production entry, revenue computed inline) ─────
+function lineItemsForDate(date){
+  const {prod}=HISTORICAL[date];
+  const items=[];
   (prod.handles.vertical||[]).forEach(r=>{
-    const total=r.day+r.night;
     const m=MASTER[k(r.client,r.model)]||{};
-    const kg=(total*(m.w||0))/1000;
-    const rev=kg*H_RATES.two;
-    revV+=rev;unitsV+=total;
-    clientRev[r.client]=(clientRev[r.client]||0)+rev;
+    const kg=((r.day+r.night)*(m.w||0))/1000;
+    items.push({date,dept:"Handles",client:r.client,model:r.model,day:r.day,night:r.night,total:r.day+r.night,revenue:kg*H_RATES.two});
   });
   (prod.handles.horizontal||[]).forEach(r=>{
-    const total=r.day+r.night;
     const m=MASTER[k(r.client,r.model)]||{};
-    const kg=(total*(m.w||0))/1000;
-    const rev=kg*H_RATES.single;
-    revH+=rev;unitsH+=total;
-    clientRev[r.client]=(clientRev[r.client]||0)+rev;
+    const kg=((r.day+r.night)*(m.w||0))/1000;
+    items.push({date,dept:"Handles",client:r.client,model:r.model,day:r.day,night:r.night,total:r.day+r.night,revenue:kg*H_RATES.single});
   });
-  const totalRev=revV+revH;
-  const totalElec=elec.V+elec.H;
-  const gp=totalRev-labourCost-totalElec;
-  return{unitsV,unitsH,totalUnits:unitsV+unitsH,revV,revH,totalRev,labourCost,totalElec,grossProfit:gp,clientRev};
-}
-function calcPrinting(prod){
-  let totalUnits=0,totalRev=0;
   (prod.printing||[]).forEach(r=>{
-    const total=r.day+r.night;totalUnits+=total;totalRev+=total*PRINT_RATE;
-  });
-  return{totalUnits,totalRev};
-}
-function calcTuftTrim(prod,labourCost){
-  const elec=dailyElec();
-  let tuftUnits=0,tuftRev=0,trimUnits=0;
-  const clientRev={};
-  (prod.tufting||[]).forEach(r=>{
     const total=r.day+r.night;
-    const m=MASTER[k(r.client,r.model)]||{};
-    const rate=(TUFT_RATE*(m.h||0))/100;
-    const rev=total*rate;
-    tuftUnits+=total;tuftRev+=rev;
-    clientRev[r.client]=(clientRev[r.client]||0)+rev;
+    items.push({date,dept:"Printing",client:r.client,model:r.model,day:r.day,night:r.night,total,revenue:total*PRINT_RATE});
   });
-  (prod.trimming||[]).forEach(r=>{trimUnits+=r.day+r.night;});
-  const totalElec=elec.T+elec.Tr;
-  const gp=tuftRev-labourCost-totalElec;
-  return{tuftUnits,trimUnits,totalRev:tuftRev,labourCost,totalElec,grossProfit:gp,clientRev};
-}
-function calcPackaging(prod,labourCost){
-  let totalBrushes=0,totalRev=0;
-  const clientRev={};
+  (prod.tufting||[]).forEach(r=>{
+    const m=MASTER[k(r.client,r.model)]||{};
+    const total=r.day+r.night;
+    const rate=(TUFT_RATE*(m.h||0))/100;
+    items.push({date,dept:"Tufting",client:r.client,model:r.model,day:r.day,night:r.night,total,revenue:total*rate});
+  });
+  (prod.trimming||[]).forEach(r=>{
+    items.push({date,dept:"Trimming",client:r.client,model:r.model,day:r.day,night:r.night,total:r.day+r.night,revenue:0});
+  });
   (prod.packaging.sealing||[]).forEach(r=>{
-    const shots=r.day+r.night;const brushes=shots*r.bps;
+    const shots=r.day+r.night; const brushes=shots*r.bps;
     const m=MASTER[k(r.client,r.model)]||{};
     const rate=PKG_RATES[m.pkg]||0.60;
-    const rev=brushes*rate;
-    totalBrushes+=brushes;totalRev+=rev;
-    clientRev[r.client]=(clientRev[r.client]||0)+rev;
+    items.push({date,dept:"Packaging",client:r.client,model:r.model,day:r.day,night:r.night,total:shots,revenue:brushes*rate});
   });
   (prod.packaging.pouch||[]).forEach(r=>{
-    const pcs=r.day+r.night;const rev=pcs*PKG_RATES.pouch;
-    totalBrushes+=pcs;totalRev+=rev;
-    clientRev[r.client]=(clientRev[r.client]||0)+rev;
+    const pcs=r.day+r.night;
+    items.push({date,dept:"Packaging",client:r.client,model:r.model,day:r.day,night:r.night,total:pcs,revenue:pcs*PKG_RATES.pouch});
   });
   (prod.packaging.loose||[]).forEach(r=>{
-    const pcs=r.day+r.night;const rev=pcs*PKG_RATES.loose;
-    totalBrushes+=pcs;totalRev+=rev;
-    clientRev[r.client]=(clientRev[r.client]||0)+rev;
+    const pcs=r.day+r.night;
+    items.push({date,dept:"Packaging",client:r.client,model:r.model,day:r.day,night:r.night,total:pcs,revenue:pcs*PKG_RATES.loose});
   });
-  const gp=totalRev-labourCost;
-  return{totalBrushes,totalRev,labourCost,grossProfit:gp,clientRev};
+  return items;
 }
-
-// ─── PER-DATE METRICS ────────────────────────────────────────────────────────
-function metricsForDate(date){
+function deptRevenueForDate(date){
   const {prod,att}=HISTORICAL[date];
   const L=calcLabour(att);
-  const H=calcHandles(prod,L.moulding);
-  const P=calcPrinting(prod);
-  const TT=calcTuftTrim(prod,L.tuftingTotal);
-  const PK=calcPackaging(prod,L.packaging);
-  const deptRev=H.totalRev+P.totalRev+TT.totalRev+PK.totalRev;
-  const deptGP=H.grossProfit+TT.grossProfit+PK.grossProfit;
+  const elec=dailyElec();
+  let handlesRev=0,printingRev=0,tuftRev=0,pkgRev=0;
+  (prod.handles.vertical||[]).forEach(r=>{const m=MASTER[k(r.client,r.model)]||{};handlesRev+=((r.day+r.night)*(m.w||0))/1000*H_RATES.two;});
+  (prod.handles.horizontal||[]).forEach(r=>{const m=MASTER[k(r.client,r.model)]||{};handlesRev+=((r.day+r.night)*(m.w||0))/1000*H_RATES.single;});
+  (prod.printing||[]).forEach(r=>{printingRev+=(r.day+r.night)*PRINT_RATE;});
+  (prod.tufting||[]).forEach(r=>{const m=MASTER[k(r.client,r.model)]||{};tuftRev+=(r.day+r.night)*(TUFT_RATE*(m.h||0))/100;});
+  (prod.packaging.sealing||[]).forEach(r=>{const shots=r.day+r.night;const m=MASTER[k(r.client,r.model)]||{};pkgRev+=shots*r.bps*(PKG_RATES[m.pkg]||0.60);});
+  (prod.packaging.pouch||[]).forEach(r=>{pkgRev+=(r.day+r.night)*PKG_RATES.pouch;});
+  (prod.packaging.loose||[]).forEach(r=>{pkgRev+=(r.day+r.night)*PKG_RATES.loose;});
+  const handlesGP=handlesRev-L.moulding-(elec.V+elec.H);
+  const tuftGP=tuftRev-L.tuftingTotal-(elec.T+elec.Tr);
+  const pkgGP=pkgRev-L.packaging;
+  const deptRev=handlesRev+printingRev+tuftRev+pkgRev;
+  const deptGP=handlesGP+tuftGP+pkgGP;
   const fixedOH=FIXED_OH.staffing+FIXED_OH.capRepayment+FIXED_OH.maintenance;
   const netProfit=deptGP-L.overhead-fixedOH;
-  const clientRev={};
-  [H.clientRev,TT.clientRev,PK.clientRev].forEach(m=>Object.entries(m).forEach(([c,v])=>{clientRev[c]=(clientRev[c]||0)+v;}));
-  return{
-    date,deptRev,netProfit,
-    handlesRev:H.totalRev,printingRev:P.totalRev,tuftTrimRev:TT.totalRev,packagingRev:PK.totalRev,
-    totalUnits:H.totalUnits+TT.tuftUnits+PK.totalBrushes,
-    clientRev,
-    netMargin:deptRev>0?(netProfit/deptRev)*100:0
-  };
+  return{handlesRev,handlesGP,printingRev,tuftRev,tuftGP,pkgRev,pkgGP,deptRev,netProfit};
 }
+
+// ─── FILTERING ───────────────────────────────────────────────────────────────
 function filteredDates(){
   const all=Object.keys(HISTORICAL).sort();
   if(rangePreset==="custom") return all.filter(d=>(!customFrom||d>=customFrom)&&(!customTo||d<=customTo));
   if(rangePreset==="all") return all;
   return all.slice(-parseInt(rangePreset,10));
 }
-function computeAggregate(dates){
-  const series=dates.map(metricsForDate);
-  const totalRevenue=series.reduce((a,s)=>a+s.deptRev,0);
-  const totalNetProfit=series.reduce((a,s)=>a+s.netProfit,0);
-  const totalUnits=series.reduce((a,s)=>a+s.totalUnits,0);
-  const avgMargin=totalRevenue>0?(totalNetProfit/totalRevenue)*100:0;
-  const clientTotals={};
-  series.forEach(s=>Object.entries(s.clientRev).forEach(([c,v])=>{clientTotals[c]=(clientTotals[c]||0)+v;}));
-  return{series,totalRevenue,totalNetProfit,totalUnits,avgMargin,clientTotals};
+function allClients(){
+  const set=new Set();
+  Object.keys(MASTER).forEach(key=>set.add(key.slice(0,key.indexOf("|"))));
+  return [...set].sort();
+}
+function filteredLineItems(dates){
+  let items=[];
+  dates.forEach(d=>{items=items.concat(lineItemsForDate(d));});
+  if(deptFilter!=="all") items=items.filter(i=>i.dept===deptFilter);
+  if(clientFilter!=="all") items=items.filter(i=>i.client===clientFilter);
+  return items;
+}
+function kpiForDates(dates){
+  let totalRevenue=0, totalProfit=0, profitLabel="Net Profit", isNet=true;
+  dates.forEach(date=>{
+    const d=deptRevenueForDate(date);
+    if(deptFilter==="all"){
+      totalRevenue+=d.deptRev; totalProfit+=d.netProfit;
+    }else if(deptFilter==="Handles"){
+      totalRevenue+=d.handlesRev; totalProfit+=d.handlesGP; profitLabel="Gross Profit"; isNet=false;
+    }else if(deptFilter==="Printing"){
+      totalRevenue+=d.printingRev; totalProfit+=d.printingRev; profitLabel="Revenue"; isNet=false;
+    }else if(deptFilter==="Tufting"||deptFilter==="Trimming"){
+      totalRevenue+=d.tuftRev; totalProfit+=d.tuftGP; profitLabel="Gross Profit"; isNet=false;
+    }else if(deptFilter==="Packaging"){
+      totalRevenue+=d.pkgRev; totalProfit+=d.pkgGP; profitLabel="Gross Profit"; isNet=false;
+    }
+  });
+  const avgMargin=totalRevenue>0?(totalProfit/totalRevenue)*100:0;
+  return{totalRevenue,totalProfit,profitLabel,isNet,avgMargin};
 }
 
 // ─── PENDING BOM ENTRIES ─────────────────────────────────────────────────────
@@ -270,37 +267,111 @@ function pendingEntries(){
   return rows;
 }
 
+// ─── EXPORT ──────────────────────────────────────────────────────────────────
+function csvEscape(v){
+  const s=String(v);
+  return /[",\r\n]/.test(s) ? `"${s.replace(/"/g,'""')}"` : s;
+}
+function exportCSV(){
+  const dates=filteredDates();
+  const items=filteredLineItems(dates);
+  const headers=["Date","Department","Client","Model","Day","Night","Total","Revenue"];
+  const rows=items.map(i=>[i.date,i.dept,i.client,i.model,i.day,i.night,i.total,i.revenue.toFixed(2)]);
+  const csv=[headers,...rows].map(r=>r.map(csvEscape).join(",")).join("\r\n");
+  const blob=new Blob([csv],{type:"text/csv;charset=utf-8;"});
+  const url=URL.createObjectURL(blob);
+  const a=document.createElement("a");
+  const stamp=new Date().toISOString().slice(0,10);
+  a.href=url;
+  a.download=`greenedge-report-${stamp}.csv`;
+  document.body.appendChild(a);
+  a.click();
+  document.body.removeChild(a);
+  URL.revokeObjectURL(url);
+}
+
 // ─── UI PIECES ───────────────────────────────────────────────────────────────
 function filterBar(){
   const presets=[["7","7d"],["30","30d"],["90","90d"],["all","All time"]];
+  const depts=["all","Handles","Printing","Tufting","Trimming","Packaging"];
   return `<div class="filter-bar">
-    <div class="preset-group">
-      ${presets.map(([v,l])=>`<button class="preset-btn${rangePreset===v?" active":""}" onclick="setPreset('${v}')">${l}</button>`).join("")}
+    <div class="filter-group">
+      <div class="filter-field">
+        <label>Timeline</label>
+        <div class="preset-group">
+          ${presets.map(([v,l])=>`<button class="preset-btn${rangePreset===v?" active":""}" onclick="setPreset('${v}')">${l}</button>`).join("")}
+        </div>
+      </div>
+      <div class="filter-field">
+        <label>Custom range</label>
+        <div style="display:flex;gap:6px;align-items:center">
+          <input type="date" value="${customFrom}" onchange="setCustom('from',this.value)"/>
+          <span style="color:#4b5563;font-size:11px">to</span>
+          <input type="date" value="${customTo}" onchange="setCustom('to',this.value)"/>
+        </div>
+      </div>
+      <div class="filter-field">
+        <label>Department</label>
+        <select onchange="setDept(this.value)">
+          ${depts.map(d=>`<option value="${d}"${deptFilter===d?" selected":""}>${d==="all"?"All departments":d}</option>`).join("")}
+        </select>
+      </div>
+      <div class="filter-field">
+        <label>Client</label>
+        <select onchange="setClient(this.value)">
+          <option value="all"${clientFilter==="all"?" selected":""}>All clients</option>
+          ${allClients().map(c=>`<option value="${esc(c)}"${clientFilter===c?" selected":""}>${esc(c)}</option>`).join("")}
+        </select>
+      </div>
+      <div class="filter-field">
+        <label>View</label>
+        <select onchange="setGroupBy(this.value)">
+          <option value="flat"${groupBy==="flat"?" selected":""}>Flat list</option>
+          <option value="client"${groupBy==="client"?" selected":""}>Grouped by client</option>
+        </select>
+      </div>
     </div>
-    <div class="custom-range">
-      <input type="date" value="${customFrom}" onchange="setCustom('from',this.value)"/>
-      <span>to</span>
-      <input type="date" value="${customTo}" onchange="setCustom('to',this.value)"/>
-    </div>
+    <button class="export-btn" onclick="exportCSV()">⬇ Export CSV</button>
   </div>`;
 }
-function kpiStrip(agg,pending){
-  const netColor=agg.totalNetProfit>=0?"#06d6a0":"#ff4d6d";
+function kpiStrip(kpi,pending){
+  const profitColor=kpi.isNet?(kpi.totalProfit>=0?"#06d6a0":"#ff4d6d"):"#00b4d8";
   return `<div class="kpi-strip">
-    <div class="kpi-card"><div class="kpi-label">Total Revenue</div><div class="kpi-val" style="color:#00b4d8">${fmt(agg.totalRevenue)}</div></div>
-    <div class="kpi-card" style="border-left-color:${netColor}"><div class="kpi-label">Net ${agg.totalNetProfit>=0?"Profit":"Loss"}</div><div class="kpi-val" style="color:${netColor}">${fmt(Math.abs(agg.totalNetProfit))}</div></div>
-    <div class="kpi-card"><div class="kpi-label">Avg Net Margin</div><div class="kpi-val">${agg.avgMargin.toFixed(1)}%</div></div>
+    <div class="kpi-card"><div class="kpi-label">Total Revenue</div><div class="kpi-val" style="color:#00b4d8">${fmt(kpi.totalRevenue)}</div></div>
+    <div class="kpi-card" style="border-left-color:${profitColor}"><div class="kpi-label">${kpi.profitLabel}${kpi.isNet&&kpi.totalProfit<0?" (Loss)":""}</div><div class="kpi-val" style="color:${profitColor}">${fmt(Math.abs(kpi.totalProfit))}</div></div>
+    <div class="kpi-card"><div class="kpi-label">Margin</div><div class="kpi-val">${kpi.avgMargin.toFixed(1)}%</div></div>
     <div class="kpi-card${pending.length?' warn':''}"><div class="kpi-label">Pending BOM Entries</div><div class="kpi-val" style="color:${pending.length?'#fbbf24':'#06d6a0'}">${pending.length}</div></div>
   </div>`;
 }
-function clientTable(agg){
-  const entries=Object.entries(agg.clientTotals).sort((a,b)=>b[1]-a[1]);
-  if(!entries.length) return `<div class="panel"><div class="panel-title">Client Revenue — Selected Period</div><div class="empty-note">No revenue in this range.</div></div>`;
-  const max=entries[0][1]||1;
+function dataTable(items){
+  if(!items.length) return `<div class="panel"><div class="panel-title">Production Records</div><div class="empty-note">No records match these filters.</div></div>`;
+  const totalRevenue=items.reduce((a,i)=>a+i.revenue,0);
+  const rowHTML=i=>`<tr><td>${i.date}</td><td><span class="dept-pill" style="background:${DEPT_COLOR[i.dept]}22;color:${DEPT_COLOR[i.dept]}">${i.dept}</span></td><td>${esc(i.client)}</td><td>${esc(i.model)}</td><td>${fmtN(i.day)}</td><td>${fmtN(i.night)}</td><td>${fmtN(i.total)}</td><td>${fmt(i.revenue)}</td></tr>`;
+  const head=`<tr><th>Date</th><th>Dept</th><th>Client</th><th>Model</th><th>Day</th><th>Night</th><th>Total</th><th>Revenue</th></tr>`;
+
+  let body;
+  if(groupBy==="client"){
+    const byClient={};
+    items.forEach(i=>{(byClient[i.client]=byClient[i.client]||[]).push(i);});
+    const clients=Object.keys(byClient).sort((a,b)=>{
+      const ta=byClient[a].reduce((s,i)=>s+i.revenue,0), tb=byClient[b].reduce((s,i)=>s+i.revenue,0);
+      return tb-ta;
+    });
+    body=clients.map(c=>{
+      const rows=byClient[c];
+      const subtotal=rows.reduce((s,i)=>s+i.revenue,0);
+      return rows.map(rowHTML).join("")+`<tr class="subtotal-row"><td colspan="7">${esc(c)} subtotal</td><td>${fmt(subtotal)}</td></tr>`;
+    }).join("");
+  }else{
+    body=items.map(rowHTML).join("");
+  }
+
   return `<div class="panel">
-    <div class="panel-title">Client Revenue — Selected Period</div>
-    <div class="tbl-wrap"><table><thead><tr><th>Client</th><th>Revenue</th><th>Share</th></tr></thead><tbody>
-      ${entries.map(([c,v])=>`<tr><td>${esc(c)}</td><td>${fmt(v)}</td><td><div class="bar-track"><div class="bar-fill" style="width:${(v/max*100).toFixed(1)}%"></div></div></td></tr>`).join("")}
+    <div class="panel-title">Production Records</div>
+    <div class="summary-line"><b>${items.length}</b> record${items.length>1?"s":""} · Total Revenue: <b>${fmt(totalRevenue)}</b></div>
+    <div class="tbl-wrap"><table><thead>${head}</thead><tbody>
+      ${body}
+      <tr class="total-row"><td colspan="7">Grand Total</td><td>${fmt(totalRevenue)}</td></tr>
     </tbody></table></div>
   </div>`;
 }
@@ -320,90 +391,27 @@ function setCustom(which,v){
   rangePreset="custom";
   render();
 }
-
-// ─── CHARTS ──────────────────────────────────────────────────────────────────
-function renderCharts(agg){
-  const labels=agg.series.map(s=>s.date.slice(5));
-  const ctx1=document.getElementById("chart-profit");
-  if(profitChart) profitChart.destroy();
-  if(ctx1){
-    profitChart=new Chart(ctx1.getContext("2d"),{
-      data:{
-        labels,
-        datasets:[
-          {type:"line",label:"Revenue",data:agg.series.map(s=>s.deptRev),borderColor:"#00b4d8",backgroundColor:"transparent",tension:0.3,pointRadius:2},
-          {type:"bar",label:"Net Profit",data:agg.series.map(s=>s.netProfit),backgroundColor:agg.series.map(s=>s.netProfit>=0?"rgba(6,214,160,0.7)":"rgba(255,77,109,0.7)")}
-        ]
-      },
-      options:{
-        responsive:true,maintainAspectRatio:false,
-        plugins:{legend:{labels:{color:"#94a3b8",font:{family:"DM Mono"}}}},
-        scales:{
-          x:{ticks:{color:"#6b7280"},grid:{color:"rgba(255,255,255,0.05)"}},
-          y:{ticks:{color:"#6b7280"},grid:{color:"rgba(255,255,255,0.05)"}}
-        }
-      }
-    });
-  }
-  const ctx2=document.getElementById("chart-dept");
-  if(deptChart) deptChart.destroy();
-  if(ctx2){
-    deptChart=new Chart(ctx2.getContext("2d"),{
-      type:"bar",
-      data:{
-        labels,
-        datasets:[
-          {label:"Handles",data:agg.series.map(s=>s.handlesRev),backgroundColor:"#06d6a0"},
-          {label:"Printing",data:agg.series.map(s=>s.printingRev),backgroundColor:"#fbbf24"},
-          {label:"Tufting/Trim",data:agg.series.map(s=>s.tuftTrimRev),backgroundColor:"#a78bfa"},
-          {label:"Packaging",data:agg.series.map(s=>s.packagingRev),backgroundColor:"#f97316"}
-        ]
-      },
-      options:{
-        responsive:true,maintainAspectRatio:false,
-        plugins:{legend:{labels:{color:"#94a3b8",font:{family:"DM Mono"}}}},
-        scales:{
-          x:{stacked:true,ticks:{color:"#6b7280"},grid:{display:false}},
-          y:{stacked:true,ticks:{color:"#6b7280"},grid:{color:"rgba(255,255,255,0.05)"}}
-        }
-      }
-    });
-  }
-}
+function setDept(v){deptFilter=v;render();}
+function setClient(v){clientFilter=v;render();}
+function setGroupBy(v){groupBy=v;render();}
 
 // ─── MAIN RENDER ─────────────────────────────────────────────────────────────
 function render(){
   const dates=filteredDates();
   const pending=pendingEntries();
-  if(!dates.length){
-    document.getElementById("app").innerHTML=`
-      <div class="header">
-        <div><div class="header-sub">Greenedge Ventures — Factory</div><div class="header-title mono">Reports</div></div>
-        <div class="nav-links"><a class="nav-link" href="index.html">← Dashboard</a><a class="nav-link" href="entry.html">Enter Data →</a></div>
-      </div>
-      ${filterBar()}
-      <div class="error">No production data in this range yet.</div>
-      ${pendingTable(pending)}
-    `;
-    return;
-  }
-  const agg=computeAggregate(dates);
+  const items=filteredLineItems(dates);
+  const kpi=kpiForDates(dates);
   document.getElementById("app").innerHTML=`
     <div class="header">
       <div><div class="header-sub">Greenedge Ventures — Factory</div><div class="header-title mono">Reports</div></div>
       <div class="nav-links"><a class="nav-link" href="index.html">← Dashboard</a><a class="nav-link" href="entry.html">Enter Data →</a></div>
     </div>
     ${filterBar()}
-    ${kpiStrip(agg,pending)}
-    <div class="chart-row">
-      <div class="chart-card"><div class="chart-title">Daily Revenue vs Net Profit</div><canvas id="chart-profit"></canvas></div>
-      <div class="chart-card"><div class="chart-title">Revenue by Department</div><canvas id="chart-dept"></canvas></div>
-    </div>
-    ${clientTable(agg)}
+    ${dates.length?kpiStrip(kpi,pending):`<div class="error">No production data in this range yet.</div>`}
+    ${dataTable(items)}
     ${pendingTable(pending)}
-    <div class="footer">${dates.length} day${dates.length>1?"s":""} in range · Pending BOM count reflects the current product list, not the date range.</div>
+    <div class="footer">${dates.length} day${dates.length!==1?"s":""} in range · Pending BOM count reflects the current product list, not the date range.</div>
   `;
-  renderCharts(agg);
 }
 
 // ─── INIT ────────────────────────────────────────────────────────────────────
