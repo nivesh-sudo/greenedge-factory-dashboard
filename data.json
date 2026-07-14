@@ -1,0 +1,53 @@
+{
+  "reports": {
+    "2026-07-14": {
+      "prod": {
+        "handles": {
+          "vertical": [
+            {
+              "client": "Assure",
+              "model": "Delta Disp",
+              "day": 100,
+              "night": 100
+            }
+          ],
+          "horizontal": []
+        },
+        "printing": [],
+        "tufting": [],
+        "trimming": [],
+        "packaging": {
+          "sealing": [],
+          "pouch": [],
+          "loose": []
+        }
+      },
+      "att": {
+        "moulding": {
+          "day12": {},
+          "night12": {},
+          "hr8": {}
+        },
+        "tufting": {
+          "day12": {},
+          "night12": {},
+          "hr8": {}
+        },
+        "checking": {
+          "hr12": 0,
+          "hr8": 0
+        },
+        "packaging": {
+          "day12": 0,
+          "hr8": 0,
+          "night12": 0
+        },
+        "overhead": {
+          "cleaning_8hr": 0,
+          "store_12hr": 0,
+          "qc_12hr": 0
+        }
+      }
+    }
+  }
+}
