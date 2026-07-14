@@ -112,7 +112,14 @@
             }
           ]
         },
-        "printing": [],
+        "printing": [
+          {
+            "client": "Dabur",
+            "model": "Promise",
+            "day": 6890,
+            "night": 8500
+          }
+        ],
         "tufting": [],
         "trimming": [],
         "packaging": {
