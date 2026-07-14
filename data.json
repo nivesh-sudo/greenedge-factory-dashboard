@@ -14,7 +14,14 @@
           "horizontal": []
         },
         "printing": [],
-        "tufting": [],
+        "tufting": [
+          {
+            "client": "Dabur Int",
+            "model": "Power Clean",
+            "day": 10000,
+            "night": 0
+          }
+        ],
         "trimming": [],
         "packaging": {
           "sealing": [],
