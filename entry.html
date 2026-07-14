@@ -33,6 +33,9 @@ body{background:#0d0d1a;color:#e2e8f0;font-family:'Inter','Segoe UI',sans-serif;
 .add-row-form select,.add-row-form input{background:#111827;border:1px solid rgba(255,255,255,0.12);border-radius:7px;padding:8px 10px;color:#e2e8f0;font-family:'DM Mono',monospace;font-size:12.5px;outline:none}
 .add-row-form select:focus,.add-row-form input:focus{border-color:#00b4d8}
 .add-row-form input[type=number]{width:100px}
+.new-toggle{display:flex;align-items:center;gap:7px;font-size:11.5px;color:#94a3b8;width:100%;margin-bottom:2px;cursor:pointer}
+.new-toggle input{width:auto;cursor:pointer}
+.existing-fields,.new-fields{display:flex;gap:8px;flex-wrap:wrap}
 .add-btn{background:#00b4d8;color:#0d0d1a;border:none;border-radius:7px;padding:9px 14px;font-weight:700;font-size:12px;cursor:pointer;font-family:'DM Mono',monospace}
 .add-btn.small{padding:8px 12px}
 .hint-text{font-size:11px;color:#6b7280;margin-bottom:10px;font-style:italic}
@@ -137,6 +140,40 @@ function modelOptionsHTML(client,selected){
   const models=(MODELS_BY_CLIENT[client]||[]).slice().sort();
   return `<option value="">Model…</option>`+models.map(m=>`<option value="${esc(m)}"${m===selected?" selected":""}>${esc(m)}</option>`).join("");
 }
+function toggleNewModel(prefix){
+  const isNew=document.getElementById(prefix+"-new").checked;
+  const existingWrap=document.getElementById(prefix+"-existing-fields");
+  const newWrap=document.getElementById(prefix+"-new-fields");
+  if(existingWrap) existingWrap.style.display=isNew?"none":"";
+  if(newWrap) newWrap.style.display=isNew?"":"none";
+  if(prefix==="pk"){
+    const hint=document.getElementById("pk-hint");
+    const bpsWrap=document.getElementById("pk-bps-wrap");
+    if(hint) hint.style.display=isNew?"none":"";
+    if(bpsWrap&&isNew) bpsWrap.style.display="none";
+  }
+}
+function onNewPkgChange(){
+  const pkg=val("pk-new-pkg");
+  const wrap=document.getElementById("pk-new-bps-wrap");
+  if(wrap) wrap.style.display=(pkg==="hanger"||pkg==="dispenser")?"":"none";
+}
+async function registerNewProduct(client,model,fields){
+  const res=await fetch("/api/add-product",{
+    method:"POST",
+    headers:{"Content-Type":"application/json"},
+    body:JSON.stringify({pin,client,model,fields})
+  });
+  const json=await res.json().catch(()=>({}));
+  if(!res.ok) throw new Error(json.error||`HTTP ${res.status}`);
+  return json.product||fields;
+}
+function mergeIntoMaster(client,model,product){
+  const key=client+"|"+model;
+  MASTER[key]=Object.assign({},MASTER[key]||{},product);
+  if(!MODELS_BY_CLIENT[client]){MODELS_BY_CLIENT[client]=[];CLIENTS.push(client);CLIENTS.sort();}
+  if(!MODELS_BY_CLIENT[client].includes(model)){MODELS_BY_CLIENT[client].push(model);MODELS_BY_CLIENT[client].sort();}
+}
 function onClientChange(prefix){
   const client=val(prefix+"-client");
   const modelEl=document.getElementById(prefix+"-model");
@@ -196,17 +233,26 @@ function secLabel(title){return `<div class="sec-label"><div class="sec-text">${
 function tabHandles(){
   return `
     <div class="add-row-form">
-      <select id="h-client" onchange="onClientChange('h')">${clientOptionsHTML()}</select>
-      <select id="h-model">${modelOptionsHTML(val("h-client"))}</select>
+      <label class="new-toggle"><input type="checkbox" id="h-new" onchange="toggleNewModel('h')"/> New model (not in list yet)</label>
+      <span id="h-existing-fields" class="existing-fields">
+        <select id="h-client" onchange="onClientChange('h')">${clientOptionsHTML()}</select>
+        <select id="h-model">${modelOptionsHTML(val("h-client"))}</select>
+      </span>
+      <span id="h-new-fields" class="new-fields" style="display:none">
+        <input id="h-client-new" type="text" list="clients-datalist" placeholder="New client name"/>
+        <input id="h-model-new" type="text" placeholder="New model name"/>
+        <input id="h-new-w" type="number" min="0" step="0.01" placeholder="Weight (g/unit)"/>
+      </span>
       <input id="h-day" type="number" min="0" placeholder="Day qty"/>
       <input id="h-night" type="number" min="0" placeholder="Night qty"/>
       <select id="h-cat">
         <option value="">Auto-detect category</option>
-        <option value="vertical">Force: Vertical (Two Colour)</option>
-        <option value="horizontal">Force: Horizontal (Single/Ancillary)</option>
+        <option value="vertical">Vertical (Two Colour)</option>
+        <option value="horizontal">Horizontal (Single/Ancillary)</option>
       </select>
       <button class="add-btn" onclick="addHandleRow()">+ Add</button>
     </div>
+    <div class="hint-text">New model? Tick the box, type the client and model name, pick Vertical/Horizontal and enter the weight per unit — that's what drives Handles revenue.</div>
     ${secLabel("Vertical — Two Colour")}
     ${rowsTable(state.handles.vertical,["handles","vertical"])}
     ${secLabel("Horizontal — Single Colour / Ancillary")}
@@ -214,37 +260,85 @@ function tabHandles(){
     <button class="submit-btn" style="background:#06d6a0" onclick="submitSection('handles')">Submit Handles Data</button>
   `;
 }
-function addHandleRow(){
-  const client=val("h-client"), model=val("h-model");
+async function addHandleRow(){
+  const isNew=document.getElementById("h-new").checked;
+  const cat=val("h-cat");
+  let client,model;
+  if(isNew){
+    client=val("h-client-new").trim();
+    model=val("h-model-new").trim();
+    const w=numVal("h-new-w");
+    if(!client||!model){alert("Enter a client and model name.");return;}
+    if(cat!=="vertical"&&cat!=="horizontal"){alert("Pick Vertical or Horizontal for this new model.");return;}
+    if(!w){alert("Enter the weight per unit (grams) — needed to calculate Handles revenue.");return;}
+    try{
+      const product=await registerNewProduct(client,model,{m:cat==="vertical"?"two":"single",w});
+      mergeIntoMaster(client,model,product);
+    }catch(e){alert("Could not save new model: "+e.message);return;}
+  }else{
+    client=val("h-client");model=val("h-model");
+    if(!client||!model){alert("Pick a client and model.");return;}
+  }
   const day=numVal("h-day"), night=numVal("h-night");
-  if(!client||!model){alert("Pick a client and model.");return;}
   if(day===0&&night===0){alert("Enter a day or night quantity.");return;}
   const prod=MASTER[client+"|"+model]||{};
-  let cat=val("h-cat");
-  if(!cat) cat=prod.m==="single"?"horizontal":"vertical";
-  state.handles[cat].push({client,model,day,night});
+  let useCat=cat;
+  if(!useCat) useCat=prod.m==="single"?"horizontal":"vertical";
+  state.handles[useCat].push({client,model,day,night});
   render();
 }
 
 // ─── TAB: PRINTING / TUFTING / TRIMMING ─────────────────────────────────────
 function tabSimpleRows(section,label,note,color){
+  const deptField=section==="tufting"
+    ? `<input id="tufting-new-h" type="number" min="0" step="0.1" placeholder="Height (cm)"/>`
+    : "";
+  const newModelNote=section==="tufting"
+    ? "New model? Tick the box, type the client and model name, and enter the height in cm — that's what drives Tufting revenue."
+    : "New model? Tick the box and type the client and model name — no extra numbers needed here.";
   return `
     <div class="add-row-form">
-      <select id="${section}-client" onchange="onClientChange('${section}')">${clientOptionsHTML()}</select>
-      <select id="${section}-model">${modelOptionsHTML(val(section+"-client"))}</select>
+      <label class="new-toggle"><input type="checkbox" id="${section}-new" onchange="toggleNewModel('${section}')"/> New model (not in list yet)</label>
+      <span id="${section}-existing-fields" class="existing-fields">
+        <select id="${section}-client" onchange="onClientChange('${section}')">${clientOptionsHTML()}</select>
+        <select id="${section}-model">${modelOptionsHTML(val(section+"-client"))}</select>
+      </span>
+      <span id="${section}-new-fields" class="new-fields" style="display:none">
+        <input id="${section}-client-new" type="text" list="clients-datalist" placeholder="New client name"/>
+        <input id="${section}-model-new" type="text" placeholder="New model name"/>
+        ${deptField}
+      </span>
       <input id="${section}-day" type="number" min="0" placeholder="Day qty"/>
       <input id="${section}-night" type="number" min="0" placeholder="Night qty"/>
       <button class="add-btn" onclick="addSimpleRow('${section}')">+ Add</button>
     </div>
-    ${note?`<div class="hint-text">${note}</div>`:""}
+    <div class="hint-text">${newModelNote}${note?` ${note}`:""}</div>
     ${rowsTable(state[section],[section])}
     <button class="submit-btn" style="background:${color}" onclick="submitSection('${section}')">Submit ${label} Data</button>
   `;
 }
-function addSimpleRow(section){
-  const client=val(section+"-client"), model=val(section+"-model");
+async function addSimpleRow(section){
+  const isNew=document.getElementById(section+"-new").checked;
+  let client,model;
+  if(isNew){
+    client=val(section+"-client-new").trim();
+    model=val(section+"-model-new").trim();
+    if(!client||!model){alert("Enter a client and model name.");return;}
+    const fields={};
+    if(section==="tufting"){
+      const h=numVal("tufting-new-h");
+      if(!h){alert("Enter the model height (cm) — needed to calculate Tufting revenue.");return;}
+      fields.h=h;
+    }
+    try{
+      const product=await registerNewProduct(client,model,fields);
+      mergeIntoMaster(client,model,product);
+    }catch(e){alert("Could not save new model: "+e.message);return;}
+  }else{
+    client=val(section+"-client");model=val(section+"-model");
+    if(!client||!model){alert("Pick a client and model.");return;}
+  }
   const day=numVal(section+"-day"), night=numVal(section+"-night");
-  if(!client||!model){alert("Pick a client and model.");return;}
   if(day===0&&night===0){alert("Enter a day or night quantity.");return;}
   state[section].push({client,model,day,night});
   render();
@@ -254,14 +348,30 @@ function addSimpleRow(section){
 function tabPackaging(){
   return `
     <div class="add-row-form">
-      <select id="pk-client" onchange="onClientChange('pk')">${clientOptionsHTML()}</select>
-      <select id="pk-model" onchange="onModelChange('pk')">${modelOptionsHTML(val("pk-client"))}</select>
+      <label class="new-toggle"><input type="checkbox" id="pk-new" onchange="toggleNewModel('pk')"/> New model (not in list yet)</label>
+      <span id="pk-existing-fields" class="existing-fields">
+        <select id="pk-client" onchange="onClientChange('pk')">${clientOptionsHTML()}</select>
+        <select id="pk-model" onchange="onModelChange('pk')">${modelOptionsHTML(val("pk-client"))}</select>
+      </span>
+      <span id="pk-new-fields" class="new-fields" style="display:none">
+        <input id="pk-client-new" type="text" list="clients-datalist" placeholder="New client name"/>
+        <input id="pk-model-new" type="text" placeholder="New model name"/>
+        <select id="pk-new-pkg" onchange="onNewPkgChange()">
+          <option value="">Packaging type…</option>
+          <option value="hanger">Hanger</option>
+          <option value="dispenser">Dispenser</option>
+          <option value="pouch">Pouch</option>
+          <option value="loose">Loose</option>
+        </select>
+        <div id="pk-new-bps-wrap" style="display:none"><input id="pk-new-bps" type="number" min="0" step="0.01" placeholder="BPS"/></div>
+      </span>
       <input id="pk-day" type="number" min="0" placeholder="Day qty"/>
       <input id="pk-night" type="number" min="0" placeholder="Night qty"/>
       <div id="pk-bps-wrap" style="display:none"><input id="pk-bps" type="number" min="0" step="0.01" placeholder="BPS"/></div>
       <button class="add-btn" onclick="addPackagingRow()">+ Add</button>
     </div>
     <div id="pk-hint" class="hint-text">Pick a client and model to see the packaging category.</div>
+    <div class="hint-text">New model? Tick the box, type the client and model name, and pick the packaging type — Hanger/Dispenser also need BPS (brushes per shot).</div>
     ${secLabel("Sealing — Hanger / Dispenser")}
     ${rowsTableBps(state.packaging.sealing,["packaging","sealing"])}
     ${secLabel("Pouch")}
@@ -271,12 +381,33 @@ function tabPackaging(){
     <button class="submit-btn" style="background:#f97316" onclick="submitSection('packaging')">Submit Packaging Data</button>
   `;
 }
-function addPackagingRow(){
-  const client=val("pk-client"), model=val("pk-model");
+async function addPackagingRow(){
+  const isNew=document.getElementById("pk-new").checked;
+  let client,model,prod;
+  if(isNew){
+    client=val("pk-client-new").trim();
+    model=val("pk-model-new").trim();
+    const pkg=val("pk-new-pkg");
+    if(!client||!model){alert("Enter a client and model name.");return;}
+    if(!pkg){alert("Pick a packaging type for this new model.");return;}
+    const fields={pkg};
+    if(pkg==="hanger"||pkg==="dispenser"){
+      const bps=numVal("pk-new-bps");
+      if(!bps){alert("Enter BPS (brushes per shot) for this packaging type.");return;}
+      fields.bps=bps;
+    }
+    try{
+      const product=await registerNewProduct(client,model,fields);
+      mergeIntoMaster(client,model,product);
+    }catch(e){alert("Could not save new model: "+e.message);return;}
+    prod=MASTER[client+"|"+model];
+  }else{
+    client=val("pk-client");model=val("pk-model");
+    if(!client||!model){alert("Pick a client and model.");return;}
+    prod=MASTER[client+"|"+model]||{};
+  }
   const day=numVal("pk-day"), night=numVal("pk-night");
-  if(!client||!model){alert("Pick a client and model.");return;}
   if(day===0&&night===0){alert("Enter a day or night quantity.");return;}
-  const prod=MASTER[client+"|"+model]||{};
   if(prod.pkg==="hanger"||prod.pkg==="dispenser"){
     const bps=numVal("pk-bps")||prod.bps||0;
     state.packaging.sealing.push({client,model,day,night,bps});
@@ -285,7 +416,7 @@ function addPackagingRow(){
   }else if(prod.pkg==="loose"){
     state.packaging.loose.push({client,model,day,night});
   }else{
-    alert("This model has no packaging type set in master.json.");return;
+    alert("This model has no packaging type set.");return;
   }
   render();
 }
@@ -443,6 +574,7 @@ function render(){
     </div>
     ${statusMsg?`<div class="status-msg ${statusMsg.type}">${esc(statusMsg.text)}</div>`:""}
     <div id="tab-content">${tabContent}</div>
+    <datalist id="clients-datalist">${CLIENTS.map(c=>`<option value="${esc(c)}"></option>`).join("")}</datalist>
     <div class="footer">Each tab submits independently and merges into that day's record — no need to fill every tab in one sitting.</div>
   `;
   document.getElementById("app").innerHTML=html;
