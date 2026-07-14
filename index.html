@@ -18,6 +18,7 @@ body{background:#0d0d1a;color:#e2e8f0;font-family:'Inter','Segoe UI',sans-serif;
 .header-right{display:flex;flex-direction:column;align-items:flex-end;gap:6px}
 .entry-link{color:#00b4d8;font-family:'DM Mono',monospace;font-size:12px;text-decoration:none;border:1px solid rgba(0,180,216,0.3);border-radius:8px;padding:8px 12px}
 .entry-link:hover{background:rgba(0,180,216,0.08)}
+.nav-links{display:flex;gap:8px}
 .last-refresh{font-size:10px;color:#4b5563}
 .date-select{background:rgba(0,180,216,0.1);border:1px solid rgba(0,180,216,0.3);border-radius:8px;padding:8px 12px;color:#00b4d8;font-family:'DM Mono',monospace;font-size:14px;font-weight:700;cursor:pointer;outline:none}
 .date-select option{background:#1a1a2e;color:#e2e8f0}
@@ -162,17 +163,22 @@ function dailyElec(){
   const d=ELEC.monthly/ELEC.days;
   return{H:d*ELEC.splits.H,V:d*ELEC.splits.V,T:d*ELEC.splits.T,Tr:d*ELEC.splits.Tr,total:d};
 }
+function attNum(v){
+  if(typeof v==='number') return v;
+  if(v&&typeof v==='object') return sumObj(v); // legacy name-map format
+  return 0;
+}
 function calcLabour(att){
-  const m12=sumObj(att.moulding.day12)+sumObj(att.moulding.night12);
-  const m8=sumObj(att.moulding.hr8);
-  const t12=sumObj(att.tufting.day12)+sumObj(att.tufting.night12);
-  const t8=sumObj(att.tufting.hr8);
+  const m12=attNum(att.moulding.day12)+attNum(att.moulding.night12);
+  const m8=attNum(att.moulding.hr8);
+  const t12=attNum(att.tufting.day12)+attNum(att.tufting.night12);
+  const t8=attNum(att.tufting.hr8);
   const moulding=m12*WAGE.hr12+m8*WAGE.hr8;
   const tufting=t12*WAGE.hr12+t8*WAGE.hr8;
   const checking=att.checking.hr12*WAGE.hr12+att.checking.hr8*WAGE.hr8;
-  const pkgDay12=typeof att.packaging.day12==='object'?sumObj(att.packaging.day12):att.packaging.day12;
-  const pkgHr8=typeof att.packaging.hr8==='object'?sumObj(att.packaging.hr8):att.packaging.hr8;
-  const pkgNight12=typeof att.packaging.night12==='object'?sumObj(att.packaging.night12):att.packaging.night12;
+  const pkgDay12=attNum(att.packaging.day12);
+  const pkgHr8=attNum(att.packaging.hr8);
+  const pkgNight12=attNum(att.packaging.night12);
   const packaging=pkgDay12*WAGE.hr12+pkgHr8*WAGE.hr8+pkgNight12*WAGE.hr12;
   const overhead=att.overhead.cleaning_8hr*WAGE.hr8+att.overhead.store_12hr*WAGE.hr12+att.overhead.qc_12hr*WAGE.hr12;
   return{moulding,tufting,checking,tuftingTotal:tufting+checking,packaging,overhead,
@@ -477,7 +483,10 @@ function render(){
           <div class="header-sub">Greenedge Ventures — Factory</div>
           <div class="header-title mono">Daily P&L Dashboard</div>
         </div>
-        <a class="entry-link" href="entry.html">+ Enter Today's Data</a>
+        <div class="nav-links">
+          <a class="entry-link" href="entry.html">+ Enter Today's Data</a>
+          <a class="entry-link" href="reports.html">Reports →</a>
+        </div>
       </div>
       <div class="header-right">
         <select class="date-select" onchange="changeDate(this.value)">

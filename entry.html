@@ -13,6 +13,7 @@ body{background:#0d0d1a;color:#e2e8f0;font-family:'Inter','Segoe UI',sans-serif;
 .header{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:18px;flex-wrap:wrap;gap:12px}
 .header-sub{font-size:10px;color:#4b5563;letter-spacing:2px;text-transform:uppercase;margin-bottom:4px}
 .header-title{font-size:22px;font-weight:700;font-family:'DM Mono',monospace;color:#f1f5f9}
+.nav-links{display:flex;gap:8px}
 .dash-link{color:#00b4d8;font-family:'DM Mono',monospace;font-size:12px;text-decoration:none;border:1px solid rgba(0,180,216,0.3);border-radius:8px;padding:8px 12px;height:fit-content}
 .dash-link:hover{background:rgba(0,180,216,0.08)}
 .entry-bar{display:flex;gap:14px;flex-wrap:wrap;background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.08);border-radius:12px;padding:14px 16px;margin-bottom:16px}
@@ -37,7 +38,6 @@ body{background:#0d0d1a;color:#e2e8f0;font-family:'Inter','Segoe UI',sans-serif;
 .new-toggle input{width:auto;cursor:pointer}
 .existing-fields,.new-fields{display:flex;gap:8px;flex-wrap:wrap}
 .add-btn{background:#00b4d8;color:#0d0d1a;border:none;border-radius:7px;padding:9px 14px;font-weight:700;font-size:12px;cursor:pointer;font-family:'DM Mono',monospace}
-.add-btn.small{padding:8px 12px}
 .hint-text{font-size:11px;color:#6b7280;margin-bottom:10px;font-style:italic}
 .empty-note{font-size:11.5px;color:#4b5563;padding:8px 2px}
 .tbl-wrap{overflow-x:auto;margin-bottom:6px}
@@ -49,17 +49,18 @@ td:first-child{text-align:left;color:#cbd5e1;font-family:'Inter',sans-serif}
 td:nth-child(2){text-align:left;color:#cbd5e1;font-family:'Inter',sans-serif}
 .rm-btn{background:rgba(255,77,109,0.12);color:#ff4d6d;border:1px solid rgba(255,77,109,0.25);border-radius:6px;width:24px;height:24px;cursor:pointer;font-size:14px;line-height:1}
 .submit-btn{display:block;width:100%;border:none;border-radius:10px;padding:13px;font-weight:700;font-size:13px;color:#0d0d1a;cursor:pointer;font-family:'DM Mono',monospace;margin-top:18px;letter-spacing:0.5px}
-.chip-row{display:flex;gap:8px;margin-bottom:8px}
-.chip-row input{flex:1;background:#111827;border:1px solid rgba(255,255,255,0.12);border-radius:7px;padding:8px 10px;color:#e2e8f0;font-family:'Inter',sans-serif;font-size:13px;outline:none}
-.chip-row input:focus{border-color:#00b4d8}
-.chips{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:4px}
-.chip{background:rgba(0,180,216,0.1);border:1px solid rgba(0,180,216,0.25);border-radius:20px;padding:5px 6px 5px 12px;font-size:12px;color:#e2e8f0;display:flex;align-items:center;gap:6px}
-.chip button{background:none;border:none;color:#ff4d6d;cursor:pointer;font-size:14px;width:18px;height:18px;border-radius:50%}
-.chip button:hover{background:rgba(255,77,109,0.15)}
 .count-row{display:flex;justify-content:space-between;align-items:center;background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.07);border-radius:9px;padding:9px 13px;margin-bottom:6px}
 .count-row label{font-size:12.5px;color:#94a3b8}
 .count-row input{width:80px;background:#111827;border:1px solid rgba(255,255,255,0.12);border-radius:6px;padding:6px 8px;color:#e2e8f0;font-family:'DM Mono',monospace;font-size:13px;text-align:right;outline:none}
 .count-row input:focus{border-color:#00b4d8}
+.pending-banner{background:rgba(251,191,36,0.08);border:1px solid rgba(251,191,36,0.25);border-radius:10px;padding:10px 14px;margin-bottom:14px}
+.pending-title{font-size:11.5px;color:#fbbf24;font-weight:600;margin-bottom:8px}
+.pending-list{display:flex;flex-wrap:wrap;gap:6px}
+.pending-chip{background:rgba(251,191,36,0.12);border:1px solid rgba(251,191,36,0.3);color:#fbbf24;border-radius:20px;padding:5px 12px;font-size:11.5px;cursor:pointer;font-family:'DM Mono',monospace}
+.pending-chip:hover{background:rgba(251,191,36,0.2)}
+.missing-note{font-size:11px;color:#fbbf24;margin:8px 0 6px;font-style:italic}
+.missing-fields{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:10px}
+.missing-fields select,.missing-fields input{background:#111827;border:1px solid rgba(251,191,36,0.4);border-radius:7px;padding:8px 10px;color:#e2e8f0;font-family:'DM Mono',monospace;font-size:12.5px;outline:none}
 .loading{display:flex;align-items:center;justify-content:center;min-height:60vh;font-size:16px;color:#6b7280;font-family:'DM Mono',monospace}
 .error{background:rgba(255,77,109,0.08);border:1px solid rgba(255,77,109,0.25);border-radius:10px;padding:20px;text-align:center;color:#ff4d6d;margin:40px 0}
 .footer{margin-top:28px;font-size:10.5px;color:#374151;text-align:center;padding-bottom:16px}
@@ -75,6 +76,14 @@ td:nth-child(2){text-align:left;color:#cbd5e1;font-family:'Inter',sans-serif}
 const REPO   = "nivesh-sudo/greenedge-factory-dashboard";
 const BRANCH = "main";
 const MASTER_URL = () => `https://raw.githubusercontent.com/${REPO}/${BRANCH}/master.json?t=${Date.now()}`;
+
+const DEPT_LABEL = {handles:"Handles",printing:"Printing",tufting:"Tufting",trimming:"Trimming",packaging:"Packaging"};
+const FIELD_DEF = {
+  w:{type:"number",label:"Weight (g/unit)",step:"0.01"},
+  h:{type:"number",label:"Height (cm)",step:"0.1"},
+  pkg:{type:"select",label:"Packaging type",options:[["hanger","Hanger"],["dispenser","Dispenser"],["pouch","Pouch"],["loose","Loose"]]},
+  bps:{type:"number",label:"BPS (brushes/shot)",step:"0.01"}
+};
 
 // ─── STATE ───────────────────────────────────────────────────────────────────
 let MASTER={}, CLIENTS=[], MODELS_BY_CLIENT={};
@@ -92,8 +101,8 @@ function freshState(){
     trimming:[],
     packaging:{sealing:[],pouch:[],loose:[]},
     attendance:{
-      moulding:{day12:[],night12:[],hr8:[]},
-      tufting:{day12:[],night12:[],hr8:[]},
+      moulding:{day12:0,night12:0,hr8:0},
+      tufting:{day12:0,night12:0,hr8:0},
       checking:{hr12:0,hr8:0},
       packaging:{day12:0,hr8:0,night12:0},
       overhead:{cleaning_8hr:0,store_12hr:0,qc_12hr:0}
@@ -140,29 +149,130 @@ function modelOptionsHTML(client,selected){
   const models=(MODELS_BY_CLIENT[client]||[]).slice().sort();
   return `<option value="">Model…</option>`+models.map(m=>`<option value="${esc(m)}"${m===selected?" selected":""}>${esc(m)}</option>`).join("");
 }
-function toggleNewModel(prefix){
+
+// ─── MISSING-FIELD / PENDING-BOM SYSTEM ─────────────────────────────────────
+function missingFieldsFor(dept,prod){
+  prod=prod||{};
+  if(dept==="handles"){
+    const out=[];
+    if(prod.m==null) out.push("m");
+    if(prod.w==null) out.push("w");
+    return out;
+  }
+  if(dept==="tufting") return prod.h==null?["h"]:[];
+  if(dept==="packaging"){
+    const out=[];
+    if(prod.pkg==null){out.push("pkg");out.push("bps");}
+    else if((prod.pkg==="hanger"||prod.pkg==="dispenser")&&prod.bps==null){out.push("bps");}
+    return out;
+  }
+  return [];
+}
+function renderableMissingFields(dept,prod){
+  return missingFieldsFor(dept,prod).filter(f=>f!=="m");
+}
+function missingFieldsHTML(prefix,dept,prod){
+  const missing=renderableMissingFields(dept,prod);
+  if(!missing.length) return "";
+  const bothPkgBps=missing.includes("pkg")&&missing.includes("bps");
+  const piece=f=>{
+    const def=FIELD_DEF[f];
+    if(def.type==="select"){
+      const opts=`<option value="">${def.label}…</option>`+def.options.map(([v,l])=>`<option value="${v}">${l}</option>`).join("");
+      const onchange=f==="pkg"?` onchange="onMissingPkgChange('${prefix}')"`:"";
+      return `<select id="${prefix}-miss-${f}"${onchange}>${opts}</select>`;
+    }
+    return `<input id="${prefix}-miss-${f}" type="number" min="0" step="${def.step}" placeholder="${def.label}"/>`;
+  };
+  const ordered=missing.filter(f=>f!=="bps");
+  let html=ordered.map(piece).join("");
+  if(missing.includes("bps")){
+    html += bothPkgBps ? `<span id="${prefix}-miss-bps-wrap" style="display:none">${piece("bps")}</span>` : piece("bps");
+  }
+  return `<div class="missing-note">Missing info needed for ${DEPT_LABEL[dept]} revenue — fill in below:</div><div class="missing-fields">${html}</div>`;
+}
+function onMissingPkgChange(prefix){
+  const pkg=val(prefix+"-miss-pkg");
+  const wrap=document.getElementById(prefix+"-miss-bps-wrap");
+  if(wrap) wrap.style.display=(pkg==="hanger"||pkg==="dispenser")?"":"none";
+}
+function readMissingFieldValues(prefix,missing,prod){
+  const out={};
+  for(const f of missing){
+    if(f==="bps"){
+      const pkgEl=document.getElementById(prefix+"-miss-pkg");
+      const pkgVal=pkgEl?pkgEl.value:(prod&&prod.pkg);
+      if(pkgVal!=="hanger"&&pkgVal!=="dispenser") continue;
+      const n=parseFloat(val(prefix+"-miss-bps"));
+      if(!n||n<=0){alert("Enter BPS (brushes per shot).");return null;}
+      out.bps=n;
+      continue;
+    }
+    if(f==="pkg"){
+      const v=val(prefix+"-miss-pkg");
+      if(!v){alert("Pick a packaging type.");return null;}
+      out.pkg=v;
+      continue;
+    }
+    const n=parseFloat(val(prefix+"-miss-"+f));
+    if(!n||n<=0){alert(`Enter ${FIELD_DEF[f].label}.`);return null;}
+    out[f]=n;
+  }
+  return out;
+}
+function currentMissingHTML(prefix,dept){
+  const {client,model}=resolveClientModel(prefix);
+  const prod=(client&&model)?(MASTER[client+"|"+model]||{}):{};
+  return missingFieldsHTML(prefix,dept,prod);
+}
+function refreshMissingFields(prefix,dept){
+  const wrap=document.getElementById(prefix+"-missing-wrap");
+  if(wrap) wrap.innerHTML=currentMissingHTML(prefix,dept);
+}
+function resolveClientModel(prefix){
+  const newEl=document.getElementById(prefix+"-new");
+  const isNew=newEl?newEl.checked:false;
+  if(isNew) return {client:val(prefix+"-client-new").trim(), model:val(prefix+"-model-new").trim()};
+  return {client:val(prefix+"-client"), model:val(prefix+"-model")};
+}
+function onNewToggle(prefix,dept){
   const isNew=document.getElementById(prefix+"-new").checked;
   const existingWrap=document.getElementById(prefix+"-existing-fields");
   const newWrap=document.getElementById(prefix+"-new-fields");
   if(existingWrap) existingWrap.style.display=isNew?"none":"";
   if(newWrap) newWrap.style.display=isNew?"":"none";
-  if(prefix==="pk"){
-    const hint=document.getElementById("pk-hint");
-    const bpsWrap=document.getElementById("pk-bps-wrap");
-    if(hint) hint.style.display=isNew?"none":"";
-    if(bpsWrap&&isNew) bpsWrap.style.display="none";
+  refreshMissingFields(prefix,dept);
+}
+function onClientChange(prefix,dept){
+  const client=val(prefix+"-client");
+  const modelEl=document.getElementById(prefix+"-model");
+  if(modelEl) modelEl.innerHTML=modelOptionsHTML(client);
+  refreshMissingFields(prefix,dept);
+}
+async function confirmAndRegister(client,model,fields){
+  const labels={m:"Category",w:"Weight (g/unit)",h:"Height (cm)",pkg:"Packaging type",bps:"BPS"};
+  const summary=Object.entries(fields).map(([k,v])=>{
+    const display=k==="m"?(v==="two"?"Vertical (Two Colour)":"Horizontal (Single/Ancillary)"):v;
+    return `${labels[k]||k}: ${display}`;
+  }).join("\n");
+  const ok=confirm(`Add "${client} — ${model}" to the shared product list?\n\n${summary}\n\nThis will be visible to every department.`);
+  if(!ok) return false;
+  const confirmPin=prompt("Enter the supervisor PIN to confirm this addition:");
+  if(confirmPin===null||confirmPin==="") return false;
+  try{
+    const product=await registerProduct(client,model,fields,confirmPin);
+    mergeIntoMaster(client,model,product);
+    return true;
+  }catch(e){
+    alert("Could not save: "+e.message);
+    return false;
   }
 }
-function onNewPkgChange(){
-  const pkg=val("pk-new-pkg");
-  const wrap=document.getElementById("pk-new-bps-wrap");
-  if(wrap) wrap.style.display=(pkg==="hanger"||pkg==="dispenser")?"":"none";
-}
-async function registerNewProduct(client,model,fields){
+async function registerProduct(client,model,fields,pinValue){
   const res=await fetch("/api/add-product",{
     method:"POST",
     headers:{"Content-Type":"application/json"},
-    body:JSON.stringify({pin,client,model,fields})
+    body:JSON.stringify({pin:pinValue,client,model,fields})
   });
   const json=await res.json().catch(()=>({}));
   if(!res.ok) throw new Error(json.error||`HTTP ${res.status}`);
@@ -174,36 +284,29 @@ function mergeIntoMaster(client,model,product){
   if(!MODELS_BY_CLIENT[client]){MODELS_BY_CLIENT[client]=[];CLIENTS.push(client);CLIENTS.sort();}
   if(!MODELS_BY_CLIENT[client].includes(model)){MODELS_BY_CLIENT[client].push(model);MODELS_BY_CLIENT[client].sort();}
 }
-function onClientChange(prefix){
-  const client=val(prefix+"-client");
-  const modelEl=document.getElementById(prefix+"-model");
-  if(modelEl) modelEl.innerHTML=modelOptionsHTML(client);
-  if(prefix==="pk") onModelChange("pk");
+function prefixFor(dept){return dept==="handles"?"h":dept==="packaging"?"pk":dept;}
+function pendingBanner(dept){
+  const need=Object.keys(MASTER).filter(k=>missingFieldsFor(dept,MASTER[k]).length>0);
+  if(!need.length) return "";
+  return `<div class="pending-banner">
+    <div class="pending-title">⚠ ${need.length} product${need.length>1?"s":""} pending ${DEPT_LABEL[dept]} info</div>
+    <div class="pending-list">${need.map(k=>{
+      const idx=k.indexOf("|"); const c=k.slice(0,idx), m=k.slice(idx+1);
+      return `<button type="button" class="pending-chip" data-dept="${dept}" data-client="${esc(c)}" data-model="${esc(m)}" onclick="jumpToPending(this)">${esc(c)} — ${esc(m)}</button>`;
+    }).join("")}</div>
+  </div>`;
 }
-function onModelChange(prefix){
-  if(prefix!=="pk") return;
-  const client=val("pk-client"), model=val("pk-model");
-  const prod=MASTER[client+"|"+model]||{};
-  const hint=document.getElementById("pk-hint");
-  const bpsWrap=document.getElementById("pk-bps-wrap");
-  if(!hint||!bpsWrap) return;
-  if(!client||!model){
-    bpsWrap.style.display="none";
-    hint.textContent="Pick a client and model to see the packaging category.";
-  }else if(prod.pkg==="hanger"||prod.pkg==="dispenser"){
-    bpsWrap.style.display="";
-    document.getElementById("pk-bps").value=prod.bps||"";
-    hint.textContent=`Category: Sealing (${prod.pkg}) — enter shots, brushes = shots × BPS.`;
-  }else if(prod.pkg==="pouch"){
-    bpsWrap.style.display="none";
-    hint.textContent="Category: Pouch — enter pieces.";
-  }else if(prod.pkg==="loose"){
-    bpsWrap.style.display="none";
-    hint.textContent="Category: Loose — enter pieces.";
-  }else{
-    bpsWrap.style.display="none";
-    hint.textContent="This model has no packaging type set in master.json.";
-  }
+function jumpToPending(btn){
+  const dept=btn.dataset.dept, client=btn.dataset.client, model=btn.dataset.model;
+  const prefix=prefixFor(dept);
+  const newCk=document.getElementById(prefix+"-new");
+  if(newCk&&newCk.checked){newCk.checked=false;onNewToggle(prefix,dept);}
+  const clientEl=document.getElementById(prefix+"-client");
+  const modelEl=document.getElementById(prefix+"-model");
+  if(clientEl){clientEl.value=client;onClientChange(prefix,dept);}
+  if(modelEl){modelEl.value=model;refreshMissingFields(prefix,dept);}
+  const anchor=modelEl||clientEl;
+  if(anchor) anchor.scrollIntoView({behavior:"smooth",block:"center"});
 }
 
 // ─── ROW TABLES ──────────────────────────────────────────────────────────────
@@ -229,30 +332,89 @@ function removeRow(path,idx){
 }
 function secLabel(title){return `<div class="sec-label"><div class="sec-text">${title}</div></div>`;}
 
-// ─── TAB: HANDLES ────────────────────────────────────────────────────────────
-function tabHandles(){
-  return `
-    <div class="add-row-form">
-      <label class="new-toggle"><input type="checkbox" id="h-new" onchange="toggleNewModel('h')"/> New model (not in list yet)</label>
-      <span id="h-existing-fields" class="existing-fields">
-        <select id="h-client" onchange="onClientChange('h')">${clientOptionsHTML()}</select>
-        <select id="h-model">${modelOptionsHTML(val("h-client"))}</select>
-      </span>
-      <span id="h-new-fields" class="new-fields" style="display:none">
-        <input id="h-client-new" type="text" list="clients-datalist" placeholder="New client name"/>
-        <input id="h-model-new" type="text" placeholder="New model name"/>
-        <input id="h-new-w" type="number" min="0" step="0.01" placeholder="Weight (g/unit)"/>
-      </span>
-      <input id="h-day" type="number" min="0" placeholder="Day qty"/>
-      <input id="h-night" type="number" min="0" placeholder="Night qty"/>
+// ─── GENERIC ADD-ROW FORM ────────────────────────────────────────────────────
+function addRowFormHTML(prefix,dept){
+  const catSelect = dept==="handles" ? `
       <select id="h-cat">
         <option value="">Auto-detect category</option>
         <option value="vertical">Vertical (Two Colour)</option>
         <option value="horizontal">Horizontal (Single/Ancillary)</option>
-      </select>
-      <button class="add-btn" onclick="addHandleRow()">+ Add</button>
+      </select>` : "";
+  return `
+    <div class="add-row-form">
+      <label class="new-toggle"><input type="checkbox" id="${prefix}-new" onchange="onNewToggle('${prefix}','${dept}')"/> New model (not in list yet)</label>
+      <span id="${prefix}-existing-fields" class="existing-fields">
+        <select id="${prefix}-client" onchange="onClientChange('${prefix}','${dept}')">${clientOptionsHTML()}</select>
+        <select id="${prefix}-model" onchange="refreshMissingFields('${prefix}','${dept}')">${modelOptionsHTML(val(prefix+"-client"))}</select>
+      </span>
+      <span id="${prefix}-new-fields" class="new-fields" style="display:none">
+        <input id="${prefix}-client-new" type="text" list="clients-datalist" oninput="refreshMissingFields('${prefix}','${dept}')" placeholder="New client name"/>
+        <input id="${prefix}-model-new" type="text" oninput="refreshMissingFields('${prefix}','${dept}')" placeholder="New model name"/>
+      </span>
+      <input id="${prefix}-day" type="number" min="0" placeholder="Day qty"/>
+      <input id="${prefix}-night" type="number" min="0" placeholder="Night qty"/>
+      ${catSelect}
+      <button class="add-btn" onclick="addRow('${prefix}','${dept}')">+ Add</button>
     </div>
-    <div class="hint-text">New model? Tick the box, type the client and model name, pick Vertical/Horizontal and enter the weight per unit — that's what drives Handles revenue.</div>
+    <div id="${prefix}-missing-wrap">${currentMissingHTML(prefix,dept)}</div>
+  `;
+}
+async function addRow(prefix,dept){
+  const {client,model}=resolveClientModel(prefix);
+  if(!client||!model){alert("Pick or enter a client and model.");return;}
+  const day=numVal(prefix+"-day"), night=numVal(prefix+"-night");
+  if(day===0&&night===0){alert("Enter a day or night quantity.");return;}
+
+  let prod=MASTER[client+"|"+model]||{};
+  const missing=renderableMissingFields(dept,prod);
+  const fieldsToRegister={};
+
+  if(missing.length){
+    const values=readMissingFieldValues(prefix,missing,prod);
+    if(!values) return;
+    Object.assign(fieldsToRegister,values);
+  }
+
+  let cat;
+  if(dept==="handles"){
+    cat=val("h-cat");
+    if(prod.m==null){
+      if(cat!=="vertical"&&cat!=="horizontal"){alert("Pick Vertical or Horizontal for this model.");return;}
+      fieldsToRegister.m=cat==="vertical"?"two":"single";
+    }
+  }
+
+  if(Object.keys(fieldsToRegister).length){
+    const confirmed=await confirmAndRegister(client,model,fieldsToRegister);
+    if(!confirmed) return;
+    prod=MASTER[client+"|"+model];
+  }
+
+  if(dept==="handles"){
+    if(!cat) cat=prod.m==="single"?"horizontal":"vertical";
+    state.handles[cat].push({client,model,day,night});
+  }else if(dept==="packaging"){
+    if(prod.pkg==="hanger"||prod.pkg==="dispenser"){
+      state.packaging.sealing.push({client,model,day,night,bps:prod.bps||0});
+    }else if(prod.pkg==="pouch"){
+      state.packaging.pouch.push({client,model,day,night});
+    }else if(prod.pkg==="loose"){
+      state.packaging.loose.push({client,model,day,night});
+    }else{
+      alert("Packaging type still not set — please try again.");return;
+    }
+  }else{
+    state[dept].push({client,model,day,night});
+  }
+  render();
+}
+
+// ─── TABS ────────────────────────────────────────────────────────────────────
+function tabHandles(){
+  return `
+    ${addRowFormHTML("h","handles")}
+    <div class="hint-text">New or incomplete model? Fill in the highlighted fields — you'll confirm with the PIN since it updates the shared product list.</div>
+    ${pendingBanner("handles")}
     ${secLabel("Vertical — Two Colour")}
     ${rowsTable(state.handles.vertical,["handles","vertical"])}
     ${secLabel("Horizontal — Single Colour / Ancillary")}
@@ -260,118 +422,20 @@ function tabHandles(){
     <button class="submit-btn" style="background:#06d6a0" onclick="submitSection('handles')">Submit Handles Data</button>
   `;
 }
-async function addHandleRow(){
-  const isNew=document.getElementById("h-new").checked;
-  const cat=val("h-cat");
-  let client,model;
-  if(isNew){
-    client=val("h-client-new").trim();
-    model=val("h-model-new").trim();
-    const w=numVal("h-new-w");
-    if(!client||!model){alert("Enter a client and model name.");return;}
-    if(cat!=="vertical"&&cat!=="horizontal"){alert("Pick Vertical or Horizontal for this new model.");return;}
-    if(!w){alert("Enter the weight per unit (grams) — needed to calculate Handles revenue.");return;}
-    try{
-      const product=await registerNewProduct(client,model,{m:cat==="vertical"?"two":"single",w});
-      mergeIntoMaster(client,model,product);
-    }catch(e){alert("Could not save new model: "+e.message);return;}
-  }else{
-    client=val("h-client");model=val("h-model");
-    if(!client||!model){alert("Pick a client and model.");return;}
-  }
-  const day=numVal("h-day"), night=numVal("h-night");
-  if(day===0&&night===0){alert("Enter a day or night quantity.");return;}
-  const prod=MASTER[client+"|"+model]||{};
-  let useCat=cat;
-  if(!useCat) useCat=prod.m==="single"?"horizontal":"vertical";
-  state.handles[useCat].push({client,model,day,night});
-  render();
-}
-
-// ─── TAB: PRINTING / TUFTING / TRIMMING ─────────────────────────────────────
 function tabSimpleRows(section,label,note,color){
-  const deptField=section==="tufting"
-    ? `<input id="tufting-new-h" type="number" min="0" step="0.1" placeholder="Height (cm)"/>`
-    : "";
-  const newModelNote=section==="tufting"
-    ? "New model? Tick the box, type the client and model name, and enter the height in cm — that's what drives Tufting revenue."
-    : "New model? Tick the box and type the client and model name — no extra numbers needed here.";
   return `
-    <div class="add-row-form">
-      <label class="new-toggle"><input type="checkbox" id="${section}-new" onchange="toggleNewModel('${section}')"/> New model (not in list yet)</label>
-      <span id="${section}-existing-fields" class="existing-fields">
-        <select id="${section}-client" onchange="onClientChange('${section}')">${clientOptionsHTML()}</select>
-        <select id="${section}-model">${modelOptionsHTML(val(section+"-client"))}</select>
-      </span>
-      <span id="${section}-new-fields" class="new-fields" style="display:none">
-        <input id="${section}-client-new" type="text" list="clients-datalist" placeholder="New client name"/>
-        <input id="${section}-model-new" type="text" placeholder="New model name"/>
-        ${deptField}
-      </span>
-      <input id="${section}-day" type="number" min="0" placeholder="Day qty"/>
-      <input id="${section}-night" type="number" min="0" placeholder="Night qty"/>
-      <button class="add-btn" onclick="addSimpleRow('${section}')">+ Add</button>
-    </div>
-    <div class="hint-text">${newModelNote}${note?` ${note}`:""}</div>
+    ${addRowFormHTML(section,section)}
+    ${note?`<div class="hint-text">${note}</div>`:""}
+    ${pendingBanner(section)}
     ${rowsTable(state[section],[section])}
     <button class="submit-btn" style="background:${color}" onclick="submitSection('${section}')">Submit ${label} Data</button>
   `;
 }
-async function addSimpleRow(section){
-  const isNew=document.getElementById(section+"-new").checked;
-  let client,model;
-  if(isNew){
-    client=val(section+"-client-new").trim();
-    model=val(section+"-model-new").trim();
-    if(!client||!model){alert("Enter a client and model name.");return;}
-    const fields={};
-    if(section==="tufting"){
-      const h=numVal("tufting-new-h");
-      if(!h){alert("Enter the model height (cm) — needed to calculate Tufting revenue.");return;}
-      fields.h=h;
-    }
-    try{
-      const product=await registerNewProduct(client,model,fields);
-      mergeIntoMaster(client,model,product);
-    }catch(e){alert("Could not save new model: "+e.message);return;}
-  }else{
-    client=val(section+"-client");model=val(section+"-model");
-    if(!client||!model){alert("Pick a client and model.");return;}
-  }
-  const day=numVal(section+"-day"), night=numVal(section+"-night");
-  if(day===0&&night===0){alert("Enter a day or night quantity.");return;}
-  state[section].push({client,model,day,night});
-  render();
-}
-
-// ─── TAB: PACKAGING ──────────────────────────────────────────────────────────
 function tabPackaging(){
   return `
-    <div class="add-row-form">
-      <label class="new-toggle"><input type="checkbox" id="pk-new" onchange="toggleNewModel('pk')"/> New model (not in list yet)</label>
-      <span id="pk-existing-fields" class="existing-fields">
-        <select id="pk-client" onchange="onClientChange('pk')">${clientOptionsHTML()}</select>
-        <select id="pk-model" onchange="onModelChange('pk')">${modelOptionsHTML(val("pk-client"))}</select>
-      </span>
-      <span id="pk-new-fields" class="new-fields" style="display:none">
-        <input id="pk-client-new" type="text" list="clients-datalist" placeholder="New client name"/>
-        <input id="pk-model-new" type="text" placeholder="New model name"/>
-        <select id="pk-new-pkg" onchange="onNewPkgChange()">
-          <option value="">Packaging type…</option>
-          <option value="hanger">Hanger</option>
-          <option value="dispenser">Dispenser</option>
-          <option value="pouch">Pouch</option>
-          <option value="loose">Loose</option>
-        </select>
-        <div id="pk-new-bps-wrap" style="display:none"><input id="pk-new-bps" type="number" min="0" step="0.01" placeholder="BPS"/></div>
-      </span>
-      <input id="pk-day" type="number" min="0" placeholder="Day qty"/>
-      <input id="pk-night" type="number" min="0" placeholder="Night qty"/>
-      <div id="pk-bps-wrap" style="display:none"><input id="pk-bps" type="number" min="0" step="0.01" placeholder="BPS"/></div>
-      <button class="add-btn" onclick="addPackagingRow()">+ Add</button>
-    </div>
-    <div id="pk-hint" class="hint-text">Pick a client and model to see the packaging category.</div>
-    <div class="hint-text">New model? Tick the box, type the client and model name, and pick the packaging type — Hanger/Dispenser also need BPS (brushes per shot).</div>
+    ${addRowFormHTML("pk","packaging")}
+    <div class="hint-text">New or incomplete model? Pick the packaging type (and BPS for Hanger/Dispenser) — confirmed with the PIN since it updates the shared product list.</div>
+    ${pendingBanner("packaging")}
     ${secLabel("Sealing — Hanger / Dispenser")}
     ${rowsTableBps(state.packaging.sealing,["packaging","sealing"])}
     ${secLabel("Pouch")}
@@ -380,73 +444,6 @@ function tabPackaging(){
     ${rowsTable(state.packaging.loose,["packaging","loose"])}
     <button class="submit-btn" style="background:#f97316" onclick="submitSection('packaging')">Submit Packaging Data</button>
   `;
-}
-async function addPackagingRow(){
-  const isNew=document.getElementById("pk-new").checked;
-  let client,model,prod;
-  if(isNew){
-    client=val("pk-client-new").trim();
-    model=val("pk-model-new").trim();
-    const pkg=val("pk-new-pkg");
-    if(!client||!model){alert("Enter a client and model name.");return;}
-    if(!pkg){alert("Pick a packaging type for this new model.");return;}
-    const fields={pkg};
-    if(pkg==="hanger"||pkg==="dispenser"){
-      const bps=numVal("pk-new-bps");
-      if(!bps){alert("Enter BPS (brushes per shot) for this packaging type.");return;}
-      fields.bps=bps;
-    }
-    try{
-      const product=await registerNewProduct(client,model,fields);
-      mergeIntoMaster(client,model,product);
-    }catch(e){alert("Could not save new model: "+e.message);return;}
-    prod=MASTER[client+"|"+model];
-  }else{
-    client=val("pk-client");model=val("pk-model");
-    if(!client||!model){alert("Pick a client and model.");return;}
-    prod=MASTER[client+"|"+model]||{};
-  }
-  const day=numVal("pk-day"), night=numVal("pk-night");
-  if(day===0&&night===0){alert("Enter a day or night quantity.");return;}
-  if(prod.pkg==="hanger"||prod.pkg==="dispenser"){
-    const bps=numVal("pk-bps")||prod.bps||0;
-    state.packaging.sealing.push({client,model,day,night,bps});
-  }else if(prod.pkg==="pouch"){
-    state.packaging.pouch.push({client,model,day,night});
-  }else if(prod.pkg==="loose"){
-    state.packaging.loose.push({client,model,day,night});
-  }else{
-    alert("This model has no packaging type set.");return;
-  }
-  render();
-}
-
-// ─── TAB: ATTENDANCE ─────────────────────────────────────────────────────────
-function chipInput(prefix,names,path){
-  const pathStr=JSON.stringify(path);
-  return `<div class="chip-row">
-    <input id="${prefix}-name" type="text" placeholder="Worker name" onkeydown="if(event.key==='Enter'){event.preventDefault();addChip('${prefix}',${pathStr});}"/>
-    <button class="add-btn small" onclick="addChip('${prefix}',${pathStr})">+ Add</button>
-  </div>
-  <div class="chips">
-    ${names.length?names.map((n,i)=>`<span class="chip">${esc(n)}<button onclick='removeChipAt(${pathStr},${i})'>×</button></span>`).join(""):`<span class="empty-note">No workers added</span>`}
-  </div>`;
-}
-function addChip(prefix,path){
-  const name=val(prefix+"-name").trim();
-  if(!name) return;
-  let obj=state;
-  for(const p of path) obj=obj[p];
-  obj.push(name);
-  render();
-  const el=document.getElementById(prefix+"-name");
-  if(el) el.focus();
-}
-function removeChipAt(path,idx){
-  let obj=state;
-  for(const p of path) obj=obj[p];
-  obj.splice(idx,1);
-  render();
 }
 function countInput(id,label,value,path){
   const pathStr=JSON.stringify(path);
@@ -461,18 +458,14 @@ function setCount(id,path){
 function tabAttendance(){
   const A=state.attendance;
   return `
-    ${secLabel("Moulding — 12hr Day Shift")}
-    ${chipInput("mould-day12",A.moulding.day12,["attendance","moulding","day12"])}
-    ${secLabel("Moulding — 12hr Night Shift")}
-    ${chipInput("mould-night12",A.moulding.night12,["attendance","moulding","night12"])}
-    ${secLabel("Moulding — 8hr Shift")}
-    ${chipInput("mould-hr8",A.moulding.hr8,["attendance","moulding","hr8"])}
-    ${secLabel("Tufting — 12hr Day Shift")}
-    ${chipInput("tuft-day12",A.tufting.day12,["attendance","tufting","day12"])}
-    ${secLabel("Tufting — 12hr Night Shift")}
-    ${chipInput("tuft-night12",A.tufting.night12,["attendance","tufting","night12"])}
-    ${secLabel("Tufting — 8hr Shift")}
-    ${chipInput("tuft-hr8",A.tufting.hr8,["attendance","tufting","hr8"])}
+    ${secLabel("Moulding")}
+    ${countInput("mould-day12","12hr day shift workers",A.moulding.day12,["attendance","moulding","day12"])}
+    ${countInput("mould-night12","12hr night shift workers",A.moulding.night12,["attendance","moulding","night12"])}
+    ${countInput("mould-hr8","8hr shift workers",A.moulding.hr8,["attendance","moulding","hr8"])}
+    ${secLabel("Tufting")}
+    ${countInput("tuft-day12","12hr day shift workers",A.tufting.day12,["attendance","tufting","day12"])}
+    ${countInput("tuft-night12","12hr night shift workers",A.tufting.night12,["attendance","tufting","night12"])}
+    ${countInput("tuft-hr8","8hr shift workers",A.tufting.hr8,["attendance","tufting","hr8"])}
     ${secLabel("Checking")}
     ${countInput("checking-hr12","12hr shift workers",A.checking.hr12,["attendance","checking","hr12"])}
     ${countInput("checking-hr8","8hr shift workers",A.checking.hr8,["attendance","checking","hr8"])}
@@ -487,17 +480,6 @@ function tabAttendance(){
     <button class="submit-btn" style="background:#fb7185" onclick="submitSection('attendance')">Submit Attendance Data</button>
   `;
 }
-function buildAttendancePayload(){
-  const A=state.attendance;
-  const toObj=names=>{const o={};names.forEach(n=>o[n]=1);return o;};
-  return {
-    moulding:{day12:toObj(A.moulding.day12),night12:toObj(A.moulding.night12),hr8:toObj(A.moulding.hr8)},
-    tufting:{day12:toObj(A.tufting.day12),night12:toObj(A.tufting.night12),hr8:toObj(A.tufting.hr8)},
-    checking:{hr12:A.checking.hr12,hr8:A.checking.hr8},
-    packaging:{day12:A.packaging.day12,hr8:A.packaging.hr8,night12:A.packaging.night12},
-    overhead:{cleaning_8hr:A.overhead.cleaning_8hr,store_12hr:A.overhead.store_12hr,qc_12hr:A.overhead.qc_12hr}
-  };
-}
 
 // ─── SUBMIT ──────────────────────────────────────────────────────────────────
 async function submitSection(section){
@@ -507,7 +489,7 @@ async function submitSection(section){
   let payload;
   if(section==="handles") payload=state.handles;
   else if(section==="packaging") payload=state.packaging;
-  else if(section==="attendance") payload=buildAttendancePayload();
+  else if(section==="attendance") payload=state.attendance;
   else payload=state[section];
 
   setStatus("info",`Submitting ${section}…`);render();
@@ -557,7 +539,10 @@ function render(){
         <div class="header-sub">Greenedge Ventures — Factory</div>
         <div class="header-title mono">Daily Data Entry</div>
       </div>
-      <a class="dash-link" href="index.html">← Dashboard</a>
+      <div class="nav-links">
+        <a class="dash-link" href="index.html">← Dashboard</a>
+        <a class="dash-link" href="reports.html">Reports →</a>
+      </div>
     </div>
     <div class="entry-bar">
       <div class="entry-field">

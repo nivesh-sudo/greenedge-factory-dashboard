@@ -14,8 +14,8 @@ function emptyReport() {
       packaging: { sealing: [], pouch: [], loose: [] }
     },
     att: {
-      moulding: { day12: {}, night12: {}, hr8: {} },
-      tufting: { day12: {}, night12: {}, hr8: {} },
+      moulding: { day12: 0, night12: 0, hr8: 0 },
+      tufting: { day12: 0, night12: 0, hr8: 0 },
       checking: { hr12: 0, hr8: 0 },
       packaging: { day12: 0, hr8: 0, night12: 0 },
       overhead: { cleaning_8hr: 0, store_12hr: 0, qc_12hr: 0 }

@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>Greenedge Ventures — Reports</title>
+<link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.4/dist/chart.umd.min.js"></script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:#0d0d1a;color:#e2e8f0;font-family:'Inter','Segoe UI',sans-serif;min-height:100vh;padding:22px 14px}
+.mono{font-family:'DM Mono',monospace}
+.container{max-width:1040px;margin:0 auto}
+.header{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:18px;flex-wrap:wrap;gap:12px}
+.header-sub{font-size:10px;color:#4b5563;letter-spacing:2px;text-transform:uppercase;margin-bottom:4px}
+.header-title{font-size:24px;font-weight:700;font-family:'DM Mono',monospace;color:#f1f5f9}
+.nav-links{display:flex;gap:8px}
+.nav-link{color:#00b4d8;font-family:'DM Mono',monospace;font-size:12px;text-decoration:none;border:1px solid rgba(0,180,216,0.3);border-radius:8px;padding:8px 12px;height:fit-content}
+.nav-link:hover{background:rgba(0,180,216,0.08)}
+.filter-bar{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.08);border-radius:12px;padding:12px 16px;margin-bottom:18px}
+.preset-group{display:flex;gap:6px}
+.preset-btn{padding:7px 13px;border-radius:7px;border:none;cursor:pointer;font-size:11.5px;font-weight:600;font-family:'DM Mono',monospace;background:rgba(255,255,255,0.05);color:#6b7280}
+.preset-btn.active{background:#00b4d8;color:#0d0d1a}
+.custom-range{display:flex;align-items:center;gap:8px;font-size:11.5px;color:#6b7280}
+.custom-range input{background:#111827;border:1px solid rgba(255,255,255,0.12);border-radius:7px;padding:7px 9px;color:#e2e8f0;font-family:'DM Mono',monospace;font-size:12px;outline:none}
+.kpi-strip{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:10px;margin-bottom:18px}
+.kpi-card{background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.08);border-left:3px solid rgba(255,255,255,0.15);border-radius:10px;padding:14px 16px}
+.kpi-card.warn{border-left-color:#fbbf24}
+.kpi-label{font-size:10px;color:#6b7280;letter-spacing:1px;text-transform:uppercase;margin-bottom:6px}
+.kpi-val{font-size:22px;font-family:'DM Mono',monospace;font-weight:700}
+.chart-row{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:18px}
+.chart-card{background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.08);border-radius:12px;padding:16px;min-height:280px}
+.chart-title{font-size:11px;color:#6b7280;letter-spacing:1px;text-transform:uppercase;margin-bottom:12px}
+.panel{background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.08);border-radius:12px;padding:16px;margin-bottom:14px}
+.panel-title{font-size:11px;color:#6b7280;letter-spacing:1px;text-transform:uppercase;margin-bottom:10px;font-family:'DM Mono',monospace;font-weight:700}
+.hint-text{font-size:11px;color:#6b7280;margin-bottom:10px;font-style:italic}
+.tbl-wrap{overflow-x:auto}
+table{width:100%;border-collapse:collapse;font-size:12px}
+th{padding:6px 9px;color:#6b7280;font-weight:600;font-size:10px;letter-spacing:0.8px;text-transform:uppercase;border-bottom:1px solid rgba(255,255,255,0.07);font-family:'DM Mono',monospace;text-align:right}
+th:first-child,th:nth-child(2){text-align:left}
+td{padding:7px 9px;border-bottom:1px solid rgba(255,255,255,0.04);text-align:right;color:#94a3b8;font-family:'DM Mono',monospace}
+td:first-child,td:nth-child(2){text-align:left;color:#cbd5e1;font-family:'Inter',sans-serif}
+.bar-track{background:#111827;border-radius:6px;height:8px;overflow:hidden;min-width:100px}
+.bar-fill{height:100%;background:linear-gradient(90deg,#00b4d8,#06d6a0);border-radius:6px}
+.pill{display:inline-block;background:rgba(251,191,36,0.12);border:1px solid rgba(251,191,36,0.3);color:#fbbf24;border-radius:20px;padding:3px 9px;font-size:10.5px;font-family:'DM Mono',monospace;margin-right:4px}
+.mini-link{color:#00b4d8;font-size:11.5px;font-family:'DM Mono',monospace;text-decoration:none}
+.mini-link:hover{text-decoration:underline}
+.empty-note{font-size:11.5px;color:#4b5563;padding:8px 2px}
+.loading{display:flex;align-items:center;justify-content:center;min-height:60vh;font-size:16px;color:#6b7280;font-family:'DM Mono',monospace}
+.error{background:rgba(255,77,109,0.08);border:1px solid rgba(255,77,109,0.25);border-radius:10px;padding:20px;text-align:center;color:#ff4d6d;margin:40px 0}
+.footer{margin-top:28px;font-size:10.5px;color:#374151;text-align:center;padding-bottom:16px}
+@media (max-width:720px){.chart-row{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<div class="container">
+  <div id="app"><div class="loading">Loading reports...</div></div>
+</div>
+
+<script>
+// ─── CONFIG ──────────────────────────────────────────────────────────────────
+const REPO   = "nivesh-sudo/greenedge-factory-dashboard";
+const BRANCH = "main";
+const DATA_URL   = () => `https://raw.githubusercontent.com/${REPO}/${BRANCH}/data.json?t=${Date.now()}`;
+const MASTER_URL = () => `https://raw.githubusercontent.com/${REPO}/${BRANCH}/master.json?t=${Date.now()}`;
+const DEPT_LABEL = {handles:"Handles",tufting:"Tufting",packaging:"Packaging"};
+
+// ─── STATE ───────────────────────────────────────────────────────────────────
+let MASTER={}, PKG_RATES={}, PRINT_RATE=0, H_RATES={}, TUFT_RATE=0, WAGE={}, ELEC={}, FIXED_OH={};
+let HISTORICAL={};
+let rangePreset="30";
+let customFrom="", customTo="";
+let profitChart=null, deptChart=null;
+
+// ─── FETCH ───────────────────────────────────────────────────────────────────
+async function loadData(){
+  try{
+    const [mRes,dRes]=await Promise.all([fetch(MASTER_URL()),fetch(DATA_URL())]);
+    if(!mRes.ok||!dRes.ok) throw new Error("Failed to fetch data files");
+    const mJson=await mRes.json();
+    const dJson=await dRes.json();
+    MASTER     = mJson.products||{};
+    PKG_RATES  = mJson.PKG_RATES||{hanger:0.60,pouch:0.10,loose:0.05,dispenser:0.75};
+    PRINT_RATE = mJson.PRINT_RATE||0.10;
+    H_RATES    = mJson.H_RATES||{two:56,single:23};
+    TUFT_RATE  = mJson.TUFT_RATE||1.4;
+    WAGE       = mJson.WAGE||{hr12:880,hr8:450};
+    ELEC       = mJson.ELEC||{monthly:1000000,days:30,splits:{H:0.35,V:0.25,T:0.25,Tr:0.15}};
+    FIXED_OH   = mJson.FIXED_OH||{staffing:30000,capRepayment:78333,maintenance:16667};
+    HISTORICAL = dJson.reports||{};
+    render();
+  }catch(e){
+    document.getElementById("app").innerHTML=`<div class="error"><b>Could not load data</b><br/>${e.message}</div>`;
+  }
+}
+
+// ─── HELPERS ─────────────────────────────────────────────────────────────────
+const fmt  = n=>`₹${Math.round(n).toLocaleString("en-IN")}`;
+const fmtN = n=>Math.round(n).toLocaleString("en-IN");
+const k    = (c,m)=>`${c}|${m}`;
+const sumObj=o=>Object.values(o).reduce((a,b)=>a+b,0);
+function esc(s){return String(s).replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));}
+function attNum(v){
+  if(typeof v==='number') return v;
+  if(v&&typeof v==='object') return sumObj(v);
+  return 0;
+}
+function dailyElec(){
+  const d=ELEC.monthly/ELEC.days;
+  return{H:d*ELEC.splits.H,V:d*ELEC.splits.V,T:d*ELEC.splits.T,Tr:d*ELEC.splits.Tr,total:d};
+}
+
+// ─── CALC (mirrors index.html) ───────────────────────────────────────────────
+function calcLabour(att){
+  const m12=attNum(att.moulding.day12)+attNum(att.moulding.night12);
+  const m8=attNum(att.moulding.hr8);
+  const t12=attNum(att.tufting.day12)+attNum(att.tufting.night12);
+  const t8=attNum(att.tufting.hr8);
+  const moulding=m12*WAGE.hr12+m8*WAGE.hr8;
+  const tufting=t12*WAGE.hr12+t8*WAGE.hr8;
+  const checking=att.checking.hr12*WAGE.hr12+att.checking.hr8*WAGE.hr8;
+  const pkgDay12=attNum(att.packaging.day12);
+  const pkgHr8=attNum(att.packaging.hr8);
+  const pkgNight12=attNum(att.packaging.night12);
+  const packaging=pkgDay12*WAGE.hr12+pkgHr8*WAGE.hr8+pkgNight12*WAGE.hr12;
+  const overhead=att.overhead.cleaning_8hr*WAGE.hr8+att.overhead.store_12hr*WAGE.hr12+att.overhead.qc_12hr*WAGE.hr12;
+  return{moulding,tufting,checking,tuftingTotal:tufting+checking,packaging,overhead};
+}
+function calcHandles(prod,labourCost){
+  const elec=dailyElec();
+  let revV=0,revH=0,unitsV=0,unitsH=0;
+  const clientRev={};
+  (prod.handles.vertical||[]).forEach(r=>{
+    const total=r.day+r.night;
+    const m=MASTER[k(r.client,r.model)]||{};
+    const kg=(total*(m.w||0))/1000;
+    const rev=kg*H_RATES.two;
+    revV+=rev;unitsV+=total;
+    clientRev[r.client]=(clientRev[r.client]||0)+rev;
+  });
+  (prod.handles.horizontal||[]).forEach(r=>{
+    const total=r.day+r.night;
+    const m=MASTER[k(r.client,r.model)]||{};
+    const kg=(total*(m.w||0))/1000;
+    const rev=kg*H_RATES.single;
+    revH+=rev;unitsH+=total;
+    clientRev[r.client]=(clientRev[r.client]||0)+rev;
+  });
+  const totalRev=revV+revH;
+  const totalElec=elec.V+elec.H;
+  const gp=totalRev-labourCost-totalElec;
+  return{unitsV,unitsH,totalUnits:unitsV+unitsH,revV,revH,totalRev,labourCost,totalElec,grossProfit:gp,clientRev};
+}
+function calcPrinting(prod){
+  let totalUnits=0,totalRev=0;
+  (prod.printing||[]).forEach(r=>{
+    const total=r.day+r.night;totalUnits+=total;totalRev+=total*PRINT_RATE;
+  });
+  return{totalUnits,totalRev};
+}
+function calcTuftTrim(prod,labourCost){
+  const elec=dailyElec();
+  let tuftUnits=0,tuftRev=0,trimUnits=0;
+  const clientRev={};
+  (prod.tufting||[]).forEach(r=>{
+    const total=r.day+r.night;
+    const m=MASTER[k(r.client,r.model)]||{};
+    const rate=(TUFT_RATE*(m.h||0))/100;
+    const rev=total*rate;
+    tuftUnits+=total;tuftRev+=rev;
+    clientRev[r.client]=(clientRev[r.client]||0)+rev;
+  });
+  (prod.trimming||[]).forEach(r=>{trimUnits+=r.day+r.night;});
+  const totalElec=elec.T+elec.Tr;
+  const gp=tuftRev-labourCost-totalElec;
+  return{tuftUnits,trimUnits,totalRev:tuftRev,labourCost,totalElec,grossProfit:gp,clientRev};
+}
+function calcPackaging(prod,labourCost){
+  let totalBrushes=0,totalRev=0;
+  const clientRev={};
+  (prod.packaging.sealing||[]).forEach(r=>{
+    const shots=r.day+r.night;const brushes=shots*r.bps;
+    const m=MASTER[k(r.client,r.model)]||{};
+    const rate=PKG_RATES[m.pkg]||0.60;
+    const rev=brushes*rate;
+    totalBrushes+=brushes;totalRev+=rev;
+    clientRev[r.client]=(clientRev[r.client]||0)+rev;
+  });
+  (prod.packaging.pouch||[]).forEach(r=>{
+    const pcs=r.day+r.night;const rev=pcs*PKG_RATES.pouch;
+    totalBrushes+=pcs;totalRev+=rev;
+    clientRev[r.client]=(clientRev[r.client]||0)+rev;
+  });
+  (prod.packaging.loose||[]).forEach(r=>{
+    const pcs=r.day+r.night;const rev=pcs*PKG_RATES.loose;
+    totalBrushes+=pcs;totalRev+=rev;
+    clientRev[r.client]=(clientRev[r.client]||0)+rev;
+  });
+  const gp=totalRev-labourCost;
+  return{totalBrushes,totalRev,labourCost,grossProfit:gp,clientRev};
+}
+
+// ─── PER-DATE METRICS ────────────────────────────────────────────────────────
+function metricsForDate(date){
+  const {prod,att}=HISTORICAL[date];
+  const L=calcLabour(att);
+  const H=calcHandles(prod,L.moulding);
+  const P=calcPrinting(prod);
+  const TT=calcTuftTrim(prod,L.tuftingTotal);
+  const PK=calcPackaging(prod,L.packaging);
+  const deptRev=H.totalRev+P.totalRev+TT.totalRev+PK.totalRev;
+  const deptGP=H.grossProfit+TT.grossProfit+PK.grossProfit;
+  const fixedOH=FIXED_OH.staffing+FIXED_OH.capRepayment+FIXED_OH.maintenance;
+  const netProfit=deptGP-L.overhead-fixedOH;
+  const clientRev={};
+  [H.clientRev,TT.clientRev,PK.clientRev].forEach(m=>Object.entries(m).forEach(([c,v])=>{clientRev[c]=(clientRev[c]||0)+v;}));
+  return{
+    date,deptRev,netProfit,
+    handlesRev:H.totalRev,printingRev:P.totalRev,tuftTrimRev:TT.totalRev,packagingRev:PK.totalRev,
+    totalUnits:H.totalUnits+TT.tuftUnits+PK.totalBrushes,
+    clientRev,
+    netMargin:deptRev>0?(netProfit/deptRev)*100:0
+  };
+}
+function filteredDates(){
+  const all=Object.keys(HISTORICAL).sort();
+  if(rangePreset==="custom") return all.filter(d=>(!customFrom||d>=customFrom)&&(!customTo||d<=customTo));
+  if(rangePreset==="all") return all;
+  return all.slice(-parseInt(rangePreset,10));
+}
+function computeAggregate(dates){
+  const series=dates.map(metricsForDate);
+  const totalRevenue=series.reduce((a,s)=>a+s.deptRev,0);
+  const totalNetProfit=series.reduce((a,s)=>a+s.netProfit,0);
+  const totalUnits=series.reduce((a,s)=>a+s.totalUnits,0);
+  const avgMargin=totalRevenue>0?(totalNetProfit/totalRevenue)*100:0;
+  const clientTotals={};
+  series.forEach(s=>Object.entries(s.clientRev).forEach(([c,v])=>{clientTotals[c]=(clientTotals[c]||0)+v;}));
+  return{series,totalRevenue,totalNetProfit,totalUnits,avgMargin,clientTotals};
+}
+
+// ─── PENDING BOM ENTRIES ─────────────────────────────────────────────────────
+function missingFieldsFor(dept,prod){
+  prod=prod||{};
+  if(dept==="handles"){
+    const out=[];
+    if(prod.m==null) out.push("m");
+    if(prod.w==null) out.push("w");
+    return out;
+  }
+  if(dept==="tufting") return prod.h==null?["h"]:[];
+  if(dept==="packaging"){
+    const out=[];
+    if(prod.pkg==null){out.push("pkg");out.push("bps");}
+    else if((prod.pkg==="hanger"||prod.pkg==="dispenser")&&prod.bps==null){out.push("bps");}
+    return out;
+  }
+  return [];
+}
+function pendingEntries(){
+  const rows=[];
+  Object.keys(MASTER).forEach(key=>{
+    const prod=MASTER[key];
+    const depts=["handles","tufting","packaging"].filter(d=>missingFieldsFor(d,prod).length>0);
+    if(depts.length){
+      const idx=key.indexOf("|");
+      rows.push({client:key.slice(0,idx),model:key.slice(idx+1),depts});
+    }
+  });
+  return rows;
+}
+
+// ─── UI PIECES ───────────────────────────────────────────────────────────────
+function filterBar(){
+  const presets=[["7","7d"],["30","30d"],["90","90d"],["all","All time"]];
+  return `<div class="filter-bar">
+    <div class="preset-group">
+      ${presets.map(([v,l])=>`<button class="preset-btn${rangePreset===v?" active":""}" onclick="setPreset('${v}')">${l}</button>`).join("")}
+    </div>
+    <div class="custom-range">
+      <input type="date" value="${customFrom}" onchange="setCustom('from',this.value)"/>
+      <span>to</span>
+      <input type="date" value="${customTo}" onchange="setCustom('to',this.value)"/>
+    </div>
+  </div>`;
+}
+function kpiStrip(agg,pending){
+  const netColor=agg.totalNetProfit>=0?"#06d6a0":"#ff4d6d";
+  return `<div class="kpi-strip">
+    <div class="kpi-card"><div class="kpi-label">Total Revenue</div><div class="kpi-val" style="color:#00b4d8">${fmt(agg.totalRevenue)}</div></div>
+    <div class="kpi-card" style="border-left-color:${netColor}"><div class="kpi-label">Net ${agg.totalNetProfit>=0?"Profit":"Loss"}</div><div class="kpi-val" style="color:${netColor}">${fmt(Math.abs(agg.totalNetProfit))}</div></div>
+    <div class="kpi-card"><div class="kpi-label">Avg Net Margin</div><div class="kpi-val">${agg.avgMargin.toFixed(1)}%</div></div>
+    <div class="kpi-card${pending.length?' warn':''}"><div class="kpi-label">Pending BOM Entries</div><div class="kpi-val" style="color:${pending.length?'#fbbf24':'#06d6a0'}">${pending.length}</div></div>
+  </div>`;
+}
+function clientTable(agg){
+  const entries=Object.entries(agg.clientTotals).sort((a,b)=>b[1]-a[1]);
+  if(!entries.length) return `<div class="panel"><div class="panel-title">Client Revenue — Selected Period</div><div class="empty-note">No revenue in this range.</div></div>`;
+  const max=entries[0][1]||1;
+  return `<div class="panel">
+    <div class="panel-title">Client Revenue — Selected Period</div>
+    <div class="tbl-wrap"><table><thead><tr><th>Client</th><th>Revenue</th><th>Share</th></tr></thead><tbody>
+      ${entries.map(([c,v])=>`<tr><td>${esc(c)}</td><td>${fmt(v)}</td><td><div class="bar-track"><div class="bar-fill" style="width:${(v/max*100).toFixed(1)}%"></div></div></td></tr>`).join("")}
+    </tbody></table></div>
+  </div>`;
+}
+function pendingTable(pending){
+  if(!pending.length) return `<div class="panel"><div class="panel-title">Pending BOM Entries</div><div class="empty-note">Nothing pending — every product has full info for Handles, Tufting and Packaging.</div></div>`;
+  return `<div class="panel">
+    <div class="panel-title">Pending BOM Entries — ${pending.length}</div>
+    <div class="hint-text">These products are missing info needed to calculate revenue correctly for the department listed. Open the entry form, pick the client/model on that tab, and fill in the highlighted fields.</div>
+    <div class="tbl-wrap"><table><thead><tr><th>Client</th><th>Model</th><th>Needs</th><th></th></tr></thead><tbody>
+      ${pending.map(p=>`<tr><td>${esc(p.client)}</td><td>${esc(p.model)}</td><td>${p.depts.map(d=>`<span class="pill">${DEPT_LABEL[d]}</span>`).join(" ")}</td><td><a class="mini-link" href="entry.html">Complete →</a></td></tr>`).join("")}
+    </tbody></table></div>
+  </div>`;
+}
+function setPreset(v){rangePreset=v;render();}
+function setCustom(which,v){
+  if(which==="from") customFrom=v; else customTo=v;
+  rangePreset="custom";
+  render();
+}
+
+// ─── CHARTS ──────────────────────────────────────────────────────────────────
+function renderCharts(agg){
+  const labels=agg.series.map(s=>s.date.slice(5));
+  const ctx1=document.getElementById("chart-profit");
+  if(profitChart) profitChart.destroy();
+  if(ctx1){
+    profitChart=new Chart(ctx1.getContext("2d"),{
+      data:{
+        labels,
+        datasets:[
+          {type:"line",label:"Revenue",data:agg.series.map(s=>s.deptRev),borderColor:"#00b4d8",backgroundColor:"transparent",tension:0.3,pointRadius:2},
+          {type:"bar",label:"Net Profit",data:agg.series.map(s=>s.netProfit),backgroundColor:agg.series.map(s=>s.netProfit>=0?"rgba(6,214,160,0.7)":"rgba(255,77,109,0.7)")}
+        ]
+      },
+      options:{
+        responsive:true,maintainAspectRatio:false,
+        plugins:{legend:{labels:{color:"#94a3b8",font:{family:"DM Mono"}}}},
+        scales:{
+          x:{ticks:{color:"#6b7280"},grid:{color:"rgba(255,255,255,0.05)"}},
+          y:{ticks:{color:"#6b7280"},grid:{color:"rgba(255,255,255,0.05)"}}
+        }
+      }
+    });
+  }
+  const ctx2=document.getElementById("chart-dept");
+  if(deptChart) deptChart.destroy();
+  if(ctx2){
+    deptChart=new Chart(ctx2.getContext("2d"),{
+      type:"bar",
+      data:{
+        labels,
+        datasets:[
+          {label:"Handles",data:agg.series.map(s=>s.handlesRev),backgroundColor:"#06d6a0"},
+          {label:"Printing",data:agg.series.map(s=>s.printingRev),backgroundColor:"#fbbf24"},
+          {label:"Tufting/Trim",data:agg.series.map(s=>s.tuftTrimRev),backgroundColor:"#a78bfa"},
+          {label:"Packaging",data:agg.series.map(s=>s.packagingRev),backgroundColor:"#f97316"}
+        ]
+      },
+      options:{
+        responsive:true,maintainAspectRatio:false,
+        plugins:{legend:{labels:{color:"#94a3b8",font:{family:"DM Mono"}}}},
+        scales:{
+          x:{stacked:true,ticks:{color:"#6b7280"},grid:{display:false}},
+          y:{stacked:true,ticks:{color:"#6b7280"},grid:{color:"rgba(255,255,255,0.05)"}}
+        }
+      }
+    });
+  }
+}
+
+// ─── MAIN RENDER ─────────────────────────────────────────────────────────────
+function render(){
+  const dates=filteredDates();
+  const pending=pendingEntries();
+  if(!dates.length){
+    document.getElementById("app").innerHTML=`
+      <div class="header">
+        <div><div class="header-sub">Greenedge Ventures — Factory</div><div class="header-title mono">Reports</div></div>
+        <div class="nav-links"><a class="nav-link" href="index.html">← Dashboard</a><a class="nav-link" href="entry.html">Enter Data →</a></div>
+      </div>
+      ${filterBar()}
+      <div class="error">No production data in this range yet.</div>
+      ${pendingTable(pending)}
+    `;
+    return;
+  }
+  const agg=computeAggregate(dates);
+  document.getElementById("app").innerHTML=`
+    <div class="header">
+      <div><div class="header-sub">Greenedge Ventures — Factory</div><div class="header-title mono">Reports</div></div>
+      <div class="nav-links"><a class="nav-link" href="index.html">← Dashboard</a><a class="nav-link" href="entry.html">Enter Data →</a></div>
+    </div>
+    ${filterBar()}
+    ${kpiStrip(agg,pending)}
+    <div class="chart-row">
+      <div class="chart-card"><div class="chart-title">Daily Revenue vs Net Profit</div><canvas id="chart-profit"></canvas></div>
+      <div class="chart-card"><div class="chart-title">Revenue by Department</div><canvas id="chart-dept"></canvas></div>
+    </div>
+    ${clientTable(agg)}
+    ${pendingTable(pending)}
+    <div class="footer">${dates.length} day${dates.length>1?"s":""} in range · Pending BOM count reflects the current product list, not the date range.</div>
+  `;
+  renderCharts(agg);
+}
+
+// ─── INIT ────────────────────────────────────────────────────────────────────
+loadData();
+</script>
+</body>
+</html>
