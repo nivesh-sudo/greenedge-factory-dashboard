@@ -292,7 +292,9 @@
     },
     "Assure|Freshguard": {
       "w": 13,
-      "m": "two"
+      "m": "two",
+      "pkg": "hanger",
+      "bps": 12
     }
   }
 }
