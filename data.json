@@ -120,7 +120,62 @@
             "night": 8500
           }
         ],
-        "tufting": [],
+        "tufting": [
+          {
+            "client": "MKJ",
+            "model": "8 Pack",
+            "day": 8450,
+            "night": 0
+          },
+          {
+            "client": "Flipkart",
+            "model": "Gumcare",
+            "day": 9500,
+            "night": 0
+          },
+          {
+            "client": "WNF",
+            "model": "Luxuria",
+            "day": 5300,
+            "night": 3000
+          },
+          {
+            "client": "Dabur",
+            "model": "Prima",
+            "day": 18040,
+            "night": 14700
+          },
+          {
+            "client": "KPN",
+            "model": "Classique Loose",
+            "day": 2750,
+            "night": 0
+          },
+          {
+            "client": "Dabur",
+            "model": "Promise",
+            "day": 10000,
+            "night": 8400
+          },
+          {
+            "client": "Dabur",
+            "model": "Basica",
+            "day": 19200,
+            "night": 14200
+          },
+          {
+            "client": "WNF",
+            "model": "Junior",
+            "day": 7000,
+            "night": 4800
+          },
+          {
+            "client": "Flipkart",
+            "model": "Super Flexi",
+            "day": 700,
+            "night": 8300
+          }
+        ],
         "trimming": [],
         "packaging": {
           "sealing": [],
