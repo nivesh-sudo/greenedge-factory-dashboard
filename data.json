@@ -70,14 +70,7 @@
             "night": 7920
           }
         ],
-        "tufting": [
-          {
-            "client": "Dabur",
-            "model": "Prima",
-            "day": 24000,
-            "night": 25000
-          }
-        ],
+        "tufting": [],
         "trimming": [],
         "packaging": {
           "sealing": [],
