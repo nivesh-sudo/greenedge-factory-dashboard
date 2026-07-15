@@ -447,7 +447,7 @@ function tabPackaging(){
 }
 function countInput(id,label,value,path){
   const pathStr=JSON.stringify(path);
-  return `<div class="count-row"><label>${label}</label><input id="${id}" type="number" min="0" value="${value}" onchange="setCount('${id}',${pathStr})"/></div>`;
+  return `<div class="count-row"><label>${label}</label><input id="${id}" type="number" min="0" value="${value}" onchange='setCount("${id}",${pathStr})'/></div>`;
 }
 function setCount(id,path){
   const v=numVal(id);
