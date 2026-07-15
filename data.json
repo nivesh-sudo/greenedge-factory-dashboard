@@ -3,14 +3,7 @@
     "2026-07-14": {
       "prod": {
         "handles": {
-          "vertical": [
-            {
-              "client": "Dabur",
-              "model": "Basica",
-              "day": 26000,
-              "night": 32000
-            }
-          ],
+          "vertical": [],
           "horizontal": []
         },
         "printing": [],
