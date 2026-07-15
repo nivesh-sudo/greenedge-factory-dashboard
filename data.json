@@ -74,14 +74,14 @@
       },
       "att": {
         "moulding": {
-          "day12": {},
-          "night12": {},
-          "hr8": {}
+          "day12": 0,
+          "night12": 0,
+          "hr8": 0
         },
         "tufting": {
-          "day12": {},
-          "night12": {},
-          "hr8": {}
+          "day12": 0,
+          "night12": 0,
+          "hr8": 0
         },
         "checking": {
           "hr12": 0,
