@@ -420,9 +420,9 @@
       },
       "att": {
         "moulding": {
-          "day12": 0,
-          "night12": 0,
-          "hr8": 0
+          "day12": 9,
+          "night12": 10,
+          "hr8": 10
         },
         "tufting": {
           "day12": 0,
