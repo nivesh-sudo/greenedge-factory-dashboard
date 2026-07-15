@@ -25,6 +25,9 @@ body{background:#0d0d1a;color:#e2e8f0;font-family:'Inter','Segoe UI',sans-serif;
 .preset-group{display:flex;gap:6px}
 .preset-btn{padding:7px 13px;border-radius:7px;border:none;cursor:pointer;font-size:11.5px;font-weight:600;font-family:'DM Mono',monospace;background:rgba(255,255,255,0.05);color:#6b7280}
 .preset-btn.active{background:#00b4d8;color:#0d0d1a}
+.tabs{display:flex;gap:6px;margin-bottom:16px;flex-wrap:wrap}
+.tab-btn{padding:8px 14px;border-radius:7px;border:none;cursor:pointer;font-size:12px;font-weight:600;font-family:'DM Mono',monospace;background:rgba(255,255,255,0.05);color:#6b7280}
+.tab-btn.active{color:#0d0d1a}
 .export-btn{background:#06d6a0;color:#0d0d1a;border:none;border-radius:8px;padding:10px 16px;font-weight:700;font-size:12px;cursor:pointer;font-family:'DM Mono',monospace;white-space:nowrap}
 .export-btn:hover{background:#05c090}
 .kpi-strip{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:10px;margin-bottom:18px}
@@ -68,15 +71,19 @@ const DATA_URL   = () => `https://raw.githubusercontent.com/${REPO}/${BRANCH}/da
 const MASTER_URL = () => `https://raw.githubusercontent.com/${REPO}/${BRANCH}/master.json?t=${Date.now()}`;
 const DEPT_LABEL = {handles:"Handles",tufting:"Tufting",packaging:"Packaging"};
 const DEPT_COLOR = {Handles:"#06d6a0",Printing:"#fbbf24",Tufting:"#a78bfa",Trimming:"#f59e0b",Packaging:"#f97316"};
+const LABOUR_DEPTS = ["Moulding","Tufting","Checking","Packaging","Overhead"];
+const LABOUR_DEPT_COLOR = {Moulding:"#f59e0b",Tufting:"#a78bfa",Checking:"#fb7185",Packaging:"#f97316",Overhead:"#94a3b8"};
 
 // ─── STATE ───────────────────────────────────────────────────────────────────
 let MASTER={}, PKG_RATES={}, PRINT_RATE=0, H_RATES={}, TUFT_RATE=0, WAGE={}, ELEC={}, FIXED_OH={};
 let HISTORICAL={};
 let rangePreset="30";
 let customFrom="", customTo="";
+let reportTab="production";
 let deptFilter="all";
 let clientFilter="all";
 let groupBy="flat";
+let labourDeptFilter="all";
 
 // ─── FETCH ───────────────────────────────────────────────────────────────────
 async function loadData(){
@@ -197,6 +204,43 @@ function deptRevenueForDate(date){
   return{handlesRev,handlesGP,printingRev,tuftRev,tuftGP,pkgRev,pkgGP,deptRev,netProfit};
 }
 
+// ─── LABOUR LINE ITEMS ────────────────────────────────────────────────────────
+function labourItemsForDate(date){
+  const {att}=HISTORICAL[date];
+  const items=[];
+  const push=(dept,shift,count,rate)=>{
+    const c=count||0;
+    if(c>0) items.push({date,dept,shift,count:c,rate,cost:c*rate});
+  };
+  push("Moulding","12hr Day",attNum(att.moulding.day12),WAGE.hr12);
+  push("Moulding","12hr Night",attNum(att.moulding.night12),WAGE.hr12);
+  push("Moulding","8hr",attNum(att.moulding.hr8),WAGE.hr8);
+  push("Tufting","12hr Day",attNum(att.tufting.day12),WAGE.hr12);
+  push("Tufting","12hr Night",attNum(att.tufting.night12),WAGE.hr12);
+  push("Tufting","8hr",attNum(att.tufting.hr8),WAGE.hr8);
+  push("Checking","12hr",att.checking.hr12,WAGE.hr12);
+  push("Checking","8hr",att.checking.hr8,WAGE.hr8);
+  push("Packaging","12hr Day",attNum(att.packaging.day12),WAGE.hr12);
+  push("Packaging","12hr Night",attNum(att.packaging.night12),WAGE.hr12);
+  push("Packaging","8hr",attNum(att.packaging.hr8),WAGE.hr8);
+  push("Overhead","Cleaning (8hr)",att.overhead.cleaning_8hr,WAGE.hr8);
+  push("Overhead","Store (12hr)",att.overhead.store_12hr,WAGE.hr12);
+  push("Overhead","QC (12hr)",att.overhead.qc_12hr,WAGE.hr12);
+  return items;
+}
+function filteredLabourItems(dates){
+  let items=[];
+  dates.forEach(d=>{items=items.concat(labourItemsForDate(d));});
+  if(labourDeptFilter!=="all") items=items.filter(i=>i.dept===labourDeptFilter);
+  return items;
+}
+function labourKPI(items){
+  const totalCost=items.reduce((a,i)=>a+i.cost,0);
+  const totalShifts=items.reduce((a,i)=>a+i.count,0);
+  const avgCost=totalShifts>0?totalCost/totalShifts:0;
+  return{totalCost,totalShifts,avgCost};
+}
+
 // ─── FILTERING ───────────────────────────────────────────────────────────────
 function filteredDates(){
   const all=Object.keys(HISTORICAL).sort();
@@ -289,11 +333,27 @@ function exportCSV(){
   document.body.removeChild(a);
   URL.revokeObjectURL(url);
 }
+function exportLabourCSV(){
+  const dates=filteredDates();
+  const items=filteredLabourItems(dates);
+  const headers=["Date","Department","Shift","Workers","Rate","Cost"];
+  const rows=items.map(i=>[i.date,i.dept,i.shift,i.count,i.rate,i.cost.toFixed(2)]);
+  const csv=[headers,...rows].map(r=>r.map(csvEscape).join(",")).join("\r\n");
+  const blob=new Blob([csv],{type:"text/csv;charset=utf-8;"});
+  const url=URL.createObjectURL(blob);
+  const a=document.createElement("a");
+  const stamp=new Date().toISOString().slice(0,10);
+  a.href=url;
+  a.download=`greenedge-labour-report-${stamp}.csv`;
+  document.body.appendChild(a);
+  a.click();
+  document.body.removeChild(a);
+  URL.revokeObjectURL(url);
+}
 
 // ─── UI PIECES ───────────────────────────────────────────────────────────────
-function filterBar(){
+function timelineBar(){
   const presets=[["7","7d"],["30","30d"],["90","90d"],["all","All time"]];
-  const depts=["all","Handles","Printing","Tufting","Trimming","Packaging"];
   return `<div class="filter-bar">
     <div class="filter-group">
       <div class="filter-field">
@@ -310,6 +370,13 @@ function filterBar(){
           <input type="date" value="${customTo}" onchange="setCustom('to',this.value)"/>
         </div>
       </div>
+    </div>
+  </div>`;
+}
+function productionFilterRow(){
+  const depts=["all","Handles","Printing","Tufting","Trimming","Packaging"];
+  return `<div class="filter-bar">
+    <div class="filter-group">
       <div class="filter-field">
         <label>Department</label>
         <select onchange="setDept(this.value)">
@@ -332,6 +399,20 @@ function filterBar(){
       </div>
     </div>
     <button class="export-btn" onclick="exportCSV()">⬇ Export CSV</button>
+  </div>`;
+}
+function labourFilterRow(){
+  const depts=["all",...LABOUR_DEPTS];
+  return `<div class="filter-bar">
+    <div class="filter-group">
+      <div class="filter-field">
+        <label>Labour Department</label>
+        <select onchange="setLabourDept(this.value)">
+          ${depts.map(d=>`<option value="${d}"${labourDeptFilter===d?" selected":""}>${d==="all"?"All departments":d}</option>`).join("")}
+        </select>
+      </div>
+    </div>
+    <button class="export-btn" onclick="exportLabourCSV()">⬇ Export Labour CSV</button>
   </div>`;
 }
 function kpiStrip(kpi,pending){
@@ -385,31 +466,90 @@ function pendingTable(pending){
     </tbody></table></div>
   </div>`;
 }
+function labourKPIStrip(kpi){
+  return `<div class="kpi-strip">
+    <div class="kpi-card" style="border-left-color:#f59e0b"><div class="kpi-label">Total Labour Cost</div><div class="kpi-val" style="color:#f59e0b">${fmt(kpi.totalCost)}</div></div>
+    <div class="kpi-card"><div class="kpi-label">Total Worker-Shifts</div><div class="kpi-val">${fmtN(kpi.totalShifts)}</div></div>
+    <div class="kpi-card"><div class="kpi-label">Avg Cost / Shift</div><div class="kpi-val">${fmt(kpi.avgCost)}</div></div>
+  </div>`;
+}
+function labourTable(items){
+  if(!items.length) return `<div class="panel"><div class="panel-title">Labour Records</div><div class="empty-note">No labour records match these filters.</div></div>`;
+  const totalCost=items.reduce((a,i)=>a+i.cost,0);
+  const rowHTML=i=>`<tr><td>${i.date}</td><td><span class="dept-pill" style="background:${LABOUR_DEPT_COLOR[i.dept]}22;color:${LABOUR_DEPT_COLOR[i.dept]}">${i.dept}</span></td><td>${i.shift}</td><td>${fmtN(i.count)}</td><td>${fmt(i.rate)}</td><td>${fmt(i.cost)}</td></tr>`;
+  const head=`<tr><th>Date</th><th>Dept</th><th>Shift</th><th>Workers</th><th>Rate</th><th>Cost</th></tr>`;
+
+  let body;
+  if(labourDeptFilter==="all"){
+    const byDept={};
+    items.forEach(i=>{(byDept[i.dept]=byDept[i.dept]||[]).push(i);});
+    body=LABOUR_DEPTS.filter(d=>byDept[d]).map(d=>{
+      const rows=byDept[d];
+      const subtotal=rows.reduce((s,i)=>s+i.cost,0);
+      return rows.map(rowHTML).join("")+`<tr class="subtotal-row"><td colspan="5">${d} subtotal</td><td>${fmt(subtotal)}</td></tr>`;
+    }).join("");
+  }else{
+    body=items.map(rowHTML).join("");
+  }
+
+  return `<div class="panel">
+    <div class="panel-title">Labour Records</div>
+    <div class="summary-line"><b>${items.length}</b> record${items.length>1?"s":""} · Total Labour Cost: <b>${fmt(totalCost)}</b></div>
+    <div class="hint-text">"Worker-shifts" counts a worker once per shift logged — not unique headcount (names aren't tracked, only counts per shift).</div>
+    <div class="tbl-wrap"><table><thead>${head}</thead><tbody>
+      ${body}
+      <tr class="total-row"><td colspan="5">Grand Total</td><td>${fmt(totalCost)}</td></tr>
+    </tbody></table></div>
+  </div>`;
+}
 function setPreset(v){rangePreset=v;render();}
 function setCustom(which,v){
   if(which==="from") customFrom=v; else customTo=v;
   rangePreset="custom";
   render();
 }
+function setReportTab(t){reportTab=t;render();}
 function setDept(v){deptFilter=v;render();}
 function setClient(v){clientFilter=v;render();}
 function setGroupBy(v){groupBy=v;render();}
+function setLabourDept(v){labourDeptFilter=v;render();}
+
+// ─── VIEWS ───────────────────────────────────────────────────────────────────
+function productionView(dates){
+  const pending=pendingEntries();
+  const items=filteredLineItems(dates);
+  const kpi=kpiForDates(dates);
+  return `
+    ${productionFilterRow()}
+    ${dates.length?kpiStrip(kpi,pending):`<div class="error">No production data in this range yet.</div>`}
+    ${dataTable(items)}
+    ${pendingTable(pending)}
+  `;
+}
+function labourView(dates){
+  const items=filteredLabourItems(dates);
+  const kpi=labourKPI(items);
+  return `
+    ${labourFilterRow()}
+    ${dates.length?labourKPIStrip(kpi):`<div class="error">No labour data in this range yet.</div>`}
+    ${labourTable(items)}
+  `;
+}
 
 // ─── MAIN RENDER ─────────────────────────────────────────────────────────────
 function render(){
   const dates=filteredDates();
-  const pending=pendingEntries();
-  const items=filteredLineItems(dates);
-  const kpi=kpiForDates(dates);
   document.getElementById("app").innerHTML=`
     <div class="header">
       <div><div class="header-sub">Greenedge Ventures — Factory</div><div class="header-title mono">Reports</div></div>
       <div class="nav-links"><a class="nav-link" href="index.html">← Dashboard</a><a class="nav-link" href="entry.html">Enter Data →</a></div>
     </div>
-    ${filterBar()}
-    ${dates.length?kpiStrip(kpi,pending):`<div class="error">No production data in this range yet.</div>`}
-    ${dataTable(items)}
-    ${pendingTable(pending)}
+    ${timelineBar()}
+    <div class="tabs">
+      <button class="tab-btn${reportTab==="production"?" active":""}" style="${reportTab==="production"?"background:#00b4d8":"background:rgba(255,255,255,0.05)"}" onclick="setReportTab('production')">Production</button>
+      <button class="tab-btn${reportTab==="labour"?" active":""}" style="${reportTab==="labour"?"background:#f59e0b":"background:rgba(255,255,255,0.05)"}" onclick="setReportTab('labour')">Labour</button>
+    </div>
+    ${reportTab==="production"?productionView(dates):labourView(dates)}
     <div class="footer">${dates.length} day${dates.length!==1?"s":""} in range · Pending BOM count reflects the current product list, not the date range.</div>
   `;
 }
