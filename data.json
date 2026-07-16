@@ -503,8 +503,58 @@
     "2026-07-15": {
       "prod": {
         "handles": {
-          "vertical": [],
-          "horizontal": []
+          "vertical": [
+            {
+              "client": "Dabur",
+              "model": "Basica",
+              "day": 11670,
+              "night": 6210
+            },
+            {
+              "client": "Dabur",
+              "model": "Prima Blue",
+              "day": 13200,
+              "night": 8800
+            },
+            {
+              "client": "WNF",
+              "model": "Classic Besto 09",
+              "day": 7080,
+              "night": 7510
+            },
+            {
+              "client": "Flipkart",
+              "model": "Super Flexi",
+              "day": 16930,
+              "night": 10745
+            },
+            {
+              "client": "Dabur",
+              "model": "Duos",
+              "day": 12290,
+              "night": 10550
+            },
+            {
+              "client": "Vicco",
+              "model": "Senso Clean",
+              "day": 9620,
+              "night": 8240
+            },
+            {
+              "client": "MKJ",
+              "model": "4 Pack",
+              "day": 6970,
+              "night": 6365
+            }
+          ],
+          "horizontal": [
+            {
+              "client": "Dabur",
+              "model": "Promise",
+              "day": 19700,
+              "night": 18610
+            }
+          ]
         },
         "printing": [],
         "tufting": [
