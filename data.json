@@ -671,7 +671,50 @@
           }
         ],
         "packaging": {
-          "sealing": [],
+          "sealing": [
+            {
+              "client": "Vicco",
+              "model": "Senso Clean",
+              "day": 0,
+              "night": 900,
+              "bps": 6
+            },
+            {
+              "client": "Dabur",
+              "model": "Basica",
+              "day": 2400,
+              "night": 0,
+              "bps": 12
+            },
+            {
+              "client": "Flipkart",
+              "model": "Super Flexi",
+              "day": 500,
+              "night": 0,
+              "bps": 18
+            },
+            {
+              "client": "oxident",
+              "model": "Luxuria",
+              "day": 430,
+              "night": 750,
+              "bps": 6
+            },
+            {
+              "client": "Flipkart",
+              "model": "Gumcare",
+              "day": 140,
+              "night": 0,
+              "bps": 18
+            },
+            {
+              "client": "WNF",
+              "model": "Junior",
+              "day": 510,
+              "night": 160,
+              "bps": 12
+            }
+          ],
           "pouch": [],
           "loose": []
         }
