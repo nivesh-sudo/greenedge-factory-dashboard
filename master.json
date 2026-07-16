@@ -305,6 +305,10 @@
       "h": 29,
       "pkg": "hanger",
       "bps": 12
+    },
+    "oxident|Luxuria": {
+      "pkg": "dispenser",
+      "bps": 6
     }
   }
 }
