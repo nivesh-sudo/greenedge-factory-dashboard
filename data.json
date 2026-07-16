@@ -557,7 +557,56 @@
             "night": 0
           }
         ],
-        "trimming": [],
+        "trimming": [
+          {
+            "client": "Dabur",
+            "model": "Promise",
+            "day": 9500,
+            "night": 10000
+          },
+          {
+            "client": "MKJ",
+            "model": "8 Pack",
+            "day": 13100,
+            "night": 6000
+          },
+          {
+            "client": "WNF",
+            "model": "Junior",
+            "day": 2000,
+            "night": 0
+          },
+          {
+            "client": "Dabur",
+            "model": "Duos",
+            "day": 8500,
+            "night": 8500
+          },
+          {
+            "client": "Dabur",
+            "model": "Prima",
+            "day": 20200,
+            "night": 13100
+          },
+          {
+            "client": "Dabur",
+            "model": "Basica",
+            "day": 19600,
+            "night": 18800
+          },
+          {
+            "client": "WNF",
+            "model": "Luxuria",
+            "day": 3500,
+            "night": 0
+          },
+          {
+            "client": "Flipkart",
+            "model": "Super Flexi",
+            "day": 8900,
+            "night": 10700
+          }
+        ],
         "packaging": {
           "sealing": [],
           "pouch": [],
