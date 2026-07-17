@@ -810,6 +810,12 @@
         },
         "printing": [
           {
+            "client": "MKJ",
+            "model": "8 Pack",
+            "day": 27955,
+            "night": 17310
+          },
+          {
             "client": "Dabur",
             "model": "Promise",
             "day": 1300,
