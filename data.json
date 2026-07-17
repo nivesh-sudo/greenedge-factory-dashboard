@@ -962,13 +962,13 @@
       },
       "att": {
         "moulding": {
-          "day12": 12,
-          "night12": 11,
+          "day12": 0,
+          "night12": 0,
           "hr8": 0
         },
         "tufting": {
-          "day12": 10,
-          "night12": 6,
+          "day12": 0,
+          "night12": 0,
           "hr8": 0
         },
         "checking": {
@@ -977,13 +977,13 @@
         },
         "packaging": {
           "day12": 0,
-          "hr8": 0,
+          "hr8": 41,
           "night12": 0
         },
         "overhead": {
-          "cleaning_8hr": 2,
-          "store_12hr": 6,
-          "qc_12hr": 1
+          "cleaning_8hr": 0,
+          "store_12hr": 0,
+          "qc_12hr": 0
         }
       }
     },
