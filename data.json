@@ -808,7 +808,14 @@
             }
           ]
         },
-        "printing": [],
+        "printing": [
+          {
+            "client": "Dabur",
+            "model": "Promise",
+            "day": 1300,
+            "night": 0
+          }
+        ],
         "tufting": [
           {
             "client": "Dabur",
