@@ -990,8 +990,70 @@
     "2026-07-17": {
       "prod": {
         "handles": {
-          "vertical": [],
-          "horizontal": []
+          "vertical": [
+            {
+              "client": "Dabur",
+              "model": "Basica",
+              "day": 18910,
+              "night": 8130
+            },
+            {
+              "client": "Dabur",
+              "model": "Prima",
+              "day": 17105,
+              "night": 13710
+            },
+            {
+              "client": "KPN",
+              "model": "Classique Loose",
+              "day": 6090,
+              "night": 2380
+            },
+            {
+              "client": "Flipkart",
+              "model": "Super Flexi",
+              "day": 9280,
+              "night": 0
+            },
+            {
+              "client": "Flipkart",
+              "model": "Gumcare",
+              "day": 5830,
+              "night": 0
+            },
+            {
+              "client": "Vicco",
+              "model": "Senso Clean",
+              "day": 9460,
+              "night": 0
+            },
+            {
+              "client": "MKJ",
+              "model": "4 Pack",
+              "day": 6660,
+              "night": 5000
+            },
+            {
+              "client": "Flipkart",
+              "model": "Daily Defence",
+              "day": 12330,
+              "night": 7670
+            },
+            {
+              "client": "JLM",
+              "model": "Prima",
+              "day": 4430,
+              "night": 6730
+            }
+          ],
+          "horizontal": [
+            {
+              "client": "Dabur",
+              "model": "Promise",
+              "day": 17900,
+              "night": 2350
+            }
+          ]
         },
         "printing": [
           {
