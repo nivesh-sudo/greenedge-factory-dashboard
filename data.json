@@ -1302,7 +1302,32 @@
             }
           ]
         },
-        "printing": [],
+        "printing": [
+          {
+            "client": "JLM",
+            "model": "Prima",
+            "day": 4684,
+            "night": 2520
+          },
+          {
+            "client": "MKJ",
+            "model": "8 Pack",
+            "day": 1232,
+            "night": 0
+          },
+          {
+            "client": "KPN",
+            "model": "Classique Loose",
+            "day": 7693,
+            "night": 10200
+          },
+          {
+            "client": "MKJ",
+            "model": "4 Pack",
+            "day": 2820,
+            "night": 4050
+          }
+        ],
         "tufting": [],
         "trimming": [],
         "packaging": {
