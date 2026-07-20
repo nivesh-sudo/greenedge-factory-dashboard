@@ -1331,8 +1331,65 @@
         "tufting": [],
         "trimming": [],
         "packaging": {
-          "sealing": [],
-          "pouch": [],
+          "sealing": [
+            {
+              "client": "Vicco",
+              "model": "Senso Clean",
+              "day": 700,
+              "night": 400,
+              "bps": 6
+            },
+            {
+              "client": "Dabur",
+              "model": "Basica",
+              "day": 2200,
+              "night": 0,
+              "bps": 12
+            },
+            {
+              "client": "Flipkart",
+              "model": "Super Flexi",
+              "day": 400,
+              "night": 0,
+              "bps": 18
+            },
+            {
+              "client": "JLM",
+              "model": "Prima",
+              "day": 715,
+              "night": 700,
+              "bps": 12
+            },
+            {
+              "client": "Vicco",
+              "model": "Senso 4 Pack",
+              "day": 0,
+              "night": 410,
+              "bps": 20
+            },
+            {
+              "client": "Flipkart",
+              "model": "Gumcare",
+              "day": 167,
+              "night": 0,
+              "bps": 18
+            },
+            {
+              "client": "MKJ",
+              "model": "8 Pack",
+              "day": 1150,
+              "night": 600,
+              "bps": 24
+            }
+          ],
+          "pouch": [
+            {
+              "client": "Dabur",
+              "model": "Promise",
+              "day": 18000,
+              "night": 0
+            }
+          ],
           "loose": []
         }
       },
