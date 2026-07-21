@@ -1550,7 +1550,38 @@
             "night": 18320
           }
         ],
-        "trimming": [],
+        "trimming": [
+          {
+            "client": "Flipkart",
+            "model": "Daily Defence",
+            "day": 12200,
+            "night": 5450
+          },
+          {
+            "client": "Dabur",
+            "model": "Prima",
+            "day": 9350,
+            "night": 7900
+          },
+          {
+            "client": "Dabur",
+            "model": "Basica",
+            "day": 18950,
+            "night": 16600
+          },
+          {
+            "client": "Flipkart",
+            "model": "Gentle Cavity",
+            "day": 7000,
+            "night": 0
+          },
+          {
+            "client": "Flipkart",
+            "model": "Super Flexi",
+            "day": 18500,
+            "night": 17600
+          }
+        ],
         "packaging": {
           "sealing": [],
           "pouch": [],
