@@ -299,7 +299,9 @@
     "WNF|Luxuria": {
       "w": 19.3,
       "m": "two",
-      "h": 46
+      "h": 46,
+      "pkg": "dispenser",
+      "bps": 6
     },
     "WNF|Junior": {
       "h": 29,
