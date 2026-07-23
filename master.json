@@ -313,6 +313,10 @@
     "Assure|Shine 06 pk": {
       "w": 15.5,
       "m": "two"
+    },
+    "WNF|Excel 51": {
+      "pkg": "hanger",
+      "bps": 12
     }
   }
 }
