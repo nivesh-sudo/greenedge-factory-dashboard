@@ -1843,6 +1843,97 @@
           "qc_12hr": 1
         }
       }
+    },
+    "2026-07-21": {
+      "prod": {
+        "handles": {
+          "vertical": [],
+          "horizontal": []
+        },
+        "printing": [],
+        "tufting": [
+          {
+            "client": "Dabur",
+            "model": "Promise",
+            "day": 5950,
+            "night": 8200
+          },
+          {
+            "client": "JLM",
+            "model": "Prima",
+            "day": 1370,
+            "night": 0
+          },
+          {
+            "client": "Assure",
+            "model": "Freshguard",
+            "day": 7350,
+            "night": 8100
+          },
+          {
+            "client": "Dabur",
+            "model": "Prima",
+            "day": 15230,
+            "night": 21600
+          },
+          {
+            "client": "Flipkart",
+            "model": "Gentle Cavity",
+            "day": 7570,
+            "night": 7530
+          },
+          {
+            "client": "Dabur",
+            "model": "Basica",
+            "day": 19000,
+            "night": 18200
+          },
+          {
+            "client": "Flipkart",
+            "model": "Gumcare",
+            "day": 8800,
+            "night": 8113
+          },
+          {
+            "client": "Flipkart",
+            "model": "Super Flexi",
+            "day": 13490,
+            "night": 0
+          }
+        ],
+        "trimming": [],
+        "packaging": {
+          "sealing": [],
+          "pouch": [],
+          "loose": []
+        }
+      },
+      "att": {
+        "moulding": {
+          "day12": 0,
+          "night12": 0,
+          "hr8": 0
+        },
+        "tufting": {
+          "day12": 0,
+          "night12": 0,
+          "hr8": 0
+        },
+        "checking": {
+          "hr12": 0,
+          "hr8": 0
+        },
+        "packaging": {
+          "day12": 0,
+          "hr8": 0,
+          "night12": 0
+        },
+        "overhead": {
+          "cleaning_8hr": 0,
+          "store_12hr": 0,
+          "qc_12hr": 0
+        }
+      }
     }
   }
 }
