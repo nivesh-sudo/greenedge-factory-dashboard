@@ -1736,9 +1736,45 @@
         ],
         "tufting": [
           {
+            "client": "Vicco",
+            "model": "Senso Clean",
+            "day": 2000,
+            "night": 8360
+          },
+          {
+            "client": "Dabur",
+            "model": "Promise",
+            "day": 8100,
+            "night": 8800
+          },
+          {
+            "client": "Dabur",
+            "model": "Prima Blue",
+            "day": 24980,
+            "night": 14500
+          },
+          {
+            "client": "Flipkart",
+            "model": "Gentle Cavity",
+            "day": 7100,
+            "night": 7500
+          },
+          {
+            "client": "Dabur",
+            "model": "Basica",
+            "day": 12930,
+            "night": 19300
+          },
+          {
+            "client": "Flipkart",
+            "model": "Gumcare",
+            "day": 7500,
+            "night": 8255
+          },
+          {
             "client": "Assure",
             "model": "Freshguard",
-            "day": 5050,
+            "day": 5250,
             "night": 0
           }
         ],
