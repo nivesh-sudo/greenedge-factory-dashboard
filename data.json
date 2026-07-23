@@ -1772,7 +1772,32 @@
             "night": 8255
           }
         ],
-        "trimming": [],
+        "trimming": [
+          {
+            "client": "Dabur",
+            "model": "Promise",
+            "day": 8100,
+            "night": 8800
+          },
+          {
+            "client": "Dabur",
+            "model": "Prima",
+            "day": 27200,
+            "night": 23000
+          },
+          {
+            "client": "Dabur",
+            "model": "Basica",
+            "day": 12930,
+            "night": 19300
+          },
+          {
+            "client": "Flipkart",
+            "model": "Gentle Cavity",
+            "day": 8300,
+            "night": 6360
+          }
+        ],
         "packaging": {
           "sealing": [
             {
