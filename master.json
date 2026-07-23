@@ -317,6 +317,10 @@
     "WNF|Excel 51": {
       "pkg": "hanger",
       "bps": 12
+    },
+    "Assure|Besto 09": {
+      "pkg": "dispenser",
+      "bps": 6
     }
   }
 }
