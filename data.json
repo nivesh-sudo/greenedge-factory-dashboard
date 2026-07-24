@@ -1883,8 +1883,52 @@
     "2026-07-21": {
       "prod": {
         "handles": {
-          "vertical": [],
-          "horizontal": []
+          "vertical": [
+            {
+              "client": "Dabur",
+              "model": "Basica",
+              "day": 2900,
+              "night": 0
+            },
+            {
+              "client": "Dabur",
+              "model": "Prima Blue",
+              "day": 19290,
+              "night": 14865
+            },
+            {
+              "client": "Flipkart",
+              "model": "Gentle Cavity",
+              "day": 1530,
+              "night": 6060
+            },
+            {
+              "client": "Vicco",
+              "model": "Senso Clean",
+              "day": 0,
+              "night": 11960
+            },
+            {
+              "client": "Flipkart",
+              "model": "Gumcare",
+              "day": 1550,
+              "night": 8930
+            },
+            {
+              "client": "MKJ",
+              "model": "4 Pack",
+              "day": 3410,
+              "night": 8190
+            }
+          ],
+          "horizontal": [
+            {
+              "client": "Dabur",
+              "model": "Promise",
+              "day": 3440,
+              "night": 18090
+            }
+          ]
         },
         "printing": [
           {
