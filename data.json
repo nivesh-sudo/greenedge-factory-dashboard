@@ -1592,7 +1592,32 @@
             }
           ]
         },
-        "printing": [],
+        "printing": [
+          {
+            "client": "JLM",
+            "model": "Prima",
+            "day": 4932,
+            "night": 8102
+          },
+          {
+            "client": "Dabur",
+            "model": "Promise",
+            "day": 3470,
+            "night": 19115
+          },
+          {
+            "client": "KPN",
+            "model": "Classique Loose",
+            "day": 3500,
+            "night": 0
+          },
+          {
+            "client": "MKJ",
+            "model": "4 Pack",
+            "day": 7060,
+            "night": 7385
+          }
+        ],
         "tufting": [
           {
             "client": "Vicco",
