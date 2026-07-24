@@ -2379,7 +2379,43 @@
           }
         ],
         "packaging": {
-          "sealing": [],
+          "sealing": [
+            {
+              "client": "Dabur",
+              "model": "Basica",
+              "day": 2200,
+              "night": 0,
+              "bps": 12
+            },
+            {
+              "client": "Flipkart",
+              "model": "Gumcare",
+              "day": 850,
+              "night": 0,
+              "bps": 18
+            },
+            {
+              "client": "Flipkart",
+              "model": "Daily Defence",
+              "day": 600,
+              "night": 0,
+              "bps": 18
+            },
+            {
+              "client": "Assure",
+              "model": "Besto 09",
+              "day": 200,
+              "night": 0,
+              "bps": 6
+            },
+            {
+              "client": "WNF",
+              "model": "Luxuria",
+              "day": 550,
+              "night": 0,
+              "bps": 6
+            }
+          ],
           "pouch": [],
           "loose": []
         }
