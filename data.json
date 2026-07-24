@@ -1707,7 +1707,36 @@
           }
         ],
         "packaging": {
-          "sealing": [],
+          "sealing": [
+            {
+              "client": "JLM",
+              "model": "Prima",
+              "day": 200,
+              "night": 0,
+              "bps": 12
+            },
+            {
+              "client": "Flipkart",
+              "model": "Daily Defence",
+              "day": 300,
+              "night": 700,
+              "bps": 18
+            },
+            {
+              "client": "MKJ",
+              "model": "8 Pack",
+              "day": 800,
+              "night": 0,
+              "bps": 24
+            },
+            {
+              "client": "Vicco",
+              "model": "Senso 4 Pack",
+              "day": 700,
+              "night": 630,
+              "bps": 20
+            }
+          ],
           "pouch": [],
           "loose": []
         }
