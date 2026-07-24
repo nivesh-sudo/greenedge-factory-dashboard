@@ -2033,7 +2033,64 @@
           }
         ],
         "packaging": {
-          "sealing": [],
+          "sealing": [
+            {
+              "client": "Dabur",
+              "model": "Basica",
+              "day": 2200,
+              "night": 0,
+              "bps": 12
+            },
+            {
+              "client": "Vicco",
+              "model": "Senso 4 Pack",
+              "day": 530,
+              "night": 0,
+              "bps": 20
+            },
+            {
+              "client": "Flipkart",
+              "model": "Gentle Cavity",
+              "day": 520,
+              "night": 0,
+              "bps": 18
+            },
+            {
+              "client": "Flipkart",
+              "model": "Super Flexi",
+              "day": 220,
+              "night": 0,
+              "bps": 18
+            },
+            {
+              "client": "Flipkart",
+              "model": "Gumcare",
+              "day": 995,
+              "night": 0,
+              "bps": 18
+            },
+            {
+              "client": "Flipkart",
+              "model": "Daily Defence",
+              "day": 180,
+              "night": 0,
+              "bps": 18
+            },
+            {
+              "client": "JLM",
+              "model": "Prima",
+              "day": 730,
+              "night": 0,
+              "bps": 12
+            },
+            {
+              "client": "WNF",
+              "model": "Excel 51",
+              "day": 900,
+              "night": 0,
+              "bps": 12
+            }
+          ],
           "pouch": [],
           "loose": []
         }
