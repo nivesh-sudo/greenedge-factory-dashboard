@@ -1539,8 +1539,58 @@
     "2026-07-20": {
       "prod": {
         "handles": {
-          "vertical": [],
-          "horizontal": []
+          "vertical": [
+            {
+              "client": "Dabur",
+              "model": "Basica",
+              "day": 9260,
+              "night": 0
+            },
+            {
+              "client": "Dabur",
+              "model": "Prima",
+              "day": 9810,
+              "night": 15467
+            },
+            {
+              "client": "Flipkart",
+              "model": "Gentle Cavity",
+              "day": 5840,
+              "night": 7225
+            },
+            {
+              "client": "Flipkart",
+              "model": "Daily Defence",
+              "day": 10330,
+              "night": 6425
+            },
+            {
+              "client": "Flipkart",
+              "model": "Gumcare",
+              "day": 11390,
+              "night": 0
+            },
+            {
+              "client": "JLM",
+              "model": "Prima",
+              "day": 6940,
+              "night": 0
+            },
+            {
+              "client": "MKJ",
+              "model": "4 Pack",
+              "day": 7610,
+              "night": 7820
+            }
+          ],
+          "horizontal": [
+            {
+              "client": "Dabur",
+              "model": "Promise",
+              "day": 13880,
+              "night": 0
+            }
+          ]
         },
         "printing": [],
         "tufting": [
