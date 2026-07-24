@@ -1886,7 +1886,26 @@
           "vertical": [],
           "horizontal": []
         },
-        "printing": [],
+        "printing": [
+          {
+            "client": "JLM",
+            "model": "Prima",
+            "day": 5866,
+            "night": 0
+          },
+          {
+            "client": "Dabur",
+            "model": "Promise",
+            "day": 21380,
+            "night": 25550
+          },
+          {
+            "client": "MKJ",
+            "model": "4 Pack",
+            "day": 2058,
+            "night": 0
+          }
+        ],
         "tufting": [
           {
             "client": "Dabur",
