@@ -2450,8 +2450,64 @@
     "2026-07-24": {
       "prod": {
         "handles": {
-          "vertical": [],
-          "horizontal": []
+          "vertical": [
+            {
+              "client": "Dabur",
+              "model": "Basica",
+              "day": 0,
+              "night": 8040
+            },
+            {
+              "client": "Dabur",
+              "model": "Prima Blue",
+              "day": 14900,
+              "night": 14090
+            },
+            {
+              "client": "Flipkart",
+              "model": "Gentle Cavity",
+              "day": 9650,
+              "night": 6870
+            },
+            {
+              "client": "Vicco",
+              "model": "Senso 4 Pack",
+              "day": 10640,
+              "night": 11245
+            },
+            {
+              "client": "Flipkart",
+              "model": "Gumcare",
+              "day": 12010,
+              "night": 0
+            },
+            {
+              "client": "MKJ",
+              "model": "4 Pack",
+              "day": 8240,
+              "night": 8280
+            },
+            {
+              "client": "Assure",
+              "model": "Shine 06 pk",
+              "day": 8335,
+              "night": 6850
+            }
+          ],
+          "horizontal": [
+            {
+              "client": "Dabur",
+              "model": "Promise",
+              "day": 16390,
+              "night": 18310
+            },
+            {
+              "client": "DMBH",
+              "model": "Smile 3D",
+              "day": 0,
+              "night": 10680
+            }
+          ]
         },
         "printing": [],
         "tufting": [
