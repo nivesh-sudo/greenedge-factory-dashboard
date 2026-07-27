@@ -2694,6 +2694,91 @@
           "qc_12hr": 1
         }
       }
+    },
+    "2026-07-25": {
+      "prod": {
+        "handles": {
+          "vertical": [],
+          "horizontal": []
+        },
+        "printing": [],
+        "tufting": [
+          {
+            "client": "Vicco",
+            "model": "Senso Clean",
+            "day": 10200,
+            "night": 8700
+          },
+          {
+            "client": "Assure",
+            "model": "Senso Max",
+            "day": 600,
+            "night": 0
+          },
+          {
+            "client": "Dabur",
+            "model": "Promise",
+            "day": 17850,
+            "night": 17350
+          },
+          {
+            "client": "Dabur",
+            "model": "Prima",
+            "day": 18920,
+            "night": 16600
+          },
+          {
+            "client": "Flipkart",
+            "model": "Gentle Cavity",
+            "day": 8690,
+            "night": 6800
+          },
+          {
+            "client": "Dabur",
+            "model": "Basica",
+            "day": 19400,
+            "night": 18100
+          },
+          {
+            "client": "Flipkart",
+            "model": "Gumcare",
+            "day": 9650,
+            "night": 2380
+          }
+        ],
+        "trimming": [],
+        "packaging": {
+          "sealing": [],
+          "pouch": [],
+          "loose": []
+        }
+      },
+      "att": {
+        "moulding": {
+          "day12": 0,
+          "night12": 0,
+          "hr8": 0
+        },
+        "tufting": {
+          "day12": 0,
+          "night12": 0,
+          "hr8": 0
+        },
+        "checking": {
+          "hr12": 0,
+          "hr8": 0
+        },
+        "packaging": {
+          "day12": 0,
+          "hr8": 0,
+          "night12": 0
+        },
+        "overhead": {
+          "cleaning_8hr": 0,
+          "store_12hr": 0,
+          "qc_12hr": 0
+        }
+      }
     }
   }
 }
