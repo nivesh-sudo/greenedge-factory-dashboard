@@ -2746,7 +2746,38 @@
             "night": 2380
           }
         ],
-        "trimming": [],
+        "trimming": [
+          {
+            "client": "Dabur",
+            "model": "Promise",
+            "day": 18100,
+            "night": 16700
+          },
+          {
+            "client": "KPN",
+            "model": "Classique",
+            "day": 8500,
+            "night": 0
+          },
+          {
+            "client": "Dabur",
+            "model": "Prima",
+            "day": 22000,
+            "night": 16760
+          },
+          {
+            "client": "Dabur",
+            "model": "Basica",
+            "day": 19400,
+            "night": 18100
+          },
+          {
+            "client": "Flipkart",
+            "model": "Gentle Cavity",
+            "day": 0,
+            "night": 7000
+          }
+        ],
         "packaging": {
           "sealing": [],
           "pouch": [],
