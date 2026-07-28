@@ -338,6 +338,10 @@
     "WNF|Prima Chandan 12": {
       "pkg": "hanger",
       "bps": 12
+    },
+    "WNF|Basica 13": {
+      "w": 10,
+      "m": "two"
     }
   }
 }
