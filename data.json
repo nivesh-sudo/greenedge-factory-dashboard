@@ -3160,7 +3160,44 @@
             "night": 0
           }
         ],
-        "trimming": [],
+        "trimming": [
+          {
+            "client": "Dabur",
+            "model": "Promise",
+            "day": 10400,
+            "night": 11850
+          },
+          {
+            "client": "Flipkart",
+            "model": "Max Clean",
+            "day": 4930,
+            "night": 0
+          },
+          {
+            "client": "Dabur",
+            "model": "Prima",
+            "day": 14900,
+            "night": 20800
+          },
+          {
+            "client": "WNF",
+            "model": "Basica 13",
+            "day": 1500,
+            "night": 11490
+          },
+          {
+            "client": "Flipkart",
+            "model": "Gentle Cavity",
+            "day": 5650,
+            "night": 7160
+          },
+          {
+            "client": "Dabur",
+            "model": "Basica",
+            "day": 20250,
+            "night": 5500
+          }
+        ],
         "packaging": {
           "sealing": [],
           "pouch": [],
