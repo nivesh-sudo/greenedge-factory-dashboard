@@ -3026,7 +3026,44 @@
             "night": 0
           }
         ],
-        "trimming": [],
+        "trimming": [
+          {
+            "client": "Dabur",
+            "model": "Promise",
+            "day": 6200,
+            "night": 0
+          },
+          {
+            "client": "Flipkart",
+            "model": "Gentle Cavity",
+            "day": 8500,
+            "night": 0
+          },
+          {
+            "client": "KPN",
+            "model": "Classique",
+            "day": 6600,
+            "night": 2500
+          },
+          {
+            "client": "Flipkart",
+            "model": "Daily Defence",
+            "day": 5070,
+            "night": 5420
+          },
+          {
+            "client": "Dabur",
+            "model": "Basica",
+            "day": 19150,
+            "night": 17600
+          },
+          {
+            "client": "Flipkart",
+            "model": "Super Flexi",
+            "day": 0,
+            "night": 14000
+          }
+        ],
         "packaging": {
           "sealing": [],
           "pouch": [],
