@@ -2860,9 +2860,80 @@
           }
         ],
         "packaging": {
-          "sealing": [],
-          "pouch": [],
-          "loose": []
+          "sealing": [
+            {
+              "client": "Flipkart",
+              "model": "Gumcare",
+              "day": 0,
+              "night": 700,
+              "bps": 18
+            },
+            {
+              "client": "Flipkart",
+              "model": "Daily Defence",
+              "day": 0,
+              "night": 1220,
+              "bps": 18
+            },
+            {
+              "client": "JLM",
+              "model": "Prima",
+              "day": 100,
+              "night": 0,
+              "bps": 12
+            },
+            {
+              "client": "WNF",
+              "model": "Junior",
+              "day": 150,
+              "night": 0,
+              "bps": 12
+            },
+            {
+              "client": "WNF",
+              "model": "Prima Chandan 12",
+              "day": 487,
+              "night": 0,
+              "bps": 12
+            },
+            {
+              "client": "Vicco",
+              "model": "Senso 4 Pack",
+              "day": 715,
+              "night": 180,
+              "bps": 20
+            },
+            {
+              "client": "Flipkart",
+              "model": "Gentle Cavity",
+              "day": 800,
+              "night": 190,
+              "bps": 18
+            },
+            {
+              "client": "Assure",
+              "model": "Shine 06 pk",
+              "day": 800,
+              "night": 0,
+              "bps": 6
+            }
+          ],
+          "pouch": [
+            {
+              "client": "Dabur",
+              "model": "Promise",
+              "day": 8300,
+              "night": 0
+            }
+          ],
+          "loose": [
+            {
+              "client": "Dabur",
+              "model": "Prima Blue",
+              "day": 28800,
+              "night": 0
+            }
+          ]
         }
       },
       "att": {
