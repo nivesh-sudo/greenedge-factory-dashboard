@@ -3100,8 +3100,76 @@
     "2026-07-27": {
       "prod": {
         "handles": {
-          "vertical": [],
-          "horizontal": []
+          "vertical": [
+            {
+              "client": "Dabur",
+              "model": "Basica",
+              "day": 15225,
+              "night": 0
+            },
+            {
+              "client": "Dabur",
+              "model": "Prima Blue",
+              "day": 5690,
+              "night": 9420
+            },
+            {
+              "client": "Flipkart",
+              "model": "Gentle Cavity",
+              "day": 6010,
+              "night": 0
+            },
+            {
+              "client": "Vicco",
+              "model": "Senso 4 Pack",
+              "day": 10500,
+              "night": 7090
+            },
+            {
+              "client": "Dabur Int",
+              "model": "power clean",
+              "day": 9630,
+              "night": 12655
+            },
+            {
+              "client": "MKJ",
+              "model": "4 Pack",
+              "day": 9130,
+              "night": 9340
+            },
+            {
+              "client": "JLM",
+              "model": "Classique",
+              "day": 730,
+              "night": 8500
+            },
+            {
+              "client": "Assure",
+              "model": "Delta Disp",
+              "day": 2870,
+              "night": 2710
+            }
+          ],
+          "horizontal": [
+            {
+              "client": "Dabur",
+              "model": "Promise",
+              "day": 17400,
+              "night": 17500
+            },
+            {
+              "client": "DMBH",
+              "model": "Smile 3D",
+              "day": 1800,
+              "night": 0
+            },
+            {
+              "client": "WNF",
+              "model": "Excel 51",
+              "day": 0,
+              "night": 3300
+            }
+          ]
         },
         "printing": [],
         "tufting": [
