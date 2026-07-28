@@ -321,7 +321,9 @@
     },
     "WNF|Excel 51": {
       "pkg": "hanger",
-      "bps": 12
+      "bps": 12,
+      "w": 8,
+      "m": "single"
     },
     "Assure|Besto 09": {
       "pkg": "dispenser",
