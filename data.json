@@ -2966,8 +2966,58 @@
     "2026-07-26": {
       "prod": {
         "handles": {
-          "vertical": [],
-          "horizontal": []
+          "vertical": [
+            {
+              "client": "Dabur",
+              "model": "Basica",
+              "day": 9750,
+              "night": 0
+            },
+            {
+              "client": "Dabur",
+              "model": "Prima",
+              "day": 12840,
+              "night": 0
+            },
+            {
+              "client": "Flipkart",
+              "model": "Gentle Cavity",
+              "day": 4240,
+              "night": 0
+            },
+            {
+              "client": "Vicco",
+              "model": "Senso 4 Pack",
+              "day": 8130,
+              "night": 0
+            },
+            {
+              "client": "Dabur Int",
+              "model": "Power Clean",
+              "day": 5180,
+              "night": 0
+            },
+            {
+              "client": "MKJ",
+              "model": "4 Pack",
+              "day": 8140,
+              "night": 0
+            }
+          ],
+          "horizontal": [
+            {
+              "client": "Dabur",
+              "model": "Promise",
+              "day": 18730,
+              "night": 0
+            },
+            {
+              "client": "DMBH",
+              "model": "Smile 3D",
+              "day": 11120,
+              "night": 0
+            }
+          ]
         },
         "printing": [],
         "tufting": [
