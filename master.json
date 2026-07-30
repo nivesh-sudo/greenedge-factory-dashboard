@@ -344,7 +344,9 @@
     "WNF|Basica 13": {
       "w": 10,
       "m": "two",
-      "h": 37
+      "h": 37,
+      "pkg": "hanger",
+      "bps": 12
     },
     "Dabur Int|power clean": {
       "w": 12.5,
