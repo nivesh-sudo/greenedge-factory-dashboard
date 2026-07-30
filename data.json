@@ -3560,7 +3560,38 @@
             "night": 6170
           }
         ],
-        "trimming": [],
+        "trimming": [
+          {
+            "client": "MKJ",
+            "model": "4 Pack",
+            "day": 15400,
+            "night": 1350
+          },
+          {
+            "client": "Dabur",
+            "model": "Promise",
+            "day": 9000,
+            "night": 8200
+          },
+          {
+            "client": "Dabur",
+            "model": "Prima",
+            "day": 0,
+            "night": 13100
+          },
+          {
+            "client": "WNF",
+            "model": "Basica 13",
+            "day": 17500,
+            "night": 14950
+          },
+          {
+            "client": "JLM",
+            "model": "Prima",
+            "day": 15300,
+            "night": 9400
+          }
+        ],
         "packaging": {
           "sealing": [],
           "pouch": [],
