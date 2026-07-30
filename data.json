@@ -3128,9 +3128,59 @@
           }
         ],
         "packaging": {
-          "sealing": [],
-          "pouch": [],
-          "loose": []
+          "sealing": [
+            {
+              "client": "Vicco",
+              "model": "Senso Clean",
+              "day": 339,
+              "night": 0,
+              "bps": 6
+            },
+            {
+              "client": "JLM",
+              "model": "Prima",
+              "day": 615,
+              "night": 0,
+              "bps": 12
+            },
+            {
+              "client": "MKJ",
+              "model": "8 Pack",
+              "day": 0,
+              "night": 750,
+              "bps": 24
+            },
+            {
+              "client": "Vicco",
+              "model": "Senso 4 Pack",
+              "day": 439,
+              "night": 650,
+              "bps": 20
+            },
+            {
+              "client": "Flipkart",
+              "model": "Super Flexi",
+              "day": 850,
+              "night": 850,
+              "bps": 18
+            }
+          ],
+          "pouch": [
+            {
+              "client": "Dabur",
+              "model": "Promise",
+              "day": 13700,
+              "night": 0
+            }
+          ],
+          "loose": [
+            {
+              "client": "Dabur",
+              "model": "Prima",
+              "day": 50800,
+              "night": 0
+            }
+          ]
         }
       },
       "att": {
