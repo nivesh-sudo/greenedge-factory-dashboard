@@ -3443,7 +3443,38 @@
             }
           ]
         },
-        "printing": [],
+        "printing": [
+          {
+            "client": "MKJ",
+            "model": "4 Pack",
+            "day": 5727,
+            "night": 5835
+          },
+          {
+            "client": "Dabur",
+            "model": "Promise",
+            "day": 11352,
+            "night": 7350
+          },
+          {
+            "client": "Assure",
+            "model": "Delta Disp",
+            "day": 2700,
+            "night": 0
+          },
+          {
+            "client": "JLM",
+            "model": "Classique",
+            "day": 7820,
+            "night": 10500
+          },
+          {
+            "client": "Assure",
+            "model": "Shine 06 pk",
+            "day": 8000,
+            "night": 0
+          }
+        ],
         "tufting": [
           {
             "client": "Vicco",
