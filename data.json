@@ -3992,6 +3992,86 @@
           "qc_12hr": 0
         }
       }
+    },
+    "2026-08-01": {
+      "prod": {
+        "handles": {
+          "vertical": [
+            {
+              "client": "Dabur Int",
+              "model": "power clean",
+              "day": 9880,
+              "night": 11700
+            },
+            {
+              "client": "MKJ",
+              "model": "4 Pack",
+              "day": 8290,
+              "night": 6520
+            },
+            {
+              "client": "DMBH",
+              "model": "Classic Zigzag",
+              "day": 4710,
+              "night": 620
+            },
+            {
+              "client": "Vicco",
+              "model": "Senso Free",
+              "day": 8210,
+              "night": 0
+            }
+          ],
+          "horizontal": [
+            {
+              "client": "Dabur",
+              "model": "Promise",
+              "day": 11600,
+              "night": 17700
+            },
+            {
+              "client": "Assure",
+              "model": "Qlean",
+              "day": 0,
+              "night": 6160
+            }
+          ]
+        },
+        "printing": [],
+        "tufting": [],
+        "trimming": [],
+        "packaging": {
+          "sealing": [],
+          "pouch": [],
+          "loose": []
+        }
+      },
+      "att": {
+        "moulding": {
+          "day12": 0,
+          "night12": 0,
+          "hr8": 0
+        },
+        "tufting": {
+          "day12": 0,
+          "night12": 0,
+          "hr8": 0
+        },
+        "checking": {
+          "hr12": 0,
+          "hr8": 0
+        },
+        "packaging": {
+          "day12": 0,
+          "hr8": 0,
+          "night12": 0
+        },
+        "overhead": {
+          "cleaning_8hr": 0,
+          "store_12hr": 0,
+          "qc_12hr": 0
+        }
+      }
     }
   }
 }
