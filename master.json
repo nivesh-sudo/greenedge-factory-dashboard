@@ -355,6 +355,10 @@
     "Assure|Qlean": {
       "w": 10.2,
       "m": "single"
+    },
+    "DMBH|Classic Zigzag": {
+      "w": 11.2,
+      "m": "two"
     }
   }
 }
