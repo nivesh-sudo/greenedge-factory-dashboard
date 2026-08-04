@@ -363,6 +363,9 @@
     "Assure|Softshield": {
       "pkg": "hanger",
       "bps": 6
+    },
+    "DMBH|Besto 09": {
+      "h": 39
     }
   }
 }
