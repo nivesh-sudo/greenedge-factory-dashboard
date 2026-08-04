@@ -4487,7 +4487,26 @@
             }
           ]
         },
-        "printing": [],
+        "printing": [
+          {
+            "client": "MKJ",
+            "model": "4 Pack",
+            "day": 6942,
+            "night": 0
+          },
+          {
+            "client": "Dabur",
+            "model": "Promise",
+            "day": 24612,
+            "night": 20000
+          },
+          {
+            "client": "DMBH",
+            "model": "Classic Zigzag",
+            "day": 1055,
+            "night": 0
+          }
+        ],
         "tufting": [
           {
             "client": "MKJ",
