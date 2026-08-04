@@ -4434,8 +4434,58 @@
     "2026-08-02": {
       "prod": {
         "handles": {
-          "vertical": [],
-          "horizontal": []
+          "vertical": [
+            {
+              "client": "Dabur Int",
+              "model": "Power Clean",
+              "day": 13310,
+              "night": 11940
+            },
+            {
+              "client": "MKJ",
+              "model": "4 Pack",
+              "day": 9430,
+              "night": 7140
+            },
+            {
+              "client": "DMBH",
+              "model": "Classic Zigzag",
+              "day": 9210,
+              "night": 7450
+            },
+            {
+              "client": "Vicco",
+              "model": "Senso Free",
+              "day": 3060,
+              "night": 0
+            },
+            {
+              "client": "Assure",
+              "model": "Delta Disp",
+              "day": 4890,
+              "night": 0
+            },
+            {
+              "client": "Flipkart",
+              "model": "Super Flexi",
+              "day": 5890,
+              "night": 0
+            }
+          ],
+          "horizontal": [
+            {
+              "client": "Dabur",
+              "model": "Promise",
+              "day": 17200,
+              "night": 17500
+            },
+            {
+              "client": "Assure",
+              "model": "Qlean",
+              "day": 7180,
+              "night": 8430
+            }
+          ]
         },
         "printing": [],
         "tufting": [
