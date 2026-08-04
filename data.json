@@ -4051,7 +4051,50 @@
             "night": 22000
           }
         ],
-        "tufting": [],
+        "tufting": [
+          {
+            "client": "MKJ",
+            "model": "4 Pack",
+            "day": 7400,
+            "night": 8800
+          },
+          {
+            "client": "Dabur",
+            "model": "Promise",
+            "day": 27050,
+            "night": 26950
+          },
+          {
+            "client": "DMBH",
+            "model": "Besto 09",
+            "day": 5150,
+            "night": 0
+          },
+          {
+            "client": "DMBH",
+            "model": "Smile 3D",
+            "day": 4500,
+            "night": 0
+          },
+          {
+            "client": "Assure",
+            "model": "Softshield",
+            "day": 5045,
+            "night": 0
+          },
+          {
+            "client": "Dabur",
+            "model": "Basica",
+            "day": 6400,
+            "night": 0
+          },
+          {
+            "client": "Dabur Int",
+            "model": "Power Clean",
+            "day": 11850,
+            "night": 19000
+          }
+        ],
         "trimming": [],
         "packaging": {
           "sealing": [
