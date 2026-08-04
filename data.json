@@ -4566,8 +4566,30 @@
           }
         ],
         "packaging": {
-          "sealing": [],
-          "pouch": [],
+          "sealing": [
+            {
+              "client": "Flipkart",
+              "model": "Gumcare",
+              "day": 0,
+              "night": 700,
+              "bps": 18
+            },
+            {
+              "client": "Vicco",
+              "model": "Senso Free",
+              "day": 0,
+              "night": 400,
+              "bps": 6
+            }
+          ],
+          "pouch": [
+            {
+              "client": "Dabur",
+              "model": "Promise",
+              "day": 17500,
+              "night": 11000
+            }
+          ],
           "loose": []
         }
       },
