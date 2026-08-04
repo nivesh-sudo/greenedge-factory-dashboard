@@ -4607,10 +4607,28 @@
         "printing": [],
         "tufting": [
           {
-            "client": "Assure",
-            "model": "Spider 72",
-            "day": 2750,
-            "night": 4440
+            "client": "MKJ",
+            "model": "4 Pack",
+            "day": 17590,
+            "night": 17110
+          },
+          {
+            "client": "Dabur",
+            "model": "Promise",
+            "day": 20900,
+            "night": 18800
+          },
+          {
+            "client": "Dabur",
+            "model": "Basica",
+            "day": 9800,
+            "night": 0
+          },
+          {
+            "client": "Dabur Int",
+            "model": "Power Clean",
+            "day": 19780,
+            "night": 23500
           }
         ],
         "trimming": [],
