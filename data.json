@@ -4286,10 +4286,34 @@
         "printing": [],
         "tufting": [
           {
-            "client": "Assure",
-            "model": "Softshield",
-            "day": 2750,
-            "night": 6000
+            "client": "Vicco",
+            "model": "Senso Clean",
+            "day": 1900,
+            "night": 0
+          },
+          {
+            "client": "MKJ",
+            "model": "4 Pack",
+            "day": 6400,
+            "night": 9200
+          },
+          {
+            "client": "Dabur",
+            "model": "Promise",
+            "day": 16400,
+            "night": 18200
+          },
+          {
+            "client": "DMBH",
+            "model": "Besto 09",
+            "day": 6950,
+            "night": 6320
+          },
+          {
+            "client": "Dabur Int",
+            "model": "Power Clean",
+            "day": 8500,
+            "night": 8000
           }
         ],
         "trimming": [],
