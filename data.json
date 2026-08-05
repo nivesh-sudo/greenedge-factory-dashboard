@@ -4821,10 +4821,40 @@
         "printing": [],
         "tufting": [
           {
+            "client": "MKJ",
+            "model": "4 Pack",
+            "day": 14750,
+            "night": 15800
+          },
+          {
+            "client": "Dabur",
+            "model": "Promise",
+            "day": 25500,
+            "night": 25100
+          },
+          {
             "client": "DMBH",
             "model": "Smile 3D",
-            "day": 6000,
+            "day": 6600,
             "night": 0
+          },
+          {
+            "client": "Assure",
+            "model": "Spider 72",
+            "day": 4500,
+            "night": 0
+          },
+          {
+            "client": "Dabur",
+            "model": "Basica",
+            "day": 4400,
+            "night": 0
+          },
+          {
+            "client": "Dabur Int",
+            "model": "Power Clean",
+            "day": 18250,
+            "night": 16300
           }
         ],
         "trimming": [
