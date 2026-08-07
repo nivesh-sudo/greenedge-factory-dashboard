@@ -4815,8 +4815,46 @@
     "2026-08-04": {
       "prod": {
         "handles": {
-          "vertical": [],
-          "horizontal": []
+          "vertical": [
+            {
+              "client": "Flipkart",
+              "model": "Super Flexi",
+              "day": 13710,
+              "night": 8195
+            },
+            {
+              "client": "Assure",
+              "model": "Shine 06 pk",
+              "day": 2990,
+              "night": 0
+            },
+            {
+              "client": "Flipkart",
+              "model": "Gentle Cavity",
+              "day": 7530,
+              "night": 7250
+            },
+            {
+              "client": "MKJ",
+              "model": "4 Pack",
+              "day": 16330,
+              "night": 9535
+            },
+            {
+              "client": "Dabur Int",
+              "model": "Power Clean",
+              "day": 18705,
+              "night": 17470
+            }
+          ],
+          "horizontal": [
+            {
+              "client": "Assure",
+              "model": "Qlean",
+              "day": 7580,
+              "night": 8980
+            }
+          ]
         },
         "printing": [],
         "tufting": [
