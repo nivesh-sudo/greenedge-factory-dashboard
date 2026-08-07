@@ -4941,8 +4941,37 @@
           }
         ],
         "packaging": {
-          "sealing": [],
-          "pouch": [],
+          "sealing": [
+            {
+              "client": "Dabur Int",
+              "model": "Power Clean",
+              "day": 510,
+              "night": 800,
+              "bps": 12
+            },
+            {
+              "client": "Vicco",
+              "model": "Senso Free",
+              "day": 950,
+              "night": 950,
+              "bps": 6
+            },
+            {
+              "client": "Dabur",
+              "model": "Basica",
+              "day": 2840,
+              "night": 2000,
+              "bps": 12
+            }
+          ],
+          "pouch": [
+            {
+              "client": "Dabur",
+              "model": "Promise",
+              "day": 42000,
+              "night": 18750
+            }
+          ],
           "loose": []
         }
       },
