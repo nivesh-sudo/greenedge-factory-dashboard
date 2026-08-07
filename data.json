@@ -5008,12 +5008,12 @@
       "att": {
         "moulding": {
           "day12": 0,
-          "night12": 0,
+          "night12": 14,
           "hr8": 0
         },
         "tufting": {
           "day12": 0,
-          "night12": 0,
+          "night12": 5,
           "hr8": 0
         },
         "checking": {
@@ -5022,12 +5022,12 @@
         },
         "packaging": {
           "day12": 0,
-          "hr8": 0,
-          "night12": 0
+          "hr8": 15,
+          "night12": 4
         },
         "overhead": {
-          "cleaning_8hr": 0,
-          "store_12hr": 0,
+          "cleaning_8hr": 5,
+          "store_12hr": 15,
           "qc_12hr": 0
         }
       }
