@@ -5060,7 +5060,38 @@
             "night": 20050
           }
         ],
-        "tufting": [],
+        "tufting": [
+          {
+            "client": "MKJ",
+            "model": "4 Pack",
+            "day": 0,
+            "night": 7450
+          },
+          {
+            "client": "Dabur",
+            "model": "Promise",
+            "day": 0,
+            "night": 18700
+          },
+          {
+            "client": "DMBH",
+            "model": "Classic Zigzag",
+            "day": 0,
+            "night": 7950
+          },
+          {
+            "client": "Assure",
+            "model": "Shine 06 pk",
+            "day": 0,
+            "night": 8400
+          },
+          {
+            "client": "Dabur Int",
+            "model": "Power Clean",
+            "day": 0,
+            "night": 16000
+          }
+        ],
         "trimming": [],
         "packaging": {
           "sealing": [
