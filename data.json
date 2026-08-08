@@ -5123,6 +5123,91 @@
           "qc_12hr": 0
         }
       }
+    },
+    "2026-08-05": {
+      "prod": {
+        "handles": {
+          "vertical": [],
+          "horizontal": []
+        },
+        "printing": [],
+        "tufting": [
+          {
+            "client": "MKJ",
+            "model": "4 Pack",
+            "day": 8740,
+            "night": 7250
+          },
+          {
+            "client": "Dabur",
+            "model": "Promise",
+            "day": 28700,
+            "night": 17100
+          },
+          {
+            "client": "DMBH",
+            "model": "Smile 3D",
+            "day": 8200,
+            "night": 0
+          },
+          {
+            "client": "Assure",
+            "model": "Spider 72",
+            "day": 2050,
+            "night": 0
+          },
+          {
+            "client": "DMBH",
+            "model": "Classic Zigzag",
+            "day": 4400,
+            "night": 8200
+          },
+          {
+            "client": "Assure",
+            "model": "Shine 06 pk",
+            "day": 5900,
+            "night": 8100
+          },
+          {
+            "client": "Dabur Int",
+            "model": "Power Clean",
+            "day": 18950,
+            "night": 14900
+          }
+        ],
+        "trimming": [],
+        "packaging": {
+          "sealing": [],
+          "pouch": [],
+          "loose": []
+        }
+      },
+      "att": {
+        "moulding": {
+          "day12": 0,
+          "night12": 0,
+          "hr8": 0
+        },
+        "tufting": {
+          "day12": 0,
+          "night12": 0,
+          "hr8": 0
+        },
+        "checking": {
+          "hr12": 0,
+          "hr8": 0
+        },
+        "packaging": {
+          "day12": 0,
+          "hr8": 0,
+          "night12": 0
+        },
+        "overhead": {
+          "cleaning_8hr": 0,
+          "store_12hr": 0,
+          "qc_12hr": 0
+        }
+      }
     }
   }
 }
