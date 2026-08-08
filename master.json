@@ -358,7 +358,8 @@
     },
     "DMBH|Classic Zigzag": {
       "w": 11.2,
-      "m": "two"
+      "m": "two",
+      "h": 39
     },
     "Assure|Softshield": {
       "pkg": "hanger",
