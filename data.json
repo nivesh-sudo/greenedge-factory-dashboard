@@ -5329,7 +5329,38 @@
             "night": 15700
           }
         ],
-        "trimming": [],
+        "trimming": [
+          {
+            "client": "Dabur",
+            "model": "Promise",
+            "day": 28050,
+            "night": 27100
+          },
+          {
+            "client": "MKJ",
+            "model": "4 Pack",
+            "day": 0,
+            "night": 15500
+          },
+          {
+            "client": "Flipkart",
+            "model": "Super Flexi",
+            "day": 4300,
+            "night": 8000
+          },
+          {
+            "client": "DMBH",
+            "model": "Classic Zigzag",
+            "day": 12300,
+            "night": 0
+          },
+          {
+            "client": "Assure",
+            "model": "Shine 06 pk",
+            "day": 17100,
+            "night": 0
+          }
+        ],
         "packaging": {
           "sealing": [],
           "pouch": [],
