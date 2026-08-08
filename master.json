@@ -317,7 +317,8 @@
       "w": 15.5,
       "m": "two",
       "pkg": "dispenser",
-      "bps": 6
+      "bps": 6,
+      "h": 47
     },
     "WNF|Excel 51": {
       "pkg": "hanger",
