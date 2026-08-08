@@ -5175,7 +5175,26 @@
             "night": 14900
           }
         ],
-        "trimming": [],
+        "trimming": [
+          {
+            "client": "MKJ",
+            "model": "4 Pack",
+            "day": 18500,
+            "night": 16040
+          },
+          {
+            "client": "Dabur",
+            "model": "Promise",
+            "day": 28200,
+            "night": 19780
+          },
+          {
+            "client": "DMBH",
+            "model": "Smile 3D",
+            "day": 12000,
+            "night": 0
+          }
+        ],
         "packaging": {
           "sealing": [],
           "pouch": [],
