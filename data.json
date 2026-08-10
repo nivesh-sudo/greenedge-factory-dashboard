@@ -5589,6 +5589,79 @@
           "qc_12hr": 0
         }
       }
+    },
+    "2026-08-09": {
+      "prod": {
+        "handles": {
+          "vertical": [],
+          "horizontal": []
+        },
+        "printing": [],
+        "tufting": [
+          {
+            "client": "MKJ",
+            "model": "4 Pack",
+            "day": 15830,
+            "night": 12500
+          },
+          {
+            "client": "Dabur",
+            "model": "Promise",
+            "day": 18500,
+            "night": 24400
+          },
+          {
+            "client": "Flipkart",
+            "model": "Gentle Cavity",
+            "day": 9100,
+            "night": 9235
+          },
+          {
+            "client": "Flipkart",
+            "model": "Super Flexi",
+            "day": 9250,
+            "night": 8240
+          },
+          {
+            "client": "Dabur Int",
+            "model": "Power Clean",
+            "day": 18650,
+            "night": 14200
+          }
+        ],
+        "trimming": [],
+        "packaging": {
+          "sealing": [],
+          "pouch": [],
+          "loose": []
+        }
+      },
+      "att": {
+        "moulding": {
+          "day12": 0,
+          "night12": 0,
+          "hr8": 0
+        },
+        "tufting": {
+          "day12": 0,
+          "night12": 0,
+          "hr8": 0
+        },
+        "checking": {
+          "hr12": 0,
+          "hr8": 0
+        },
+        "packaging": {
+          "day12": 0,
+          "hr8": 0,
+          "night12": 0
+        },
+        "overhead": {
+          "cleaning_8hr": 0,
+          "store_12hr": 0,
+          "qc_12hr": 0
+        }
+      }
     }
   }
 }
