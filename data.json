@@ -5727,7 +5727,20 @@
             }
           ]
         },
-        "printing": [],
+        "printing": [
+          {
+            "client": "MKJ",
+            "model": "4 Pack",
+            "day": 19154,
+            "night": 17770
+          },
+          {
+            "client": "Dabur",
+            "model": "Promise",
+            "day": 18370,
+            "night": 18540
+          }
+        ],
         "tufting": [
           {
             "client": "MKJ",
