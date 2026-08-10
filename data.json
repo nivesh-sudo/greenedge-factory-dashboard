@@ -5419,8 +5419,37 @@
           }
         ],
         "packaging": {
-          "sealing": [],
-          "pouch": [],
+          "sealing": [
+            {
+              "client": "Dabur Int",
+              "model": "Power Clean",
+              "day": 1440,
+              "night": 1410,
+              "bps": 12
+            },
+            {
+              "client": "Dabur Int",
+              "model": "Power Clean",
+              "day": 900,
+              "night": 980,
+              "bps": 12
+            },
+            {
+              "client": "WNF",
+              "model": "Basica 13",
+              "day": 850,
+              "night": 0,
+              "bps": 12
+            }
+          ],
+          "pouch": [
+            {
+              "client": "Dabur",
+              "model": "Promise",
+              "day": 21000,
+              "night": 18000
+            }
+          ],
           "loose": []
         }
       },
