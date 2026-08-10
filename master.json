@@ -336,7 +336,9 @@
     "DMBH|Smile 3D": {
       "w": 7.9,
       "m": "single",
-      "h": 29
+      "h": 29,
+      "pkg": "hanger",
+      "bps": 12
     },
     "WNF|Prima Chandan 12": {
       "pkg": "hanger",
