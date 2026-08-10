@@ -5800,8 +5800,44 @@
           }
         ],
         "packaging": {
-          "sealing": [],
-          "pouch": [],
+          "sealing": [
+            {
+              "client": "Dabur Int",
+              "model": "Power Clean",
+              "day": 1525,
+              "night": 1540,
+              "bps": 12
+            },
+            {
+              "client": "MKJ",
+              "model": "4 Pack",
+              "day": 1600,
+              "night": 1050,
+              "bps": 20
+            },
+            {
+              "client": "Vicco",
+              "model": "Senso Free",
+              "day": 380,
+              "night": 0,
+              "bps": 6
+            },
+            {
+              "client": "DMBH",
+              "model": "Smile 3D",
+              "day": 620,
+              "night": 0,
+              "bps": 12
+            }
+          ],
+          "pouch": [
+            {
+              "client": "Dabur",
+              "model": "Promise",
+              "day": 41500,
+              "night": 18500
+            }
+          ],
           "loose": []
         }
       },
