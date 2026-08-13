@@ -5977,6 +5977,97 @@
           "qc_12hr": 0
         }
       }
+    },
+    "2026-08-11": {
+      "prod": {
+        "handles": {
+          "vertical": [],
+          "horizontal": []
+        },
+        "printing": [],
+        "tufting": [
+          {
+            "client": "Vicco",
+            "model": "Senso Clean",
+            "day": 7700,
+            "night": 6000
+          },
+          {
+            "client": "MKJ",
+            "model": "4 Pack",
+            "day": 17120,
+            "night": 13450
+          },
+          {
+            "client": "Dabur",
+            "model": "Promise",
+            "day": 9850,
+            "night": 5300
+          },
+          {
+            "client": "Flipkart",
+            "model": "Gentle Cavity",
+            "day": 8150,
+            "night": 8700
+          },
+          {
+            "client": "oxident",
+            "model": "Shine Delta",
+            "day": 2620,
+            "night": 0
+          },
+          {
+            "client": "Flipkart",
+            "model": "Super Flexi",
+            "day": 9450,
+            "night": 2775
+          },
+          {
+            "client": "Assure",
+            "model": "Shine 06 pk",
+            "day": 5500,
+            "night": 4693
+          },
+          {
+            "client": "Dabur Int",
+            "model": "Power Clean",
+            "day": 8000,
+            "night": 0
+          }
+        ],
+        "trimming": [],
+        "packaging": {
+          "sealing": [],
+          "pouch": [],
+          "loose": []
+        }
+      },
+      "att": {
+        "moulding": {
+          "day12": 0,
+          "night12": 0,
+          "hr8": 0
+        },
+        "tufting": {
+          "day12": 0,
+          "night12": 0,
+          "hr8": 0
+        },
+        "checking": {
+          "hr12": 0,
+          "hr8": 0
+        },
+        "packaging": {
+          "day12": 0,
+          "hr8": 0,
+          "night12": 0
+        },
+        "overhead": {
+          "cleaning_8hr": 0,
+          "store_12hr": 0,
+          "qc_12hr": 0
+        }
+      }
     }
   }
 }
