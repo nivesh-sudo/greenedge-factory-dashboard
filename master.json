@@ -377,6 +377,10 @@
     },
     "oxident|Shine Delta": {
       "h": 48
+    },
+    "WNF|Skyline": {
+      "w": 10,
+      "m": "two"
     }
   }
 }
