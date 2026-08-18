@@ -6777,7 +6777,38 @@
             "night": 13600
           }
         ],
-        "trimming": [],
+        "trimming": [
+          {
+            "client": "MKJ",
+            "model": "4 Pack",
+            "day": 7200,
+            "night": 0
+          },
+          {
+            "client": "Dabur",
+            "model": "Promise",
+            "day": 7800,
+            "night": 18300
+          },
+          {
+            "client": "Flipkart",
+            "model": "Gentle Cavity",
+            "day": 11100,
+            "night": 0
+          },
+          {
+            "client": "Flipkart",
+            "model": "Super Flexi",
+            "day": 6100,
+            "night": 0
+          },
+          {
+            "client": "WNF",
+            "model": "Skyline",
+            "day": 8600,
+            "night": 0
+          }
+        ],
         "packaging": {
           "sealing": [],
           "pouch": [],
