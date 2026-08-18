@@ -6661,7 +6661,32 @@
             "night": 5400
           }
         ],
-        "trimming": [],
+        "trimming": [
+          {
+            "client": "MKJ",
+            "model": "4 Pack",
+            "day": 16500,
+            "night": 8120
+          },
+          {
+            "client": "Dabur",
+            "model": "Promise",
+            "day": 12600,
+            "night": 11370
+          },
+          {
+            "client": "Flipkart",
+            "model": "Gentle Cavity",
+            "day": 14000,
+            "night": 6050
+          },
+          {
+            "client": "Flipkart",
+            "model": "Super Flexi",
+            "day": 6000,
+            "night": 5980
+          }
+        ],
         "packaging": {
           "sealing": [],
           "pouch": [],
