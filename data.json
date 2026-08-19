@@ -6971,7 +6971,50 @@
           }
         ],
         "packaging": {
-          "sealing": [],
+          "sealing": [
+            {
+              "client": "Dabur Int",
+              "model": "Power Clean",
+              "day": 1856,
+              "night": 2305,
+              "bps": 12
+            },
+            {
+              "client": "MKJ",
+              "model": "4 Pack",
+              "day": 720,
+              "night": 760,
+              "bps": 20
+            },
+            {
+              "client": "Flipkart",
+              "model": "Super Flexi",
+              "day": 333,
+              "night": 0,
+              "bps": 18
+            },
+            {
+              "client": "DMBH",
+              "model": "Besto 09",
+              "day": 235,
+              "night": 200,
+              "bps": 6
+            },
+            {
+              "client": "Vicco",
+              "model": "Senso Free",
+              "day": 1181,
+              "night": 1000,
+              "bps": 6
+            },
+            {
+              "client": "Assure",
+              "model": "Senso Max",
+              "day": 424,
+              "night": 0,
+              "bps": 7
+            }
+          ],
           "pouch": [],
           "loose": []
         }
