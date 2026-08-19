@@ -6845,8 +6845,46 @@
     "2026-08-18": {
       "prod": {
         "handles": {
-          "vertical": [],
-          "horizontal": []
+          "vertical": [
+            {
+              "client": "Dabur Int",
+              "model": "Power Clean",
+              "day": 18110,
+              "night": 14870
+            },
+            {
+              "client": "Flipkart",
+              "model": "Gentle Cavity",
+              "day": 3700,
+              "night": 1710
+            },
+            {
+              "client": "JLM",
+              "model": "Prima",
+              "day": 7944,
+              "night": 5230
+            },
+            {
+              "client": "MKJ",
+              "model": "4 Pack",
+              "day": 15681,
+              "night": 15810
+            },
+            {
+              "client": "Flipkart",
+              "model": "Gumcare",
+              "day": 7330,
+              "night": 0
+            }
+          ],
+          "horizontal": [
+            {
+              "client": "Dabur",
+              "model": "Promise",
+              "day": 15971,
+              "night": 19360
+            }
+          ]
         },
         "printing": [],
         "tufting": [
