@@ -386,6 +386,10 @@
       "w": 10,
       "m": "two",
       "h": 38
+    },
+    "DMBH|Zigzag 09": {
+      "pkg": "dispenser",
+      "bps": 12
     }
   }
 }
