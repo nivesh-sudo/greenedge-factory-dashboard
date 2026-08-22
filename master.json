@@ -385,7 +385,9 @@
     "WNF|Skyline": {
       "w": 10,
       "m": "two",
-      "h": 38
+      "h": 38,
+      "pkg": "hanger",
+      "bps": 12
     },
     "DMBH|Zigzag 09": {
       "pkg": "dispenser",
