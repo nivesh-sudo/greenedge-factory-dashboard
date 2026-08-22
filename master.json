@@ -390,6 +390,10 @@
     "DMBH|Zigzag 09": {
       "pkg": "dispenser",
       "bps": 12
+    },
+    "Assure|Small Cap Hygiene": {
+      "w": 3.5,
+      "m": "single"
     }
   }
 }
