@@ -7243,7 +7243,44 @@
             "night": 0
           }
         ],
-        "tufting": [],
+        "tufting": [
+          {
+            "client": "MKJ",
+            "model": "4 Pack",
+            "day": 16700,
+            "night": 12530
+          },
+          {
+            "client": "Dabur",
+            "model": "Promise",
+            "day": 17050,
+            "night": 9700
+          },
+          {
+            "client": "Flipkart",
+            "model": "Gentle Cavity",
+            "day": 7600,
+            "night": 5860
+          },
+          {
+            "client": "JLM",
+            "model": "Prima",
+            "day": 8100,
+            "night": 7000
+          },
+          {
+            "client": "WNF",
+            "model": "Skyline",
+            "day": 1300,
+            "night": 0
+          },
+          {
+            "client": "Dabur Int",
+            "model": "Power Clean",
+            "day": 8400,
+            "night": 6550
+          }
+        ],
         "trimming": [],
         "packaging": {
           "sealing": [],
