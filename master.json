@@ -381,7 +381,9 @@
       "bps": 6
     },
     "Assure|Spider 72": {
-      "h": 72
+      "h": 72,
+      "pkg": "hanger",
+      "bps": 6
     },
     "oxident|Shine Delta": {
       "h": 48,
