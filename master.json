@@ -384,7 +384,9 @@
       "h": 72
     },
     "oxident|Shine Delta": {
-      "h": 48
+      "h": 48,
+      "pkg": "dispenser",
+      "bps": 6
     },
     "WNF|Skyline": {
       "w": 10,
