@@ -6641,7 +6641,36 @@
           }
         ],
         "packaging": {
-          "sealing": [],
+          "sealing": [
+            {
+              "client": "Vicco",
+              "model": "Value Clean",
+              "day": 830,
+              "night": 916,
+              "bps": 12
+            },
+            {
+              "client": "MKJ",
+              "model": "4 Pack",
+              "day": 1340,
+              "night": 1272,
+              "bps": 20
+            },
+            {
+              "client": "Vicco",
+              "model": "Senso Free",
+              "day": 1700,
+              "night": 1586,
+              "bps": 6
+            },
+            {
+              "client": "Assure",
+              "model": "Senso Max",
+              "day": 360,
+              "night": 0,
+              "bps": 7
+            }
+          ],
           "pouch": [],
           "loose": []
         }
