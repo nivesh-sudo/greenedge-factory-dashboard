@@ -7308,7 +7308,36 @@
           }
         ],
         "packaging": {
-          "sealing": [],
+          "sealing": [
+            {
+              "client": "Dabur Int",
+              "model": "Power Clean",
+              "day": 2580,
+              "night": 1510,
+              "bps": 12
+            },
+            {
+              "client": "Assure",
+              "model": "Softshield",
+              "day": 0,
+              "night": 150,
+              "bps": 6
+            },
+            {
+              "client": "DMBH",
+              "model": "Besto 09",
+              "day": 0,
+              "night": 366,
+              "bps": 6
+            },
+            {
+              "client": "MKJ",
+              "model": "4 Pack",
+              "day": 800,
+              "night": 186,
+              "bps": 20
+            }
+          ],
           "pouch": [],
           "loose": []
         }
