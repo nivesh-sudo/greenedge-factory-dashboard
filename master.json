@@ -359,7 +359,9 @@
     },
     "Assure|Qlean": {
       "w": 10.2,
-      "m": "single"
+      "m": "single",
+      "pkg": "hanger",
+      "bps": 13
     },
     "DMBH|Classic Zigzag": {
       "w": 11.2,
