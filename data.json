@@ -6643,32 +6643,39 @@
         "packaging": {
           "sealing": [
             {
-              "client": "Vicco",
-              "model": "Value Clean",
-              "day": 830,
-              "night": 916,
-              "bps": 12
-            },
-            {
-              "client": "MKJ",
-              "model": "4 Pack",
-              "day": 1340,
-              "night": 1272,
-              "bps": 20
-            },
-            {
-              "client": "Vicco",
-              "model": "Senso Free",
-              "day": 1700,
-              "night": 1586,
+              "client": "WNF",
+              "model": "Classic Besto 09",
+              "day": 1,
+              "night": 1,
               "bps": 6
             },
             {
               "client": "Assure",
-              "model": "Senso Max",
-              "day": 360,
-              "night": 0,
-              "bps": 7
+              "model": "Qlean",
+              "day": 1,
+              "night": 1,
+              "bps": 13
+            },
+            {
+              "client": "DMBH",
+              "model": "Classic Zigzag",
+              "day": 1,
+              "night": 1,
+              "bps": 12
+            },
+            {
+              "client": "oxident",
+              "model": "Shine Delta",
+              "day": 1,
+              "night": 1,
+              "bps": 6
+            },
+            {
+              "client": "Assure",
+              "model": "Spider 72",
+              "day": 1,
+              "night": 1,
+              "bps": 6
             }
           ],
           "pouch": [],
