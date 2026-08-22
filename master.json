@@ -271,7 +271,7 @@
       "h": 37,
       "m": "two",
       "pkg": "dispenser",
-      "bps": null,
+      "bps": 6,
       "printed": false
     },
     "Dabur|Prima Blue": {
