@@ -7178,6 +7178,86 @@
           "qc_12hr": 0
         }
       }
+    },
+    "2026-08-19": {
+      "prod": {
+        "handles": {
+          "vertical": [
+            {
+              "client": "Dabur Int",
+              "model": "Power Clean",
+              "day": 13340,
+              "night": 16530
+            },
+            {
+              "client": "Flipkart",
+              "model": "Gentle Cavity",
+              "day": 5110,
+              "night": 0
+            },
+            {
+              "client": "JLM",
+              "model": "Prima",
+              "day": 2000,
+              "night": 0
+            },
+            {
+              "client": "MKJ",
+              "model": "4 Pack",
+              "day": 23530,
+              "night": 25680
+            },
+            {
+              "client": "Flipkart",
+              "model": "Gumcare",
+              "day": 9700,
+              "night": 0
+            }
+          ],
+          "horizontal": [
+            {
+              "client": "Dabur",
+              "model": "Promise",
+              "day": 18300,
+              "night": 18630
+            }
+          ]
+        },
+        "printing": [],
+        "tufting": [],
+        "trimming": [],
+        "packaging": {
+          "sealing": [],
+          "pouch": [],
+          "loose": []
+        }
+      },
+      "att": {
+        "moulding": {
+          "day12": 0,
+          "night12": 0,
+          "hr8": 0
+        },
+        "tufting": {
+          "day12": 0,
+          "night12": 0,
+          "hr8": 0
+        },
+        "checking": {
+          "hr12": 0,
+          "hr8": 0
+        },
+        "packaging": {
+          "day12": 0,
+          "hr8": 0,
+          "night12": 0
+        },
+        "overhead": {
+          "cleaning_8hr": 0,
+          "store_12hr": 0,
+          "qc_12hr": 0
+        }
+      }
     }
   }
 }
