@@ -7874,7 +7874,20 @@
             "night": 0
           }
         ],
-        "trimming": [],
+        "trimming": [
+          {
+            "client": "MKJ",
+            "model": "4 Pack",
+            "day": 5300,
+            "night": 0
+          },
+          {
+            "client": "Flipkart",
+            "model": "Gentle Cavity",
+            "day": 7400,
+            "night": 0
+          }
+        ],
         "packaging": {
           "sealing": [],
           "pouch": [],
