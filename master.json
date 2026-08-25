@@ -404,6 +404,10 @@
     "Assure|Small Cap Hygiene": {
       "w": 3.5,
       "m": "single"
+    },
+    "Flipkart|Gentle 02 Pack": {
+      "pkg": "hanger",
+      "bps": 10
     }
   }
 }
