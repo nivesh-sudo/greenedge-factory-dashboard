@@ -7700,7 +7700,44 @@
             "night": 10267
           }
         ],
-        "tufting": [],
+        "tufting": [
+          {
+            "client": "Vicco",
+            "model": "Senso Clean",
+            "day": 7300,
+            "night": 2500
+          },
+          {
+            "client": "MKJ",
+            "model": "4 Pack",
+            "day": 20100,
+            "night": 16600
+          },
+          {
+            "client": "Dabur",
+            "model": "Promise",
+            "day": 16000,
+            "night": 14600
+          },
+          {
+            "client": "Flipkart",
+            "model": "Gentle Cavity",
+            "day": 8950,
+            "night": 9000
+          },
+          {
+            "client": "Dabur",
+            "model": "Basica",
+            "day": 8100,
+            "night": 7600
+          },
+          {
+            "client": "Dabur Int",
+            "model": "Power Clean",
+            "day": 14750,
+            "night": 13550
+          }
+        ],
         "trimming": [],
         "packaging": {
           "sealing": [
