@@ -7623,6 +7623,92 @@
           "qc_12hr": 0
         }
       }
+    },
+    "2026-08-24": {
+      "prod": {
+        "handles": {
+          "vertical": [
+            {
+              "client": "Dabur Int",
+              "model": "Power Clean",
+              "day": 12200,
+              "night": 17170
+            },
+            {
+              "client": "Flipkart",
+              "model": "Gentle Cavity",
+              "day": 8115,
+              "night": 3040
+            },
+            {
+              "client": "Dabur",
+              "model": "Basica",
+              "day": 14470,
+              "night": 13720
+            },
+            {
+              "client": "MKJ",
+              "model": "4 Pack",
+              "day": 11705,
+              "night": 12510
+            },
+            {
+              "client": "Assure",
+              "model": "Delta Disp",
+              "day": 6060,
+              "night": 2880
+            }
+          ],
+          "horizontal": [
+            {
+              "client": "HCP Wellness",
+              "model": "Gumforte",
+              "day": 12910,
+              "night": 0
+            },
+            {
+              "client": "Assure",
+              "model": "Small Cap Hygiene",
+              "day": 0,
+              "night": 13490
+            }
+          ]
+        },
+        "printing": [],
+        "tufting": [],
+        "trimming": [],
+        "packaging": {
+          "sealing": [],
+          "pouch": [],
+          "loose": []
+        }
+      },
+      "att": {
+        "moulding": {
+          "day12": 0,
+          "night12": 0,
+          "hr8": 0
+        },
+        "tufting": {
+          "day12": 0,
+          "night12": 0,
+          "hr8": 0
+        },
+        "checking": {
+          "hr12": 0,
+          "hr8": 0
+        },
+        "packaging": {
+          "day12": 0,
+          "hr8": 0,
+          "night12": 0
+        },
+        "overhead": {
+          "cleaning_8hr": 0,
+          "store_12hr": 0,
+          "qc_12hr": 0
+        }
+      }
     }
   }
 }
