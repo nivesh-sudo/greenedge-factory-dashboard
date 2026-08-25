@@ -7703,7 +7703,57 @@
         "tufting": [],
         "trimming": [],
         "packaging": {
-          "sealing": [],
+          "sealing": [
+            {
+              "client": "Flipkart",
+              "model": "Gentle 02 Pack",
+              "day": 350,
+              "night": 0,
+              "bps": 10
+            },
+            {
+              "client": "Flipkart",
+              "model": "Flexi 02 Pack",
+              "day": 420,
+              "night": 181,
+              "bps": 10
+            },
+            {
+              "client": "JLM",
+              "model": "Prima",
+              "day": 0,
+              "night": 419,
+              "bps": 12
+            },
+            {
+              "client": "Dabur Int",
+              "model": "Power Clean",
+              "day": 2558,
+              "night": 2226,
+              "bps": 12
+            },
+            {
+              "client": "Assure",
+              "model": "Shine 06 pk",
+              "day": 700,
+              "night": 0,
+              "bps": 6
+            },
+            {
+              "client": "Assure",
+              "model": "Spider 72",
+              "day": 240,
+              "night": 0,
+              "bps": 6
+            },
+            {
+              "client": "Assure",
+              "model": "Softshield",
+              "day": 170,
+              "night": 0,
+              "bps": 6
+            }
+          ],
           "pouch": [],
           "loose": []
         }
