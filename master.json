@@ -407,7 +407,8 @@
     },
     "Flipkart|Gentle 02 Pack": {
       "pkg": "hanger",
-      "bps": 10
+      "bps": 10,
+      "h": 39
     },
     "Flipkart|Flexi 02 Pack": {
       "pkg": "hanger",
