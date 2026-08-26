@@ -7965,7 +7965,26 @@
             }
           ]
         },
-        "printing": [],
+        "printing": [
+          {
+            "client": "MKJ",
+            "model": "4 Pack",
+            "day": 18976,
+            "night": 18517
+          },
+          {
+            "client": "HCP Wellness",
+            "model": "Gumforte",
+            "day": 5424,
+            "night": 9325
+          },
+          {
+            "client": "Assure",
+            "model": "Delta Disp",
+            "day": 7024,
+            "night": 0
+          }
+        ],
         "tufting": [
           {
             "client": "Vicco",
