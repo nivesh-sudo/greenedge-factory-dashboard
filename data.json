@@ -8138,6 +8138,97 @@
           "qc_12hr": 0
         }
       }
+    },
+    "2026-08-26": {
+      "prod": {
+        "handles": {
+          "vertical": [],
+          "horizontal": []
+        },
+        "printing": [],
+        "tufting": [
+          {
+            "client": "Vicco",
+            "model": "Senso Clean",
+            "day": 9000,
+            "night": 8000
+          },
+          {
+            "client": "MKJ",
+            "model": "4 Pack",
+            "day": 18750,
+            "night": 16750
+          },
+          {
+            "client": "Dabur",
+            "model": "Promise",
+            "day": 1900,
+            "night": 0
+          },
+          {
+            "client": "Flipkart",
+            "model": "Gentle 02 Pack",
+            "day": 5850,
+            "night": 0
+          },
+          {
+            "client": "Dabur",
+            "model": "Basica",
+            "day": 9800,
+            "night": 9200
+          },
+          {
+            "client": "HCP Wellness",
+            "model": "Gumforte",
+            "day": 8400,
+            "night": 16400
+          },
+          {
+            "client": "Flipkart",
+            "model": "Gumcare",
+            "day": 2300,
+            "night": 8850
+          },
+          {
+            "client": "Dabur Int",
+            "model": "Power Clean",
+            "day": 17000,
+            "night": 16200
+          }
+        ],
+        "trimming": [],
+        "packaging": {
+          "sealing": [],
+          "pouch": [],
+          "loose": []
+        }
+      },
+      "att": {
+        "moulding": {
+          "day12": 0,
+          "night12": 0,
+          "hr8": 0
+        },
+        "tufting": {
+          "day12": 0,
+          "night12": 0,
+          "hr8": 0
+        },
+        "checking": {
+          "hr12": 0,
+          "hr8": 0
+        },
+        "packaging": {
+          "day12": 0,
+          "hr8": 0,
+          "night12": 0
+        },
+        "overhead": {
+          "cleaning_8hr": 0,
+          "store_12hr": 0,
+          "qc_12hr": 0
+        }
+      }
     }
   }
 }
