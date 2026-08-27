@@ -8196,7 +8196,38 @@
             "night": 16200
           }
         ],
-        "trimming": [],
+        "trimming": [
+          {
+            "client": "MKJ",
+            "model": "4 Pack",
+            "day": 17600,
+            "night": 17000
+          },
+          {
+            "client": "Dabur",
+            "model": "Promise",
+            "day": 6800,
+            "night": 0
+          },
+          {
+            "client": "Flipkart",
+            "model": "Gentle 02 Pack",
+            "day": 15000,
+            "night": 0
+          },
+          {
+            "client": "HCP Wellness",
+            "model": "Gumforte",
+            "day": 7900,
+            "night": 0
+          },
+          {
+            "client": "Dabur",
+            "model": "Basica",
+            "day": 9800,
+            "night": 9200
+          }
+        ],
         "packaging": {
           "sealing": [],
           "pouch": [],
