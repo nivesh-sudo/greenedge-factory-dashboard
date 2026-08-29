@@ -8378,9 +8378,58 @@
           }
         ],
         "packaging": {
-          "sealing": [],
+          "sealing": [
+            {
+              "client": "MKJ",
+              "model": "4 Pack",
+              "day": 1410,
+              "night": 1442,
+              "bps": 20
+            },
+            {
+              "client": "W/Fresh",
+              "model": "Smile 3D",
+              "day": 350,
+              "night": 0,
+              "bps": 12
+            },
+            {
+              "client": "Dabur Int",
+              "model": "Power Clean",
+              "day": 440,
+              "night": 704,
+              "bps": 12
+            },
+            {
+              "client": "Assure",
+              "model": "Delta Disp",
+              "day": 600,
+              "night": 0,
+              "bps": 6
+            },
+            {
+              "client": "Assure",
+              "model": "Shine 06 pk",
+              "day": 600,
+              "night": 0,
+              "bps": 6
+            }
+          ],
           "pouch": [],
-          "loose": []
+          "loose": [
+            {
+              "client": "HCP",
+              "model": "Hygiene Cap",
+              "day": 1,
+              "night": 1
+            },
+            {
+              "client": "Assure",
+              "model": "Small Cap Hygiene",
+              "day": 1,
+              "night": 1
+            }
+          ]
         }
       },
       "att": {
