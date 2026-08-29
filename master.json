@@ -253,7 +253,7 @@
       "w": 3.5,
       "h": 0,
       "m": "single",
-      "pkg": null,
+      "pkg": "loose",
       "bps": null,
       "printed": false,
       "anc": true
