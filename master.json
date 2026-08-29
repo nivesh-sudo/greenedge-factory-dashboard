@@ -416,6 +416,10 @@
     "Flipkart|Flexi 02 Pack": {
       "pkg": "hanger",
       "bps": 10
+    },
+    "WNF|Proclean": {
+      "pkg": "hanger",
+      "bps": 12
     }
   }
 }
