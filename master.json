@@ -307,7 +307,9 @@
     "WNF|Junior": {
       "h": 29,
       "pkg": "hanger",
-      "bps": 12
+      "bps": 12,
+      "w": 11,
+      "m": "two"
     },
     "oxident|Luxuria": {
       "pkg": "dispenser",
