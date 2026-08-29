@@ -8292,7 +8292,78 @@
           }
         ],
         "packaging": {
-          "sealing": [],
+          "sealing": [
+            {
+              "client": "MKJ",
+              "model": "4 Pack",
+              "day": 1270,
+              "night": 1097,
+              "bps": 20
+            },
+            {
+              "client": "W/Fresh",
+              "model": "Smile 3D",
+              "day": 70,
+              "night": 225,
+              "bps": 12
+            },
+            {
+              "client": "WNF",
+              "model": "Proclean",
+              "day": 546,
+              "night": 0,
+              "bps": 12
+            },
+            {
+              "client": "Dabur Int",
+              "model": "Power Clean",
+              "day": 490,
+              "night": 0,
+              "bps": 12
+            },
+            {
+              "client": "Assure",
+              "model": "Delta Disp",
+              "day": 545,
+              "night": 0,
+              "bps": 6
+            },
+            {
+              "client": "Flipkart",
+              "model": "Flexi 02 Pack",
+              "day": 153,
+              "night": 0,
+              "bps": 10
+            },
+            {
+              "client": "Flipkart",
+              "model": "Gentle 02 Pack",
+              "day": 140,
+              "night": 0,
+              "bps": 10
+            },
+            {
+              "client": "Assure",
+              "model": "Shine 06 pk",
+              "day": 280,
+              "night": 0,
+              "bps": 6
+            },
+            {
+              "client": "W/Fresh",
+              "model": "Smile 3D",
+              "day": 156,
+              "night": 0,
+              "bps": 12
+            },
+            {
+              "client": "Assure",
+              "model": "Softshield",
+              "day": 115,
+              "night": 0,
+              "bps": 6
+            }
+          ],
           "pouch": [],
           "loose": []
         }
