@@ -8142,8 +8142,52 @@
     "2026-08-26": {
       "prod": {
         "handles": {
-          "vertical": [],
-          "horizontal": []
+          "vertical": [
+            {
+              "client": "WNF",
+              "model": "Junior",
+              "day": 1,
+              "night": 1
+            },
+            {
+              "client": "Dabur Int",
+              "model": "Power Clean",
+              "day": 16550,
+              "night": 18780
+            },
+            {
+              "client": "Assure",
+              "model": "Delta Disp",
+              "day": 5880,
+              "night": 2320
+            },
+            {
+              "client": "Dabur",
+              "model": "Basica",
+              "day": 11850,
+              "night": 15710
+            },
+            {
+              "client": "MKJ",
+              "model": "4 Pack",
+              "day": 11730,
+              "night": 12030
+            }
+          ],
+          "horizontal": [
+            {
+              "client": "HCP Wellness",
+              "model": "Gumforte",
+              "day": 18294,
+              "night": 3090
+            },
+            {
+              "client": "Assure",
+              "model": "Small Cap Hygiene",
+              "day": 17110,
+              "night": 16000
+            }
+          ]
         },
         "printing": [],
         "tufting": [
