@@ -403,7 +403,8 @@
     },
     "Assure|Small Cap Hygiene": {
       "w": 3.5,
-      "m": "single"
+      "m": "single",
+      "pkg": "loose"
     },
     "Flipkart|Gentle 02 Pack": {
       "pkg": "hanger",
