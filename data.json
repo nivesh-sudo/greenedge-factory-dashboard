@@ -8638,7 +8638,20 @@
             "night": 14900
           }
         ],
-        "trimming": [],
+        "trimming": [
+          {
+            "client": "MKJ",
+            "model": "4 Pack",
+            "day": 12500,
+            "night": 17000
+          },
+          {
+            "client": "HCP Wellness",
+            "model": "Gumforte",
+            "day": 0,
+            "night": 15000
+          }
+        ],
         "packaging": {
           "sealing": [],
           "pouch": [],
