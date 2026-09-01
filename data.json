@@ -8804,7 +8804,14 @@
             "night": 16500
           }
         ],
-        "trimming": [],
+        "trimming": [
+          {
+            "client": "MKJ",
+            "model": "4 Pack",
+            "day": 29000,
+            "night": 32000
+          }
+        ],
         "packaging": {
           "sealing": [],
           "pouch": [],
