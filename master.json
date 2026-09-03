@@ -332,7 +332,9 @@
     },
     "Assure|Besto 09": {
       "pkg": "dispenser",
-      "bps": 6
+      "bps": 6,
+      "w": 11,
+      "m": "two"
     },
     "Assure|Senso Max": {
       "h": 46,
