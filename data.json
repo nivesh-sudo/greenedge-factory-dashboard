@@ -9008,13 +9008,62 @@
           "sealing": [
             {
               "client": "Dabur Int",
-              "model": "power clean",
-              "day": 1,
-              "night": 1,
+              "model": "Power Clean",
+              "day": 672,
+              "night": 510,
+              "bps": 12
+            },
+            {
+              "client": "MKJ",
+              "model": "4 Pack",
+              "day": 1456,
+              "night": 1420,
+              "bps": 20
+            },
+            {
+              "client": "Flipkart",
+              "model": "Super Flexi",
+              "day": 0,
+              "night": 553,
+              "bps": 18
+            },
+            {
+              "client": "Flipkart",
+              "model": "Gentle Cavity",
+              "day": 554,
+              "night": 0,
+              "bps": 18
+            },
+            {
+              "client": "Assure",
+              "model": "Softshield",
+              "day": 425,
+              "night": 0,
+              "bps": 6
+            },
+            {
+              "client": "Assure",
+              "model": "Delta Disp",
+              "day": 360,
+              "night": 0,
+              "bps": 6
+            },
+            {
+              "client": "Assure",
+              "model": "Freshguard",
+              "day": 156,
+              "night": 0,
               "bps": 12
             }
           ],
-          "pouch": [],
+          "pouch": [
+            {
+              "client": "Dabur",
+              "model": "Promise",
+              "day": 22000,
+              "night": 19500
+            }
+          ],
           "loose": []
         }
       },
