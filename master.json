@@ -313,7 +313,9 @@
     },
     "oxident|Luxuria": {
       "pkg": "dispenser",
-      "bps": 6
+      "bps": 6,
+      "w": 23,
+      "m": "two"
     },
     "Assure|Shine 06 pk": {
       "w": 15.5,
