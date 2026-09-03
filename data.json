@@ -8950,8 +8950,44 @@
           }
         ],
         "packaging": {
-          "sealing": [],
-          "pouch": [],
+          "sealing": [
+            {
+              "client": "MKJ",
+              "model": "4 Pack",
+              "day": 1465,
+              "night": 1450,
+              "bps": 20
+            },
+            {
+              "client": "Dabur Int",
+              "model": "Power Clean",
+              "day": 980,
+              "night": 756,
+              "bps": 12
+            },
+            {
+              "client": "Flipkart",
+              "model": "Gentle Cavity",
+              "day": 320,
+              "night": 514,
+              "bps": 18
+            },
+            {
+              "client": "Assure",
+              "model": "Ultrasoft",
+              "day": 430,
+              "night": 0,
+              "bps": 6
+            }
+          ],
+          "pouch": [
+            {
+              "client": "Dabur",
+              "model": "Promise",
+              "day": 0,
+              "night": 19000
+            }
+          ],
           "loose": []
         }
       },
