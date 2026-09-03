@@ -425,7 +425,9 @@
     },
     "WNF|Proclean": {
       "pkg": "hanger",
-      "bps": 12
+      "bps": 12,
+      "w": 9,
+      "m": "single"
     }
   }
 }
