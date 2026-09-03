@@ -8901,7 +8901,14 @@
             }
           ]
         },
-        "printing": [],
+        "printing": [
+          {
+            "client": "MKJ",
+            "model": "4 Pack",
+            "day": 10555,
+            "night": 10050
+          }
+        ],
         "tufting": [
           {
             "client": "MKJ",
