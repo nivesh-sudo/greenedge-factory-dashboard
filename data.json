@@ -8848,8 +8848,58 @@
     "2026-09-01": {
       "prod": {
         "handles": {
-          "vertical": [],
-          "horizontal": []
+          "vertical": [
+            {
+              "client": "Dabur Int",
+              "model": "Power Clean",
+              "day": 18570,
+              "night": 16810
+            },
+            {
+              "client": "MKJ",
+              "model": "4 Pack",
+              "day": 12840,
+              "night": 10120
+            },
+            {
+              "client": "Dabur",
+              "model": "Basica",
+              "day": 13370,
+              "night": 0
+            },
+            {
+              "client": "DMBH",
+              "model": "Besto 09",
+              "day": 2200,
+              "night": 0
+            },
+            {
+              "client": "oxident",
+              "model": "Luxuria",
+              "day": 1,
+              "night": 1
+            },
+            {
+              "client": "Assure",
+              "model": "Besto 09",
+              "day": 1,
+              "night": 1
+            }
+          ],
+          "horizontal": [
+            {
+              "client": "Assure",
+              "model": "Small Cap Hygiene",
+              "day": 12040,
+              "night": 1400
+            },
+            {
+              "client": "WNF",
+              "model": "Proclean",
+              "day": 1,
+              "night": 1
+            }
+          ]
         },
         "printing": [],
         "tufting": [
