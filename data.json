@@ -8928,7 +8928,32 @@
     "2026-09-02": {
       "prod": {
         "handles": {
-          "vertical": [],
+          "vertical": [
+            {
+              "client": "Dabur Int",
+              "model": "Power Clean",
+              "day": 7120,
+              "night": 0
+            },
+            {
+              "client": "MKJ",
+              "model": "4 Pack",
+              "day": 14275,
+              "night": 10170
+            },
+            {
+              "client": "Dabur",
+              "model": "Basica",
+              "day": 2030,
+              "night": 0
+            },
+            {
+              "client": "JLM",
+              "model": "Prima",
+              "day": 4340,
+              "night": 7530
+            }
+          ],
           "horizontal": []
         },
         "printing": [],
