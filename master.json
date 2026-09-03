@@ -382,7 +382,9 @@
     "DMBH|Besto 09": {
       "h": 39,
       "pkg": "dispenser",
-      "bps": 6
+      "bps": 6,
+      "w": 11,
+      "m": "two"
     },
     "Assure|Spider 72": {
       "h": 72,
