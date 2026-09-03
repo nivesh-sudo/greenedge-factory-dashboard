@@ -357,7 +357,9 @@
     },
     "Dabur Int|power clean": {
       "w": 12.5,
-      "m": "two"
+      "m": "two",
+      "pkg": "hanger",
+      "bps": 12
     },
     "Assure|Qlean": {
       "w": 10.2,
