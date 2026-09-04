@@ -9186,6 +9186,91 @@
           "qc_12hr": 0
         }
       }
+    },
+    "2026-09-03": {
+      "prod": {
+        "handles": {
+          "vertical": [],
+          "horizontal": []
+        },
+        "printing": [],
+        "tufting": [
+          {
+            "client": "Vicco",
+            "model": "Senso Clean",
+            "day": 3900,
+            "night": 0
+          },
+          {
+            "client": "MKJ",
+            "model": "4 Pack",
+            "day": 19850,
+            "night": 16340
+          },
+          {
+            "client": "Dabur",
+            "model": "Promise",
+            "day": 6100,
+            "night": 8500
+          },
+          {
+            "client": "Assure",
+            "model": "Delta Disp",
+            "day": 2550,
+            "night": 6430
+          },
+          {
+            "client": "Dabur",
+            "model": "Basica",
+            "day": 14950,
+            "night": 9200
+          },
+          {
+            "client": "Assure",
+            "model": "Qlean",
+            "day": 4400,
+            "night": 0
+          },
+          {
+            "client": "Dabur Int",
+            "model": "Power Clean",
+            "day": 16000,
+            "night": 13150
+          }
+        ],
+        "trimming": [],
+        "packaging": {
+          "sealing": [],
+          "pouch": [],
+          "loose": []
+        }
+      },
+      "att": {
+        "moulding": {
+          "day12": 0,
+          "night12": 0,
+          "hr8": 0
+        },
+        "tufting": {
+          "day12": 0,
+          "night12": 0,
+          "hr8": 0
+        },
+        "checking": {
+          "hr12": 0,
+          "hr8": 0
+        },
+        "packaging": {
+          "day12": 0,
+          "hr8": 0,
+          "night12": 0
+        },
+        "overhead": {
+          "cleaning_8hr": 0,
+          "store_12hr": 0,
+          "qc_12hr": 0
+        }
+      }
     }
   }
 }
