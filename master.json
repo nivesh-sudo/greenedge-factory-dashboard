@@ -436,6 +436,10 @@
     "Assure|Ultrasoft": {
       "pkg": "hanger",
       "bps": 6
+    },
+    "Assure|CharcoSoft": {
+      "w": 16,
+      "m": "two"
     }
   }
 }
