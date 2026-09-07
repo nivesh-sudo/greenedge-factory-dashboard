@@ -9618,6 +9618,91 @@
           "qc_12hr": 0
         }
       }
+    },
+    "2026-09-05": {
+      "prod": {
+        "handles": {
+          "vertical": [],
+          "horizontal": []
+        },
+        "printing": [],
+        "tufting": [
+          {
+            "client": "MKJ",
+            "model": "4 Pack",
+            "day": 12150,
+            "night": 16300
+          },
+          {
+            "client": "Dabur",
+            "model": "Promise",
+            "day": 11000,
+            "night": 8600
+          },
+          {
+            "client": "Assure",
+            "model": "Delta Disp",
+            "day": 6550,
+            "night": 5900
+          },
+          {
+            "client": "Flipkart",
+            "model": "Super Flexi",
+            "day": 9050,
+            "night": 8800
+          },
+          {
+            "client": "Dabur",
+            "model": "Basica",
+            "day": 9500,
+            "night": 0
+          },
+          {
+            "client": "JLM",
+            "model": "Prima",
+            "day": 4750,
+            "night": 7000
+          },
+          {
+            "client": "Dabur Int",
+            "model": "Power Clean",
+            "day": 8500,
+            "night": 8500
+          }
+        ],
+        "trimming": [],
+        "packaging": {
+          "sealing": [],
+          "pouch": [],
+          "loose": []
+        }
+      },
+      "att": {
+        "moulding": {
+          "day12": 0,
+          "night12": 0,
+          "hr8": 0
+        },
+        "tufting": {
+          "day12": 0,
+          "night12": 0,
+          "hr8": 0
+        },
+        "checking": {
+          "hr12": 0,
+          "hr8": 0
+        },
+        "packaging": {
+          "day12": 0,
+          "hr8": 0,
+          "night12": 0
+        },
+        "overhead": {
+          "cleaning_8hr": 0,
+          "store_12hr": 0,
+          "qc_12hr": 0
+        }
+      }
     }
   }
 }
