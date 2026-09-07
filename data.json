@@ -9760,8 +9760,30 @@
           }
         ],
         "packaging": {
-          "sealing": [],
-          "pouch": [],
+          "sealing": [
+            {
+              "client": "MKJ",
+              "model": "4 Pack",
+              "day": 650,
+              "night": 1555,
+              "bps": 20
+            },
+            {
+              "client": "Flipkart",
+              "model": "Gentle Cavity",
+              "day": 690,
+              "night": 632,
+              "bps": 18
+            }
+          ],
+          "pouch": [
+            {
+              "client": "Dabur",
+              "model": "Promise",
+              "day": 21231,
+              "night": 7500
+            }
+          ],
           "loose": []
         }
       },
