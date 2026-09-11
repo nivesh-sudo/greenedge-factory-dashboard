@@ -8596,8 +8596,34 @@
     "2026-08-29": {
       "prod": {
         "handles": {
-          "vertical": [],
-          "horizontal": []
+          "vertical": [
+            {
+              "client": "Dabur",
+              "model": "Basica",
+              "day": 13420,
+              "night": 9660
+            },
+            {
+              "client": "Dabur Int",
+              "model": "Power Clean",
+              "day": 17765,
+              "night": 17710
+            },
+            {
+              "client": "MKJ",
+              "model": "4 Pack",
+              "day": 11950,
+              "night": 10020
+            }
+          ],
+          "horizontal": [
+            {
+              "client": "Assure",
+              "model": "Small Cap Hygiene",
+              "day": 23350,
+              "night": 0
+            }
+          ]
         },
         "printing": [],
         "tufting": [
