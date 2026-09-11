@@ -8686,7 +8686,22 @@
           }
         ],
         "packaging": {
-          "sealing": [],
+          "sealing": [
+            {
+              "client": "Dabur Int",
+              "model": "Power Clean",
+              "day": 1200,
+              "night": 1262,
+              "bps": 12
+            },
+            {
+              "client": "MKJ",
+              "model": "4 Pack",
+              "day": 1000,
+              "night": 953,
+              "bps": 20
+            }
+          ],
           "pouch": [],
           "loose": []
         }
