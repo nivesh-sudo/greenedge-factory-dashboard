@@ -10225,7 +10225,32 @@
             "night": 8340
           }
         ],
-        "trimming": [],
+        "trimming": [
+          {
+            "client": "Dabur",
+            "model": "Promise",
+            "day": 11000,
+            "night": 5000
+          },
+          {
+            "client": "Dabur",
+            "model": "Basica",
+            "day": 15350,
+            "night": 0
+          },
+          {
+            "client": "WNF",
+            "model": "Proclean",
+            "day": 0,
+            "night": 11500
+          },
+          {
+            "client": "Assure",
+            "model": "Senso Max",
+            "day": 2260,
+            "night": 15200
+          }
+        ],
         "packaging": {
           "sealing": [],
           "pouch": [],
