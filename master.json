@@ -432,7 +432,8 @@
       "pkg": "hanger",
       "bps": 12,
       "w": 9,
-      "m": "single"
+      "m": "single",
+      "h": 37
     },
     "Assure|Ultrasoft": {
       "pkg": "hanger",
