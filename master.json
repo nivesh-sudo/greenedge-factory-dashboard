@@ -339,7 +339,9 @@
     "Assure|Senso Max": {
       "h": 46,
       "pkg": "dispenser",
-      "bps": 7
+      "bps": 7,
+      "w": 18.5,
+      "m": "two"
     },
     "DMBH|Smile 3D": {
       "w": 7.9,
