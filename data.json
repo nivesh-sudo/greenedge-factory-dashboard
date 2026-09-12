@@ -10287,8 +10287,70 @@
     "2026-09-11": {
       "prod": {
         "handles": {
-          "vertical": [],
-          "horizontal": []
+          "vertical": [
+            {
+              "client": "Flipkart",
+              "model": "Gentle Cavity",
+              "day": 8720,
+              "night": 0
+            },
+            {
+              "client": "MKJ",
+              "model": "4 Pack",
+              "day": 9190,
+              "night": 10150
+            },
+            {
+              "client": "Dabur",
+              "model": "Basica",
+              "day": 8830,
+              "night": 9960
+            },
+            {
+              "client": "WNF",
+              "model": "Junior",
+              "day": 5570,
+              "night": 2180
+            },
+            {
+              "client": "WNF",
+              "model": "Prima Chandan 12",
+              "day": 2690,
+              "night": 0
+            },
+            {
+              "client": "Assure",
+              "model": "Senso Max",
+              "day": 5000,
+              "night": 0
+            },
+            {
+              "client": "Assure",
+              "model": "Ultrasoft",
+              "day": 8580,
+              "night": 3580
+            },
+            {
+              "client": "Dabur Int",
+              "model": "Power Clean",
+              "day": 2650,
+              "night": 0
+            }
+          ],
+          "horizontal": [
+            {
+              "client": "Dabur",
+              "model": "Promise",
+              "day": 18360,
+              "night": 19900
+            },
+            {
+              "client": "DMBH",
+              "model": "Dento 09 Proclean",
+              "day": 11850,
+              "night": 10350
+            }
+          ]
         },
         "printing": [],
         "tufting": [
