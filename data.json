@@ -10352,7 +10352,26 @@
             }
           ]
         },
-        "printing": [],
+        "printing": [
+          {
+            "client": "MKJ",
+            "model": "4 Pack",
+            "day": 10470,
+            "night": 9010
+          },
+          {
+            "client": "WNF",
+            "model": "Prima Chandan 12",
+            "day": 5140,
+            "night": 0
+          },
+          {
+            "client": "Dabur",
+            "model": "Promise",
+            "day": 7380,
+            "night": 9250
+          }
+        ],
         "tufting": [
           {
             "client": "MKJ",
