@@ -10580,7 +10580,32 @@
             "night": 0
           }
         ],
-        "trimming": [],
+        "trimming": [
+          {
+            "client": "MKJ",
+            "model": "4 Pack",
+            "day": 11500,
+            "night": 10000
+          },
+          {
+            "client": "Dabur",
+            "model": "Promise",
+            "day": 9000,
+            "night": 4200
+          },
+          {
+            "client": "WNF",
+            "model": "Junior",
+            "day": 8300,
+            "night": 0
+          },
+          {
+            "client": "WNF",
+            "model": "Proclean",
+            "day": 6000,
+            "night": 0
+          }
+        ],
         "packaging": {
           "sealing": [],
           "pouch": [],
