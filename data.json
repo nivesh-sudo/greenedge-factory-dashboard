@@ -10526,8 +10526,52 @@
     "2026-09-12": {
       "prod": {
         "handles": {
-          "vertical": [],
-          "horizontal": []
+          "vertical": [
+            {
+              "client": "Flipkart",
+              "model": "Gentle Cavity",
+              "day": 8440,
+              "night": 7670
+            },
+            {
+              "client": "MKJ",
+              "model": "4 Pack",
+              "day": 12460,
+              "night": 12605
+            },
+            {
+              "client": "Dabur",
+              "model": "Basica",
+              "day": 15490,
+              "night": 12255
+            },
+            {
+              "client": "Vicco",
+              "model": "Senso Free",
+              "day": 8070,
+              "night": 0
+            },
+            {
+              "client": "Dabur Int",
+              "model": "Power Clean",
+              "day": 12660,
+              "night": 0
+            }
+          ],
+          "horizontal": [
+            {
+              "client": "Dabur",
+              "model": "Promise",
+              "day": 14940,
+              "night": 17090
+            },
+            {
+              "client": "DMBH",
+              "model": "Dento 09 Proclean",
+              "day": 7280,
+              "night": 0
+            }
+          ]
         },
         "printing": [],
         "tufting": [
