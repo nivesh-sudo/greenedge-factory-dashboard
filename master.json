@@ -334,7 +334,8 @@
       "pkg": "dispenser",
       "bps": 6,
       "w": 11,
-      "m": "two"
+      "m": "two",
+      "h": 39
     },
     "Assure|Senso Max": {
       "h": 46,
