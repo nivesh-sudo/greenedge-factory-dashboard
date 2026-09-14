@@ -10607,8 +10607,65 @@
           }
         ],
         "packaging": {
-          "sealing": [],
-          "pouch": [],
+          "sealing": [
+            {
+              "client": "Dabur Int",
+              "model": "Power Clean",
+              "day": 560,
+              "night": 700,
+              "bps": 12
+            },
+            {
+              "client": "Flipkart",
+              "model": "Gentle Cavity",
+              "day": 600,
+              "night": 709,
+              "bps": 18
+            },
+            {
+              "client": "Flipkart",
+              "model": "Gumcare",
+              "day": 100,
+              "night": 0,
+              "bps": 18
+            },
+            {
+              "client": "Vicco",
+              "model": "Senso Free",
+              "day": 1510,
+              "night": 1731,
+              "bps": 6
+            },
+            {
+              "client": "Assure",
+              "model": "Senso Max",
+              "day": 147,
+              "night": 0,
+              "bps": 7
+            },
+            {
+              "client": "Dabur",
+              "model": "Basica",
+              "day": 1650,
+              "night": 1700,
+              "bps": 12
+            },
+            {
+              "client": "Assure",
+              "model": "Senso Max",
+              "day": 50,
+              "night": 0,
+              "bps": 7
+            }
+          ],
+          "pouch": [
+            {
+              "client": "Dabur",
+              "model": "Promise",
+              "day": 20400,
+              "night": 0
+            }
+          ],
           "loose": []
         }
       },
