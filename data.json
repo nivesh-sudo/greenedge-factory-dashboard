@@ -10816,7 +10816,44 @@
             "night": 0
           }
         ],
-        "trimming": [],
+        "trimming": [
+          {
+            "client": "Vicco",
+            "model": "Action Clean",
+            "day": 0,
+            "night": 9000
+          },
+          {
+            "client": "MKJ",
+            "model": "4 Pack",
+            "day": 0,
+            "night": 9300
+          },
+          {
+            "client": "Dabur",
+            "model": "Promise",
+            "day": 17955,
+            "night": 15700
+          },
+          {
+            "client": "Dabur",
+            "model": "Basica",
+            "day": 17000,
+            "night": 17600
+          },
+          {
+            "client": "WNF",
+            "model": "Junior",
+            "day": 10500,
+            "night": 0
+          },
+          {
+            "client": "WNF",
+            "model": "Proclean",
+            "day": 4500,
+            "night": 0
+          }
+        ],
         "packaging": {
           "sealing": [],
           "pouch": [],
