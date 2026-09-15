@@ -10762,8 +10762,40 @@
     "2026-09-14": {
       "prod": {
         "handles": {
-          "vertical": [],
-          "horizontal": []
+          "vertical": [
+            {
+              "client": "Dabur",
+              "model": "Prima",
+              "day": 8050,
+              "night": 8115
+            },
+            {
+              "client": "MKJ",
+              "model": "4 Pack",
+              "day": 9700,
+              "night": 10540
+            },
+            {
+              "client": "Dabur",
+              "model": "Basica",
+              "day": 8660,
+              "night": 10040
+            },
+            {
+              "client": "Vicco",
+              "model": "Senso Free",
+              "day": 11840,
+              "night": 0
+            }
+          ],
+          "horizontal": [
+            {
+              "client": "Dabur",
+              "model": "Promise",
+              "day": 17200,
+              "night": 16890
+            }
+          ]
         },
         "printing": [],
         "tufting": [
