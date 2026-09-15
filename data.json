@@ -10974,6 +10974,91 @@
           "qc_12hr": 0
         }
       }
+    },
+    "2026-09-13": {
+      "prod": {
+        "handles": {
+          "vertical": [],
+          "horizontal": []
+        },
+        "printing": [],
+        "tufting": [],
+        "trimming": [],
+        "packaging": {
+          "sealing": [
+            {
+              "client": "MKJ",
+              "model": "4 Pack",
+              "day": 400,
+              "night": 677,
+              "bps": 20
+            },
+            {
+              "client": "Flipkart",
+              "model": "Gentle Cavity",
+              "day": 0,
+              "night": 652,
+              "bps": 18
+            },
+            {
+              "client": "Flipkart",
+              "model": "Gumcare",
+              "day": 600,
+              "night": 0,
+              "bps": 18
+            },
+            {
+              "client": "Vicco",
+              "model": "Senso Free",
+              "day": 970,
+              "night": 1420,
+              "bps": 6
+            },
+            {
+              "client": "Dabur",
+              "model": "Basica",
+              "day": 2050,
+              "night": 1550,
+              "bps": 12
+            }
+          ],
+          "pouch": [
+            {
+              "client": "Dabur",
+              "model": "Promise",
+              "day": 5623,
+              "night": 0
+            }
+          ],
+          "loose": []
+        }
+      },
+      "att": {
+        "moulding": {
+          "day12": 0,
+          "night12": 0,
+          "hr8": 0
+        },
+        "tufting": {
+          "day12": 0,
+          "night12": 0,
+          "hr8": 0
+        },
+        "checking": {
+          "hr12": 0,
+          "hr8": 0
+        },
+        "packaging": {
+          "day12": 0,
+          "hr8": 0,
+          "night12": 0
+        },
+        "overhead": {
+          "cleaning_8hr": 0,
+          "store_12hr": 0,
+          "qc_12hr": 0
+        }
+      }
     }
   }
 }
