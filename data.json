@@ -11167,7 +11167,32 @@
             "night": 0
           }
         ],
-        "trimming": [],
+        "trimming": [
+          {
+            "client": "MKJ",
+            "model": "4 Pack",
+            "day": 12150,
+            "night": 0
+          },
+          {
+            "client": "Dabur",
+            "model": "Promise",
+            "day": 3100,
+            "night": 0
+          },
+          {
+            "client": "Dabur",
+            "model": "Basica",
+            "day": 17350,
+            "night": 18300
+          },
+          {
+            "client": "WNF",
+            "model": "Proclean",
+            "day": 0,
+            "night": 15000
+          }
+        ],
         "packaging": {
           "sealing": [],
           "pouch": [],
