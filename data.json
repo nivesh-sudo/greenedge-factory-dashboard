@@ -11107,8 +11107,52 @@
     "2026-09-15": {
       "prod": {
         "handles": {
-          "vertical": [],
-          "horizontal": []
+          "vertical": [
+            {
+              "client": "MKJ",
+              "model": "4 Pack",
+              "day": 6445,
+              "night": 9400
+            },
+            {
+              "client": "Dabur",
+              "model": "Prima",
+              "day": 15640,
+              "night": 8470
+            },
+            {
+              "client": "Dabur",
+              "model": "Basica",
+              "day": 12560,
+              "night": 10130
+            },
+            {
+              "client": "Vicco",
+              "model": "Senso Clean",
+              "day": 9280,
+              "night": 0
+            },
+            {
+              "client": "Dabur Int",
+              "model": "Power Clean",
+              "day": 10310,
+              "night": 0
+            },
+            {
+              "client": "Flipkart",
+              "model": "Gentle Cavity",
+              "day": 6018,
+              "night": 0
+            }
+          ],
+          "horizontal": [
+            {
+              "client": "Dabur",
+              "model": "Promise",
+              "day": 12030,
+              "night": 0
+            }
+          ]
         },
         "printing": [],
         "tufting": [
