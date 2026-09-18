@@ -11705,8 +11705,51 @@
           }
         ],
         "packaging": {
-          "sealing": [],
-          "pouch": [],
+          "sealing": [
+            {
+              "client": "Flipkart",
+              "model": "Gentle Cavity",
+              "day": 326,
+              "night": 550,
+              "bps": 18
+            },
+            {
+              "client": "Dabur",
+              "model": "Basica",
+              "day": 1550,
+              "night": 0,
+              "bps": 12
+            },
+            {
+              "client": "Vicco",
+              "model": "Senso Clean",
+              "day": 210,
+              "night": 740,
+              "bps": 6
+            },
+            {
+              "client": "JLM",
+              "model": "Prima",
+              "day": 340,
+              "night": 0,
+              "bps": 12
+            },
+            {
+              "client": "DMBH",
+              "model": "Dento 09 Proclean",
+              "day": 350,
+              "night": 700,
+              "bps": 12
+            }
+          ],
+          "pouch": [
+            {
+              "client": "Dabur",
+              "model": "Promise",
+              "day": 5279,
+              "night": 0
+            }
+          ],
           "loose": []
         }
       },
