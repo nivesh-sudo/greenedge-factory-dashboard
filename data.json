@@ -11586,7 +11586,38 @@
     "2026-09-17": {
       "prod": {
         "handles": {
-          "vertical": [],
+          "vertical": [
+            {
+              "client": "Dabur",
+              "model": "Prima",
+              "day": 12480,
+              "night": 9175
+            },
+            {
+              "client": "MKJ",
+              "model": "4 Pack",
+              "day": 7250,
+              "night": 9340
+            },
+            {
+              "client": "Dabur",
+              "model": "Basica",
+              "day": 7970,
+              "night": 10365
+            },
+            {
+              "client": "Vicco",
+              "model": "Senso Clean",
+              "day": 6140,
+              "night": 0
+            },
+            {
+              "client": "JLM",
+              "model": "Classique",
+              "day": 5540,
+              "night": 0
+            }
+          ],
           "horizontal": []
         },
         "printing": [],
