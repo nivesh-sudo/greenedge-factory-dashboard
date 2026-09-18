@@ -452,7 +452,9 @@
     },
     "DMBH|Dento 09 Proclean": {
       "w": 7.5,
-      "m": "single"
+      "m": "single",
+      "pkg": "hanger",
+      "bps": 12
     }
   }
 }
