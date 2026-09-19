@@ -11833,6 +11833,12 @@
         ],
         "trimming": [
           {
+            "client": "Dabur",
+            "model": "Promise",
+            "day": 8400,
+            "night": 0
+          },
+          {
             "client": "Vicco",
             "model": "Action Clean",
             "day": 8015,
@@ -11843,6 +11849,18 @@
             "model": "4 Pack",
             "day": 8260,
             "night": 5660
+          },
+          {
+            "client": "Dabur",
+            "model": "Basica",
+            "day": 19400,
+            "night": 16450
+          },
+          {
+            "client": "Dabur",
+            "model": "Prima",
+            "day": 9000,
+            "night": 0
           }
         ],
         "packaging": {
