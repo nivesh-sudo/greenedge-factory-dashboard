@@ -11831,7 +11831,20 @@
             "night": 0
           }
         ],
-        "trimming": [],
+        "trimming": [
+          {
+            "client": "Vicco",
+            "model": "Action Clean",
+            "day": 8015,
+            "night": 9000
+          },
+          {
+            "client": "MKJ",
+            "model": "4 Pack",
+            "day": 8260,
+            "night": 5660
+          }
+        ],
         "packaging": {
           "sealing": [],
           "pouch": [],
