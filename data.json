@@ -11817,7 +11817,26 @@
           ],
           "horizontal": []
         },
-        "printing": [],
+        "printing": [
+          {
+            "client": "MKJ",
+            "model": "4 Pack",
+            "day": 20190,
+            "night": 9770
+          },
+          {
+            "client": "Dabur",
+            "model": "Promise",
+            "day": 8230,
+            "night": 10700
+          },
+          {
+            "client": "HCP Wellness",
+            "model": "Gumforte",
+            "day": 2100,
+            "night": 8400
+          }
+        ],
         "tufting": [
           {
             "client": "Vicco",
