@@ -12213,7 +12213,20 @@
     "2026-09-20": {
       "prod": {
         "handles": {
-          "vertical": [],
+          "vertical": [
+            {
+              "client": "Dabur",
+              "model": "Prima Blue",
+              "day": 0,
+              "night": 7080
+            },
+            {
+              "client": "MKJ",
+              "model": "4 Pack",
+              "day": 10430,
+              "night": 8830
+            }
+          ],
           "horizontal": []
         },
         "printing": [],
