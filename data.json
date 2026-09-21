@@ -12040,7 +12040,44 @@
             "night": 9350
           }
         ],
-        "trimming": [],
+        "trimming": [
+          {
+            "client": "Vicco",
+            "model": "Action Clean",
+            "day": 6500,
+            "night": 0
+          },
+          {
+            "client": "MKJ",
+            "model": "4 Pack",
+            "day": 13100,
+            "night": 14500
+          },
+          {
+            "client": "Dabur",
+            "model": "Promise",
+            "day": 11150,
+            "night": 8700
+          },
+          {
+            "client": "Dabur",
+            "model": "Basica",
+            "day": 17100,
+            "night": 0
+          },
+          {
+            "client": "Dabur",
+            "model": "Prima",
+            "day": 15000,
+            "night": 10300
+          },
+          {
+            "client": "HCP Wellness",
+            "model": "Gumforte",
+            "day": 8050,
+            "night": 4500
+          }
+        ],
         "packaging": {
           "sealing": [],
           "pouch": [],
