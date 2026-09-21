@@ -12265,8 +12265,65 @@
           }
         ],
         "packaging": {
-          "sealing": [],
-          "pouch": [],
+          "sealing": [
+            {
+              "client": "MKJ",
+              "model": "4 Pack",
+              "day": 400,
+              "night": 377,
+              "bps": 20
+            },
+            {
+              "client": "Vicco",
+              "model": "Action Clean",
+              "day": 600,
+              "night": 735,
+              "bps": 12
+            },
+            {
+              "client": "Dabur",
+              "model": "Basica",
+              "day": 650,
+              "night": 0,
+              "bps": 12
+            },
+            {
+              "client": "Vicco",
+              "model": "Senso Clean",
+              "day": 245,
+              "night": 585,
+              "bps": 6
+            },
+            {
+              "client": "WNF",
+              "model": "Junior",
+              "day": 415,
+              "night": 570,
+              "bps": 12
+            },
+            {
+              "client": "Vicco",
+              "model": "Senso Free",
+              "day": 700,
+              "night": 700,
+              "bps": 6
+            },
+            {
+              "client": "DMBH",
+              "model": "Dento 09 Proclean",
+              "day": 750,
+              "night": 409,
+              "bps": 12
+            }
+          ],
+          "pouch": [
+            {
+              "client": "Dabur",
+              "model": "Promise",
+              "day": 20000,
+              "night": 0
+            }
+          ],
           "loose": []
         }
       },
