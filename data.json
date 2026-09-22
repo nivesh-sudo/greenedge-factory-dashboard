@@ -12366,6 +12366,103 @@
           "qc_12hr": 0
         }
       }
+    },
+    "2026-09-21": {
+      "prod": {
+        "handles": {
+          "vertical": [],
+          "horizontal": []
+        },
+        "printing": [],
+        "tufting": [
+          {
+            "client": "MKJ",
+            "model": "4 Pack",
+            "day": 9200,
+            "night": 9500
+          },
+          {
+            "client": "Dabur",
+            "model": "Promise",
+            "day": 9650,
+            "night": 7700
+          },
+          {
+            "client": "Vicco",
+            "model": "Senso Clean",
+            "day": 6800,
+            "night": 6550
+          },
+          {
+            "client": "Dabur",
+            "model": "Basica",
+            "day": 19500,
+            "night": 0
+          },
+          {
+            "client": "JLM",
+            "model": "Prima",
+            "day": 7550,
+            "night": 7200
+          },
+          {
+            "client": "Dabur",
+            "model": "Prima",
+            "day": 9350,
+            "night": 9000
+          },
+          {
+            "client": "WNF",
+            "model": "Junior",
+            "day": 7910,
+            "night": 0
+          },
+          {
+            "client": "JLM",
+            "model": "Classique",
+            "day": 3350,
+            "night": 8400
+          },
+          {
+            "client": "HCP Wellness",
+            "model": "Gumforte",
+            "day": 3200,
+            "night": 0
+          }
+        ],
+        "trimming": [],
+        "packaging": {
+          "sealing": [],
+          "pouch": [],
+          "loose": []
+        }
+      },
+      "att": {
+        "moulding": {
+          "day12": 0,
+          "night12": 0,
+          "hr8": 0
+        },
+        "tufting": {
+          "day12": 0,
+          "night12": 0,
+          "hr8": 0
+        },
+        "checking": {
+          "hr12": 0,
+          "hr8": 0
+        },
+        "packaging": {
+          "day12": 0,
+          "hr8": 0,
+          "night12": 0
+        },
+        "overhead": {
+          "cleaning_8hr": 0,
+          "store_12hr": 0,
+          "qc_12hr": 0
+        }
+      }
     }
   }
 }
