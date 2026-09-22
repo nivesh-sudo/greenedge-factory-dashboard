@@ -12265,15 +12265,15 @@
         ],
         "trimming": [
           {
-            "client": "WNF",
-            "model": "Junior",
-            "day": 5400,
-            "night": 0
-          },
-          {
             "client": "HCP Wellness",
             "model": "Gumforte",
             "day": 8200,
+            "night": 0
+          },
+          {
+            "client": "WNF",
+            "model": "Junior",
+            "day": 5400,
             "night": 0
           }
         ],
