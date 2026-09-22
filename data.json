@@ -12430,7 +12430,44 @@
             "night": 0
           }
         ],
-        "trimming": [],
+        "trimming": [
+          {
+            "client": "MKJ",
+            "model": "4 Pack",
+            "day": 8580,
+            "night": 9800
+          },
+          {
+            "client": "Dabur",
+            "model": "Promise",
+            "day": 9650,
+            "night": 7700
+          },
+          {
+            "client": "Dabur",
+            "model": "Basica",
+            "day": 19500,
+            "night": 0
+          },
+          {
+            "client": "Dabur",
+            "model": "Prima",
+            "day": 10400,
+            "night": 7600
+          },
+          {
+            "client": "WNF",
+            "model": "Junior",
+            "day": 7050,
+            "night": 0
+          },
+          {
+            "client": "HCP Wellness",
+            "model": "Gumforte",
+            "day": 3600,
+            "night": 0
+          }
+        ],
         "packaging": {
           "sealing": [],
           "pouch": [],
