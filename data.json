@@ -12249,7 +12249,20 @@
             "night": 8020
           }
         ],
-        "tufting": [],
+        "tufting": [
+          {
+            "client": "HCP Wellness",
+            "model": "Gumforte",
+            "day": 3500,
+            "night": 0
+          },
+          {
+            "client": "WNF",
+            "model": "Junior",
+            "day": 5300,
+            "night": 0
+          }
+        ],
         "trimming": [
           {
             "client": "WNF",
