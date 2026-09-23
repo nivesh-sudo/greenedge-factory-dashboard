@@ -12564,7 +12564,38 @@
             "night": 8200
           }
         ],
-        "trimming": [],
+        "trimming": [
+          {
+            "client": "MKJ",
+            "model": "4 Pack",
+            "day": 9500,
+            "night": 7120
+          },
+          {
+            "client": "Dabur",
+            "model": "Promise",
+            "day": 3800,
+            "night": 0
+          },
+          {
+            "client": "JLM",
+            "model": "Classique",
+            "day": 12800,
+            "night": 0
+          },
+          {
+            "client": "Dabur",
+            "model": "Prima",
+            "day": 1000,
+            "night": 17800
+          },
+          {
+            "client": "Flipkart",
+            "model": "Super Flexi",
+            "day": 5700,
+            "night": 8200
+          }
+        ],
         "packaging": {
           "sealing": [],
           "pouch": [],
