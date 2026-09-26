@@ -12422,7 +12422,26 @@
           ],
           "horizontal": []
         },
-        "printing": [],
+        "printing": [
+          {
+            "client": "MKJ",
+            "model": "4 Pack",
+            "day": 13130,
+            "night": 9200
+          },
+          {
+            "client": "Dabur",
+            "model": "Promise",
+            "day": 14170,
+            "night": 4550
+          },
+          {
+            "client": "JLM",
+            "model": "Classique",
+            "day": 6030,
+            "night": 0
+          }
+        ],
         "tufting": [
           {
             "client": "MKJ",
