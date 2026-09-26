@@ -12774,6 +12774,12 @@
         ],
         "trimming": [
           {
+            "client": "Flipkart",
+            "model": "Super Flexi",
+            "day": 10800,
+            "night": 0
+          },
+          {
             "client": "MKJ",
             "model": "4 Pack",
             "day": 11275,
