@@ -12370,7 +12370,56 @@
     "2026-09-21": {
       "prod": {
         "handles": {
-          "vertical": [],
+          "vertical": [
+            {
+              "client": "Dabur",
+              "model": "Prima Blue",
+              "day": 8320,
+              "night": 8120
+            },
+            {
+              "client": "MKJ",
+              "model": "4 Pack",
+              "day": 10720,
+              "night": 10410
+            },
+            {
+              "client": "Dabur",
+              "model": "Basica",
+              "day": 13090,
+              "night": 8300
+            },
+            {
+              "client": "Vicco",
+              "model": "Senso Clean",
+              "day": 8670,
+              "night": 0
+            },
+            {
+              "client": "JLM",
+              "model": "Classique",
+              "day": 3610,
+              "night": 0
+            },
+            {
+              "client": "Flipkart",
+              "model": "Gentle Cavity",
+              "day": 4040,
+              "night": 0
+            },
+            {
+              "client": "Flipkart",
+              "model": "Super Flexi",
+              "day": 13050,
+              "night": 9390
+            },
+            {
+              "client": "Vicco",
+              "model": "Value Clean",
+              "day": 6030,
+              "night": 7010
+            }
+          ],
           "horizontal": []
         },
         "printing": [],
