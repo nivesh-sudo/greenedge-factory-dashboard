@@ -12772,7 +12772,20 @@
             "night": 0
           }
         ],
-        "trimming": [],
+        "trimming": [
+          {
+            "client": "MKJ",
+            "model": "4 Pack",
+            "day": 11275,
+            "night": 16800
+          },
+          {
+            "client": "Dabur",
+            "model": "Prima",
+            "day": 15200,
+            "night": 0
+          }
+        ],
         "packaging": {
           "sealing": [],
           "pouch": [],
