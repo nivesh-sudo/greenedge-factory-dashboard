@@ -12994,7 +12994,85 @@
           }
         ],
         "packaging": {
-          "sealing": [],
+          "sealing": [
+            {
+              "client": "MKJ",
+              "model": "4 Pack",
+              "day": 720,
+              "night": 760,
+              "bps": 20
+            },
+            {
+              "client": "Vicco",
+              "model": "Action Clean",
+              "day": 300,
+              "night": 0,
+              "bps": 12
+            },
+            {
+              "client": "DMBH",
+              "model": "Dento 09 Proclean",
+              "day": 200,
+              "night": 0,
+              "bps": 12
+            },
+            {
+              "client": "Assure",
+              "model": "Ultrasoft",
+              "day": 300,
+              "night": 0,
+              "bps": 6
+            },
+            {
+              "client": "Vicco",
+              "model": "Senso Clean",
+              "day": 770,
+              "night": 460,
+              "bps": 6
+            },
+            {
+              "client": "Assure",
+              "model": "Delta Disp",
+              "day": 215,
+              "night": 530,
+              "bps": 6
+            },
+            {
+              "client": "Assure",
+              "model": "Besto 09",
+              "day": 490,
+              "night": 0,
+              "bps": 6
+            },
+            {
+              "client": "Assure",
+              "model": "Shine 06 pk",
+              "day": 100,
+              "night": 0,
+              "bps": 6
+            },
+            {
+              "client": "DMBH",
+              "model": "Classic Zigzag",
+              "day": 80,
+              "night": 550,
+              "bps": 12
+            },
+            {
+              "client": "Vicco",
+              "model": "Senso Free",
+              "day": 480,
+              "night": 0,
+              "bps": 6
+            },
+            {
+              "client": "Dabur Int",
+              "model": "Power Clean",
+              "day": 800,
+              "night": 660,
+              "bps": 12
+            }
+          ],
           "pouch": [],
           "loose": []
         }
