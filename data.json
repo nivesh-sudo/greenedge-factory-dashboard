@@ -13062,7 +13062,64 @@
           }
         ],
         "packaging": {
-          "sealing": [],
+          "sealing": [
+            {
+              "client": "MKJ",
+              "model": "4 Pack",
+              "day": 480,
+              "night": 142,
+              "bps": 20
+            },
+            {
+              "client": "Vicco",
+              "model": "Senso 4 Pack",
+              "day": 200,
+              "night": 613,
+              "bps": 20
+            },
+            {
+              "client": "Vicco",
+              "model": "Senso Clean",
+              "day": 310,
+              "night": 170,
+              "bps": 6
+            },
+            {
+              "client": "Assure",
+              "model": "Delta Disp",
+              "day": 310,
+              "night": 560,
+              "bps": 6
+            },
+            {
+              "client": "Assure",
+              "model": "Ultrasoft",
+              "day": 85,
+              "night": 470,
+              "bps": 6
+            },
+            {
+              "client": "Assure",
+              "model": "Shine 06 pk",
+              "day": 85,
+              "night": 0,
+              "bps": 6
+            },
+            {
+              "client": "DMBH",
+              "model": "Classic Zigzag",
+              "day": 140,
+              "night": 0,
+              "bps": 12
+            },
+            {
+              "client": "Dabur Int",
+              "model": "Power Clean",
+              "day": 600,
+              "night": 600,
+              "bps": 12
+            }
+          ],
           "pouch": [],
           "loose": []
         }
