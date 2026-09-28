@@ -13163,7 +13163,20 @@
     "2026-09-27": {
       "prod": {
         "handles": {
-          "vertical": [],
+          "vertical": [
+            {
+              "client": "Vicco",
+              "model": "Value Clean",
+              "day": 4000,
+              "night": 5440
+            },
+            {
+              "client": "MKJ",
+              "model": "4 Pack",
+              "day": 24130,
+              "night": 22765
+            }
+          ],
           "horizontal": []
         },
         "printing": [],
