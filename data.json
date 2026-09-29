@@ -13657,6 +13657,79 @@
           "qc_12hr": 0
         }
       }
+    },
+    "2026-09-28": {
+      "prod": {
+        "handles": {
+          "vertical": [],
+          "horizontal": []
+        },
+        "printing": [],
+        "tufting": [
+          {
+            "client": "MKJ",
+            "model": "4 Pack",
+            "day": 24900,
+            "night": 24580
+          },
+          {
+            "client": "Vicco",
+            "model": "Senso Clean",
+            "day": 7300,
+            "night": 6050
+          },
+          {
+            "client": "Assure",
+            "model": "Freshguard",
+            "day": 3800,
+            "night": 8410
+          },
+          {
+            "client": "Dabur",
+            "model": "Prima",
+            "day": 9400,
+            "night": 9400
+          },
+          {
+            "client": "Flipkart",
+            "model": "Super Flexi",
+            "day": 8600,
+            "night": 0
+          }
+        ],
+        "trimming": [],
+        "packaging": {
+          "sealing": [],
+          "pouch": [],
+          "loose": []
+        }
+      },
+      "att": {
+        "moulding": {
+          "day12": 0,
+          "night12": 0,
+          "hr8": 0
+        },
+        "tufting": {
+          "day12": 0,
+          "night12": 0,
+          "hr8": 0
+        },
+        "checking": {
+          "hr12": 0,
+          "hr8": 0
+        },
+        "packaging": {
+          "day12": 0,
+          "hr8": 0,
+          "night12": 0
+        },
+        "overhead": {
+          "cleaning_8hr": 0,
+          "store_12hr": 0,
+          "qc_12hr": 0
+        }
+      }
     }
   }
 }
