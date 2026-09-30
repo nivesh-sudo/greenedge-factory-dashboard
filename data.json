@@ -13781,7 +13781,14 @@
           ],
           "horizontal": []
         },
-        "printing": [],
+        "printing": [
+          {
+            "client": "MKJ",
+            "model": "4 Pack",
+            "day": 29210,
+            "night": 25640
+          }
+        ],
         "tufting": [
           {
             "client": "Vicco",
