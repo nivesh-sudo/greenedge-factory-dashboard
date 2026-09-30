@@ -13661,7 +13661,44 @@
     "2026-09-28": {
       "prod": {
         "handles": {
-          "vertical": [],
+          "vertical": [
+            {
+              "client": "Dabur",
+              "model": "Prima Blue",
+              "day": 15000,
+              "night": 6952
+            },
+            {
+              "client": "MKJ",
+              "model": "4 Pack",
+              "day": 20430,
+              "night": 21625
+            },
+            {
+              "client": "Flipkart",
+              "model": "Super Flexi",
+              "day": 13390,
+              "night": 6150
+            },
+            {
+              "client": "Vicco",
+              "model": "Senso Free",
+              "day": 610,
+              "night": 0
+            },
+            {
+              "client": "Vicco",
+              "model": "Value Clean",
+              "day": 5910,
+              "night": 0
+            },
+            {
+              "client": "Dabur",
+              "model": "Basica",
+              "day": 18050,
+              "night": 8560
+            }
+          ],
           "horizontal": []
         },
         "printing": [],
