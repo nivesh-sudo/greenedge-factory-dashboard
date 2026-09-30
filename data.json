@@ -13753,7 +13753,32 @@
     "2026-09-29": {
       "prod": {
         "handles": {
-          "vertical": [],
+          "vertical": [
+            {
+              "client": "Dabur",
+              "model": "Prima Blue",
+              "day": 17870,
+              "night": 7780
+            },
+            {
+              "client": "MKJ",
+              "model": "4 Pack",
+              "day": 12010,
+              "night": 16640
+            },
+            {
+              "client": "Flipkart",
+              "model": "Super Flexi",
+              "day": 12600,
+              "night": 9060
+            },
+            {
+              "client": "Dabur",
+              "model": "Basica",
+              "day": 19460,
+              "night": 1510
+            }
+          ],
           "horizontal": []
         },
         "printing": [],
