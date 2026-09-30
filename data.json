@@ -13836,7 +13836,50 @@
           }
         ],
         "packaging": {
-          "sealing": [],
+          "sealing": [
+            {
+              "client": "MKJ",
+              "model": "4 Pack",
+              "day": 1350,
+              "night": 825,
+              "bps": 20
+            },
+            {
+              "client": "Vicco",
+              "model": "Senso UAE",
+              "day": 390,
+              "night": 0,
+              "bps": 6
+            },
+            {
+              "client": "Assure",
+              "model": "Ultrasoft",
+              "day": 620,
+              "night": 0,
+              "bps": 6
+            },
+            {
+              "client": "JLM",
+              "model": "Prima",
+              "day": 350,
+              "night": 300,
+              "bps": 12
+            },
+            {
+              "client": "Flipkart",
+              "model": "Gumcare",
+              "day": 70,
+              "night": 0,
+              "bps": 18
+            },
+            {
+              "client": "Assure",
+              "model": "Freshguard",
+              "day": 400,
+              "night": 650,
+              "bps": 12
+            }
+          ],
           "pouch": [],
           "loose": []
         }
