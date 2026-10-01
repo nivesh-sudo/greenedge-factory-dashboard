@@ -14045,7 +14045,38 @@
             "night": 0
           }
         ],
-        "trimming": [],
+        "trimming": [
+          {
+            "client": "Vicco",
+            "model": "Value Clean",
+            "day": 0,
+            "night": 10000
+          },
+          {
+            "client": "MKJ",
+            "model": "4 Pack",
+            "day": 15360,
+            "night": 26900
+          },
+          {
+            "client": "Dabur",
+            "model": "Prima",
+            "day": 9700,
+            "night": 14650
+          },
+          {
+            "client": "WNF",
+            "model": "Junior",
+            "day": 5350,
+            "night": 0
+          },
+          {
+            "client": "Flipkart",
+            "model": "Super Flexi",
+            "day": 9450,
+            "night": 0
+          }
+        ],
         "packaging": {
           "sealing": [],
           "pouch": [],
