@@ -14321,6 +14321,79 @@
           "qc_12hr": 0
         }
       }
+    },
+    "2026-10-02": {
+      "prod": {
+        "handles": {
+          "vertical": [
+            {
+              "client": "Dabur",
+              "model": "Prima Blue",
+              "day": 9650,
+              "night": 0
+            },
+            {
+              "client": "Flipkart",
+              "model": "Super Flexi",
+              "day": 1620,
+              "night": 0
+            },
+            {
+              "client": "MKJ",
+              "model": "4 Pack",
+              "day": 31780,
+              "night": 20422
+            },
+            {
+              "client": "Assure",
+              "model": "Delta Disp",
+              "day": 6870,
+              "night": 760
+            },
+            {
+              "client": "WNF",
+              "model": "Junior",
+              "day": 6730,
+              "night": 7030
+            }
+          ],
+          "horizontal": []
+        },
+        "printing": [],
+        "tufting": [],
+        "trimming": [],
+        "packaging": {
+          "sealing": [],
+          "pouch": [],
+          "loose": []
+        }
+      },
+      "att": {
+        "moulding": {
+          "day12": 0,
+          "night12": 0,
+          "hr8": 0
+        },
+        "tufting": {
+          "day12": 0,
+          "night12": 0,
+          "hr8": 0
+        },
+        "checking": {
+          "hr12": 0,
+          "hr8": 0
+        },
+        "packaging": {
+          "day12": 0,
+          "hr8": 0,
+          "night12": 0
+        },
+        "overhead": {
+          "cleaning_8hr": 0,
+          "store_12hr": 0,
+          "qc_12hr": 0
+        }
+      }
     }
   }
 }
