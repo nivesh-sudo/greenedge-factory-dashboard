@@ -14110,9 +14110,66 @@
           }
         ],
         "packaging": {
-          "sealing": [],
+          "sealing": [
+            {
+              "client": "MKJ",
+              "model": "4 Pack",
+              "day": 1370,
+              "night": 1630,
+              "bps": 20
+            },
+            {
+              "client": "WNF",
+              "model": "Junior",
+              "day": 550,
+              "night": 0,
+              "bps": 12
+            },
+            {
+              "client": "Assure",
+              "model": "Ultrasoft",
+              "day": 550,
+              "night": 0,
+              "bps": 6
+            },
+            {
+              "client": "JLM",
+              "model": "Prima",
+              "day": 710,
+              "night": 807,
+              "bps": 12
+            },
+            {
+              "client": "Flipkart",
+              "model": "Gumcare",
+              "day": 50,
+              "night": 610,
+              "bps": 18
+            },
+            {
+              "client": "Assure",
+              "model": "Freshguard",
+              "day": 380,
+              "night": 0,
+              "bps": 12
+            },
+            {
+              "client": "WNF",
+              "model": "Prima Chandan 12",
+              "day": 150,
+              "night": 0,
+              "bps": 12
+            }
+          ],
           "pouch": [],
-          "loose": []
+          "loose": [
+            {
+              "client": "Dabur",
+              "model": "Prima Blue",
+              "day": 20000,
+              "night": 0
+            }
+          ]
         }
       },
       "att": {
