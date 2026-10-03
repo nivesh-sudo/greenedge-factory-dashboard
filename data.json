@@ -14370,7 +14370,50 @@
         "tufting": [],
         "trimming": [],
         "packaging": {
-          "sealing": [],
+          "sealing": [
+            {
+              "client": "MKJ",
+              "model": "4 Pack",
+              "day": 1250,
+              "night": 1423,
+              "bps": 20
+            },
+            {
+              "client": "WNF",
+              "model": "Junior",
+              "day": 45,
+              "night": 0,
+              "bps": 12
+            },
+            {
+              "client": "W/Fresh",
+              "model": "Smile 3D",
+              "day": 800,
+              "night": 350,
+              "bps": 12
+            },
+            {
+              "client": "Assure",
+              "model": "Softshield",
+              "day": 102,
+              "night": 0,
+              "bps": 6
+            },
+            {
+              "client": "JLM",
+              "model": "Prima",
+              "day": 840,
+              "night": 176,
+              "bps": 12
+            },
+            {
+              "client": "Flipkart",
+              "model": "Gentle Cavity",
+              "day": 360,
+              "night": 140,
+              "bps": 18
+            }
+          ],
           "pouch": [],
           "loose": []
         }
