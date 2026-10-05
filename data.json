@@ -14452,7 +14452,32 @@
           "horizontal": []
         },
         "printing": [],
-        "tufting": [],
+        "tufting": [
+          {
+            "client": "Vicco",
+            "model": "Value Clean",
+            "day": 10400,
+            "night": 0
+          },
+          {
+            "client": "MKJ",
+            "model": "4 Pack",
+            "day": 27200,
+            "night": 16300
+          },
+          {
+            "client": "Dabur",
+            "model": "Prima",
+            "day": 15380,
+            "night": 16900
+          },
+          {
+            "client": "Flipkart",
+            "model": "Super Flexi",
+            "day": 9350,
+            "night": 0
+          }
+        ],
         "trimming": [
           {
             "client": "Vicco",
