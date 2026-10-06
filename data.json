@@ -14448,7 +14448,38 @@
     "2026-10-03": {
       "prod": {
         "handles": {
-          "vertical": [],
+          "vertical": [
+            {
+              "client": "MKJ",
+              "model": "4 Pack",
+              "day": 29170,
+              "night": 20550
+            },
+            {
+              "client": "Assure",
+              "model": "Delta Disp",
+              "day": 7880,
+              "night": 0
+            },
+            {
+              "client": "WNF",
+              "model": "Junior",
+              "day": 6090,
+              "night": 260
+            },
+            {
+              "client": "Dabur",
+              "model": "Prima Blue",
+              "day": 7400,
+              "night": 0
+            },
+            {
+              "client": "WNF",
+              "model": "Junior",
+              "day": 0,
+              "night": 4680
+            }
+          ],
           "horizontal": []
         },
         "printing": [],
