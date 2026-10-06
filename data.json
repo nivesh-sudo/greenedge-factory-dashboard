@@ -14543,9 +14543,52 @@
           }
         ],
         "packaging": {
-          "sealing": [],
+          "sealing": [
+            {
+              "client": "MKJ",
+              "model": "4 Pack",
+              "day": 1330,
+              "night": 1384,
+              "bps": 20
+            },
+            {
+              "client": "Dabur",
+              "model": "Basica",
+              "day": 200,
+              "night": 0,
+              "bps": 12
+            },
+            {
+              "client": "W/Fresh",
+              "model": "Smile 3D",
+              "day": 260,
+              "night": 0,
+              "bps": 12
+            },
+            {
+              "client": "JLM",
+              "model": "Prima",
+              "day": 240,
+              "night": 0,
+              "bps": 12
+            },
+            {
+              "client": "Flipkart",
+              "model": "Gentle Cavity",
+              "day": 178,
+              "night": 0,
+              "bps": 18
+            }
+          ],
           "pouch": [],
-          "loose": []
+          "loose": [
+            {
+              "client": "Dabur",
+              "model": "Prima Blue",
+              "day": 28000,
+              "night": 0
+            }
+          ]
         }
       },
       "att": {
