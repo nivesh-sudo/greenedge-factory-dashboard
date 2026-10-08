@@ -15029,7 +15029,32 @@
             "night": 15120
           }
         ],
-        "trimming": [],
+        "trimming": [
+          {
+            "client": "Vicco",
+            "model": "Value Clean",
+            "day": 2150,
+            "night": 0
+          },
+          {
+            "client": "MKJ",
+            "model": "4 Pack",
+            "day": 33400,
+            "night": 17130
+          },
+          {
+            "client": "Dabur",
+            "model": "Basica",
+            "day": 5500,
+            "night": 0
+          },
+          {
+            "client": "Dabur",
+            "model": "Prima",
+            "day": 14000,
+            "night": 14000
+          }
+        ],
         "packaging": {
           "sealing": [],
           "pouch": [],
