@@ -15173,9 +15173,45 @@
           }
         ],
         "packaging": {
-          "sealing": [],
+          "sealing": [
+            {
+              "client": "MKJ",
+              "model": "4 Pack",
+              "day": 1400,
+              "night": 1626,
+              "bps": 20
+            },
+            {
+              "client": "Dabur",
+              "model": "Basica",
+              "day": 1800,
+              "night": 1570,
+              "bps": 12
+            },
+            {
+              "client": "Vicco",
+              "model": "Value Clean",
+              "day": 480,
+              "night": 0,
+              "bps": 12
+            },
+            {
+              "client": "Dabur Int",
+              "model": "Power Clean",
+              "day": 870,
+              "night": 0,
+              "bps": 12
+            }
+          ],
           "pouch": [],
-          "loose": []
+          "loose": [
+            {
+              "client": "Dabur",
+              "model": "Prima Blue",
+              "day": 11200,
+              "night": 0
+            }
+          ]
         }
       },
       "att": {
