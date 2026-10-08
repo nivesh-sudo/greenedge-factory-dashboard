@@ -15066,7 +15066,50 @@
     "2026-10-07": {
       "prod": {
         "handles": {
-          "vertical": [],
+          "vertical": [
+            {
+              "client": "MKJ",
+              "model": "4 Pack",
+              "day": 29320,
+              "night": 19130
+            },
+            {
+              "client": "Vicco",
+              "model": "Senso Clean",
+              "day": 9790,
+              "night": 3830
+            },
+            {
+              "client": "WNF",
+              "model": "Junior",
+              "day": 3150,
+              "night": 4110
+            },
+            {
+              "client": "Dabur",
+              "model": "Prima Blue",
+              "day": 12300,
+              "night": 11985
+            },
+            {
+              "client": "Flipkart",
+              "model": "Super Flexi",
+              "day": 820,
+              "night": 0
+            },
+            {
+              "client": "Dabur",
+              "model": "Basica",
+              "day": 4810,
+              "night": 0
+            },
+            {
+              "client": "Assure",
+              "model": "Shine 06 pk",
+              "day": 1400,
+              "night": 0
+            }
+          ],
           "horizontal": []
         },
         "printing": [],
