@@ -15336,7 +15336,32 @@
     "2026-10-09": {
       "prod": {
         "handles": {
-          "vertical": [],
+          "vertical": [
+            {
+              "client": "MKJ",
+              "model": "4 Pack",
+              "day": 24760,
+              "night": 18959
+            },
+            {
+              "client": "Vicco",
+              "model": "Senso Clean",
+              "day": 5200,
+              "night": 0
+            },
+            {
+              "client": "Dabur",
+              "model": "Prima Blue",
+              "day": 10230,
+              "night": 8570
+            },
+            {
+              "client": "WNF",
+              "model": "Junior",
+              "day": 3850,
+              "night": 2777
+            }
+          ],
           "horizontal": []
         },
         "printing": [],
