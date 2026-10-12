@@ -15549,7 +15549,38 @@
     "2026-10-10": {
       "prod": {
         "handles": {
-          "vertical": [],
+          "vertical": [
+            {
+              "client": "MKJ",
+              "model": "4 Pack",
+              "day": 24030,
+              "night": 18770
+            },
+            {
+              "client": "Vicco",
+              "model": "Senso Clean",
+              "day": 6440,
+              "night": 7310
+            },
+            {
+              "client": "Dabur",
+              "model": "Prima Blue",
+              "day": 14380,
+              "night": 1230
+            },
+            {
+              "client": "WNF",
+              "model": "Junior",
+              "day": 4530,
+              "night": 0
+            },
+            {
+              "client": "Flipkart",
+              "model": "Daily Defence",
+              "day": 6270,
+              "night": 8890
+            }
+          ],
           "horizontal": []
         },
         "printing": [],
