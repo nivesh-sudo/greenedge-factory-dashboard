@@ -14367,7 +14367,44 @@
             "night": 9460
           }
         ],
-        "tufting": [],
+        "tufting": [
+          {
+            "client": "MKJ",
+            "model": "4 Pack",
+            "day": 20650,
+            "night": 25930
+          },
+          {
+            "client": "Vicco",
+            "model": "Senso Clean",
+            "day": 2150,
+            "night": 0
+          },
+          {
+            "client": "Dabur",
+            "model": "Basica",
+            "day": 15750,
+            "night": 9500
+          },
+          {
+            "client": "Assure",
+            "model": "Freshguard",
+            "day": 5700,
+            "night": 9200
+          },
+          {
+            "client": "Dabur",
+            "model": "Prima",
+            "day": 0,
+            "night": 9500
+          },
+          {
+            "client": "WNF",
+            "model": "Junior",
+            "day": 4050,
+            "night": 0
+          }
+        ],
         "trimming": [],
         "packaging": {
           "sealing": [
