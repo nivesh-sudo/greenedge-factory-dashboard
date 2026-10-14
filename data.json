@@ -16012,7 +16012,32 @@
             "night": 7550
           }
         ],
-        "trimming": [],
+        "trimming": [
+          {
+            "client": "MKJ",
+            "model": "4 Pack",
+            "day": 20500,
+            "night": 8200
+          },
+          {
+            "client": "Flipkart",
+            "model": "Daily Defence",
+            "day": 0,
+            "night": 14250
+          },
+          {
+            "client": "Dabur",
+            "model": "Basica",
+            "day": 9500,
+            "night": 8300
+          },
+          {
+            "client": "Dabur",
+            "model": "Prima",
+            "day": 8140,
+            "night": 11500
+          }
+        ],
         "packaging": {
           "sealing": [],
           "pouch": [],
