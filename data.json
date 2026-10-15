@@ -16115,7 +16115,26 @@
             }
           ]
         },
-        "printing": [],
+        "printing": [
+          {
+            "client": "Assure",
+            "model": "Senso Max",
+            "day": 1430,
+            "night": 10525
+          },
+          {
+            "client": "Assure",
+            "model": "Shine 06 pk",
+            "day": 2000,
+            "night": 8900
+          },
+          {
+            "client": "KPN",
+            "model": "Classique Loose",
+            "day": 3200,
+            "night": 0
+          }
+        ],
         "tufting": [
           {
             "client": "MKJ",
