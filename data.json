@@ -16206,7 +16206,29 @@
           }
         ],
         "packaging": {
-          "sealing": [],
+          "sealing": [
+            {
+              "client": "MKJ",
+              "model": "4 Pack",
+              "day": 1450,
+              "night": 1090,
+              "bps": 20
+            },
+            {
+              "client": "Vicco",
+              "model": "Value Clean",
+              "day": 590,
+              "night": 0,
+              "bps": 12
+            },
+            {
+              "client": "Vicco",
+              "model": "Senso Clean",
+              "day": 1020,
+              "night": 510,
+              "bps": 6
+            }
+          ],
           "pouch": [],
           "loose": []
         }
