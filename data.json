@@ -16631,7 +16631,29 @@
           }
         ],
         "packaging": {
-          "sealing": [],
+          "sealing": [
+            {
+              "client": "MKJ",
+              "model": "4 Pack",
+              "day": 550,
+              "night": 572,
+              "bps": 20
+            },
+            {
+              "client": "Dabur Int",
+              "model": "Power Clean",
+              "day": 490,
+              "night": 550,
+              "bps": 12
+            },
+            {
+              "client": "Vicco",
+              "model": "Senso Clean",
+              "day": 400,
+              "night": 610,
+              "bps": 6
+            }
+          ],
           "pouch": [],
           "loose": []
         }
