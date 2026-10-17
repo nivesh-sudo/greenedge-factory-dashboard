@@ -16487,8 +16487,40 @@
     "2026-10-15": {
       "prod": {
         "handles": {
-          "vertical": [],
-          "horizontal": []
+          "vertical": [
+            {
+              "client": "Assure",
+              "model": "Shine 06 pk",
+              "day": 1060,
+              "night": 0
+            },
+            {
+              "client": "Assure",
+              "model": "Senso Max",
+              "day": 3540,
+              "night": 0
+            },
+            {
+              "client": "Vicco",
+              "model": "Senso Clean",
+              "day": 7790,
+              "night": 3480
+            },
+            {
+              "client": "Dabur",
+              "model": "Prima Blue",
+              "day": 15980,
+              "night": 7625
+            }
+          ],
+          "horizontal": [
+            {
+              "client": "Assure",
+              "model": "Qlean",
+              "day": 10550,
+              "night": 5660
+            }
+          ]
         },
         "printing": [],
         "tufting": [
