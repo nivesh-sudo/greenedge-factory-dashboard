@@ -16729,7 +16729,26 @@
             }
           ]
         },
-        "printing": [],
+        "printing": [
+          {
+            "client": "Assure",
+            "model": "Senso Max",
+            "day": 9300,
+            "night": 8900
+          },
+          {
+            "client": "Assure",
+            "model": "Shine 06 pk",
+            "day": 9280,
+            "night": 0
+          },
+          {
+            "client": "Dabur",
+            "model": "Promise",
+            "day": 5150,
+            "night": 8150
+          }
+        ],
         "tufting": [
           {
             "client": "Dabur",
