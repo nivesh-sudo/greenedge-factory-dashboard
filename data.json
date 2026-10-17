@@ -16182,7 +16182,43 @@
           }
         ],
         "packaging": {
-          "sealing": [],
+          "sealing": [
+            {
+              "client": "MKJ",
+              "model": "4 Pack",
+              "day": 300,
+              "night": 1350,
+              "bps": 20
+            },
+            {
+              "client": "Vicco",
+              "model": "Value Clean",
+              "day": 900,
+              "night": 0,
+              "bps": 12
+            },
+            {
+              "client": "Dabur",
+              "model": "Basica",
+              "day": 1350,
+              "night": 0,
+              "bps": 12
+            },
+            {
+              "client": "Vicco",
+              "model": "Senso Clean",
+              "day": 900,
+              "night": 920,
+              "bps": 6
+            },
+            {
+              "client": "Dabur Int",
+              "model": "Power Clean",
+              "day": 350,
+              "night": 0,
+              "bps": 12
+            }
+          ],
           "pouch": [],
           "loose": []
         }
