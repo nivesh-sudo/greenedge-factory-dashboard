@@ -16751,9 +16751,45 @@
           }
         ],
         "packaging": {
-          "sealing": [],
+          "sealing": [
+            {
+              "client": "MKJ",
+              "model": "4 Pack",
+              "day": 150,
+              "night": 0,
+              "bps": 20
+            },
+            {
+              "client": "WNF",
+              "model": "Prima Chandan 12",
+              "day": 650,
+              "night": 600,
+              "bps": 12
+            },
+            {
+              "client": "Dabur Int",
+              "model": "Power Clean",
+              "day": 600,
+              "night": 800,
+              "bps": 12
+            },
+            {
+              "client": "Vicco",
+              "model": "Senso Clean",
+              "day": 920,
+              "night": 640,
+              "bps": 6
+            }
+          ],
           "pouch": [],
-          "loose": []
+          "loose": [
+            {
+              "client": "Dabur",
+              "model": "Prima Blue",
+              "day": 52800,
+              "night": 0
+            }
+          ]
         }
       },
       "att": {
