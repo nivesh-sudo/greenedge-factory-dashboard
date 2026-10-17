@@ -15744,7 +15744,32 @@
     "2026-10-11": {
       "prod": {
         "handles": {
-          "vertical": [],
+          "vertical": [
+            {
+              "client": "Flipkart",
+              "model": "Daily Defence",
+              "day": 10580,
+              "night": 9680
+            },
+            {
+              "client": "MKJ",
+              "model": "4 Pack",
+              "day": 22750,
+              "night": 20330
+            },
+            {
+              "client": "Vicco",
+              "model": "Senso 4 Pack",
+              "day": 8270,
+              "night": 8900
+            },
+            {
+              "client": "Dabur",
+              "model": "Prima Blue",
+              "day": 8250,
+              "night": 0
+            }
+          ],
           "horizontal": []
         },
         "printing": [
