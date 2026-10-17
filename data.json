@@ -16113,8 +16113,46 @@
     "2026-10-13": {
       "prod": {
         "handles": {
-          "vertical": [],
-          "horizontal": []
+          "vertical": [
+            {
+              "client": "Flipkart",
+              "model": "Daily Defence",
+              "day": 11520,
+              "night": 0
+            },
+            {
+              "client": "Assure",
+              "model": "Senso Max",
+              "day": 19300,
+              "night": 0
+            },
+            {
+              "client": "Vicco",
+              "model": "Senso Clean",
+              "day": 9410,
+              "night": 5350
+            },
+            {
+              "client": "Dabur",
+              "model": "Prima Blue",
+              "day": 16460,
+              "night": 10800
+            },
+            {
+              "client": "Assure",
+              "model": "Shine 06 pk",
+              "day": 7150,
+              "night": 5220
+            }
+          ],
+          "horizontal": [
+            {
+              "client": "Flipkart",
+              "model": "Max Clean",
+              "day": 7650,
+              "night": 6450
+            }
+          ]
         },
         "printing": [],
         "tufting": [
