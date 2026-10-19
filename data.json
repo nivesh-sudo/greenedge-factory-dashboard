@@ -16954,9 +16954,31 @@
           }
         ],
         "packaging": {
-          "sealing": [],
+          "sealing": [
+            {
+              "client": "Vicco",
+              "model": "Senso 4 Pack",
+              "day": 720,
+              "night": 800,
+              "bps": 20
+            },
+            {
+              "client": "Flipkart",
+              "model": "Daily Defence",
+              "day": 400,
+              "night": 285,
+              "bps": 18
+            }
+          ],
           "pouch": [],
-          "loose": []
+          "loose": [
+            {
+              "client": "Dabur",
+              "model": "Prima Blue",
+              "day": 48800,
+              "night": 0
+            }
+          ]
         }
       },
       "att": {
