@@ -17062,8 +17062,46 @@
     "2026-10-18": {
       "prod": {
         "handles": {
-          "vertical": [],
-          "horizontal": []
+          "vertical": [
+            {
+              "client": "Dabur",
+              "model": "Basica",
+              "day": 8300,
+              "night": 9620
+            },
+            {
+              "client": "Assure",
+              "model": "Senso Max",
+              "day": 0,
+              "night": 2260
+            },
+            {
+              "client": "Vicco",
+              "model": "Senso 4 Pack",
+              "day": 9785,
+              "night": 9970
+            },
+            {
+              "client": "Dabur",
+              "model": "Prima Blue",
+              "day": 8850,
+              "night": 11350
+            },
+            {
+              "client": "Dabur Int",
+              "model": "Power Clean",
+              "day": 9980,
+              "night": 18020
+            }
+          ],
+          "horizontal": [
+            {
+              "client": "Assure",
+              "model": "Small Cap Hygiene",
+              "day": 6200,
+              "night": 2350
+            }
+          ]
         },
         "printing": [],
         "tufting": [],
