@@ -17213,7 +17213,44 @@
             "night": 0
           }
         ],
-        "trimming": [],
+        "trimming": [
+          {
+            "client": "Dabur",
+            "model": "Promise",
+            "day": 9350,
+            "night": 8000
+          },
+          {
+            "client": "Dabur",
+            "model": "Basica",
+            "day": 8700,
+            "night": 0
+          },
+          {
+            "client": "Assure",
+            "model": "Qlean",
+            "day": 0,
+            "night": 10600
+          },
+          {
+            "client": "Dabur",
+            "model": "Prima",
+            "day": 8935,
+            "night": 26600
+          },
+          {
+            "client": "WNF",
+            "model": "Junior",
+            "day": 2800,
+            "night": 0
+          },
+          {
+            "client": "Assure",
+            "model": "Shine Assure",
+            "day": 11746,
+            "night": 2000
+          }
+        ],
         "packaging": {
           "sealing": [],
           "pouch": [],
