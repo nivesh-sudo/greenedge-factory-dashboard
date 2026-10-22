@@ -17429,7 +17429,14 @@
             }
           ]
         },
-        "printing": [],
+        "printing": [
+          {
+            "client": "Dabur",
+            "model": "Promise",
+            "day": 12930,
+            "night": 17200
+          }
+        ],
         "tufting": [
           {
             "client": "Assure",
