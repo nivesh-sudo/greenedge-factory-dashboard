@@ -17174,7 +17174,20 @@
           "vertical": [],
           "horizontal": []
         },
-        "printing": [],
+        "printing": [
+          {
+            "client": "Assure",
+            "model": "Senso Max",
+            "day": 3610,
+            "night": 0
+          },
+          {
+            "client": "Dabur",
+            "model": "Promise",
+            "day": 7040,
+            "night": 18360
+          }
+        ],
         "tufting": [
           {
             "client": "Assure",
