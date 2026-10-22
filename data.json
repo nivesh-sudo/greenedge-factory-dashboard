@@ -17514,8 +17514,58 @@
           }
         ],
         "packaging": {
-          "sealing": [],
-          "pouch": [],
+          "sealing": [
+            {
+              "client": "Vicco",
+              "model": "Senso Clean",
+              "day": 0,
+              "night": 200,
+              "bps": 6
+            },
+            {
+              "client": "Flipkart",
+              "model": "Gentle Cavity",
+              "day": 230,
+              "night": 280,
+              "bps": 18
+            },
+            {
+              "client": "WNF",
+              "model": "Proclean",
+              "day": 0,
+              "night": 680,
+              "bps": 12
+            },
+            {
+              "client": "Dabur",
+              "model": "Basica",
+              "day": 0,
+              "night": 1000,
+              "bps": 12
+            },
+            {
+              "client": "Assure",
+              "model": "Senso Max",
+              "day": 440,
+              "night": 0,
+              "bps": 7
+            },
+            {
+              "client": "Vicco",
+              "model": "Senso 4 Pack",
+              "day": 850,
+              "night": 260,
+              "bps": 20
+            }
+          ],
+          "pouch": [
+            {
+              "client": "Dabur",
+              "model": "Promise",
+              "day": 11742,
+              "night": 16000
+            }
+          ],
           "loose": []
         }
       },
