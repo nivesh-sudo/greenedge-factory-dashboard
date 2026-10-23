@@ -17719,8 +17719,37 @@
           }
         ],
         "packaging": {
-          "sealing": [],
-          "pouch": [],
+          "sealing": [
+            {
+              "client": "Flipkart",
+              "model": "Gentle Cavity",
+              "day": 440,
+              "night": 0,
+              "bps": 18
+            },
+            {
+              "client": "Vicco",
+              "model": "Senso Clean",
+              "day": 680,
+              "night": 0,
+              "bps": 6
+            },
+            {
+              "client": "Assure",
+              "model": "Senso Max",
+              "day": 268,
+              "night": 0,
+              "bps": 7
+            }
+          ],
+          "pouch": [
+            {
+              "client": "Dabur",
+              "model": "Promise",
+              "day": 13500,
+              "night": 0
+            }
+          ],
           "loose": []
         }
       },
