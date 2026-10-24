@@ -17927,8 +17927,58 @@
           }
         ],
         "packaging": {
-          "sealing": [],
-          "pouch": [],
+          "sealing": [
+            {
+              "client": "WNF",
+              "model": "Junior",
+              "day": 500,
+              "night": 0,
+              "bps": 12
+            },
+            {
+              "client": "Vicco",
+              "model": "Senso Clean",
+              "day": 970,
+              "night": 900,
+              "bps": 6
+            },
+            {
+              "client": "DMBH",
+              "model": "Zigzag 09",
+              "day": 550,
+              "night": 0,
+              "bps": 12
+            },
+            {
+              "client": "Flipkart",
+              "model": "Super Flexi",
+              "day": 80,
+              "night": 520,
+              "bps": 18
+            },
+            {
+              "client": "Flipkart",
+              "model": "Gumcare",
+              "day": 635,
+              "night": 240,
+              "bps": 18
+            },
+            {
+              "client": "Vicco",
+              "model": "Senso Free",
+              "day": 11760,
+              "night": 0,
+              "bps": 6
+            }
+          ],
+          "pouch": [
+            {
+              "client": "Dabur",
+              "model": "Promise",
+              "day": 19500,
+              "night": 16000
+            }
+          ],
           "loose": []
         }
       },
