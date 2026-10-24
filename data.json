@@ -17836,7 +17836,20 @@
             }
           ]
         },
-        "printing": [],
+        "printing": [
+          {
+            "client": "DMBH",
+            "model": "Zigzag 09",
+            "day": 1940,
+            "night": 2430
+          },
+          {
+            "client": "Dabur",
+            "model": "Promise",
+            "day": 13240,
+            "night": 9050
+          }
+        ],
         "tufting": [
           {
             "client": "Dabur Int",
