@@ -18066,7 +18066,44 @@
           ]
         },
         "printing": [],
-        "tufting": [],
+        "tufting": [
+          {
+            "client": "Dabur Int",
+            "model": "Power Clean",
+            "day": 16650,
+            "night": 13500
+          },
+          {
+            "client": "Dabur",
+            "model": "Promise",
+            "day": 15540,
+            "night": 18640
+          },
+          {
+            "client": "Vicco",
+            "model": "Senso Clean",
+            "day": 8100,
+            "night": 7500
+          },
+          {
+            "client": "Dabur",
+            "model": "Basica",
+            "day": 13950,
+            "night": 9200
+          },
+          {
+            "client": "Dabur",
+            "model": "Prima",
+            "day": 12315,
+            "night": 9450
+          },
+          {
+            "client": "WNF",
+            "model": "Junior",
+            "day": 2810,
+            "night": 0
+          }
+        ],
         "trimming": [],
         "packaging": {
           "sealing": [],
