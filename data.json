@@ -18202,7 +18202,26 @@
             "night": 10000
           }
         ],
-        "trimming": [],
+        "trimming": [
+          {
+            "client": "Dabur",
+            "model": "Promise",
+            "day": 12450,
+            "night": 7400
+          },
+          {
+            "client": "Dabur",
+            "model": "Basica",
+            "day": 9100,
+            "night": 8800
+          },
+          {
+            "client": "Dabur",
+            "model": "Prima",
+            "day": 5270,
+            "night": 0
+          }
+        ],
         "packaging": {
           "sealing": [],
           "pouch": [],
