@@ -18162,6 +18162,79 @@
           "qc_12hr": 0
         }
       }
+    },
+    "2026-10-25": {
+      "prod": {
+        "handles": {
+          "vertical": [],
+          "horizontal": []
+        },
+        "printing": [],
+        "tufting": [
+          {
+            "client": "Dabur Int",
+            "model": "Power Clean",
+            "day": 8400,
+            "night": 14100
+          },
+          {
+            "client": "Dabur",
+            "model": "Promise",
+            "day": 9200,
+            "night": 16500
+          },
+          {
+            "client": "Vicco",
+            "model": "Senso Clean",
+            "day": 4000,
+            "night": 7700
+          },
+          {
+            "client": "Dabur",
+            "model": "Basica",
+            "day": 9100,
+            "night": 8800
+          },
+          {
+            "client": "Dabur",
+            "model": "Prima",
+            "day": 0,
+            "night": 10000
+          }
+        ],
+        "trimming": [],
+        "packaging": {
+          "sealing": [],
+          "pouch": [],
+          "loose": []
+        }
+      },
+      "att": {
+        "moulding": {
+          "day12": 0,
+          "night12": 0,
+          "hr8": 0
+        },
+        "tufting": {
+          "day12": 0,
+          "night12": 0,
+          "hr8": 0
+        },
+        "checking": {
+          "hr12": 0,
+          "hr8": 0
+        },
+        "packaging": {
+          "day12": 0,
+          "hr8": 0,
+          "night12": 0
+        },
+        "overhead": {
+          "cleaning_8hr": 0,
+          "store_12hr": 0,
+          "qc_12hr": 0
+        }
+      }
     }
   }
 }
