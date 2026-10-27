@@ -18306,7 +18306,32 @@
             "night": 800
           }
         ],
-        "trimming": [],
+        "trimming": [
+          {
+            "client": "Dabur",
+            "model": "Promise",
+            "day": 27100,
+            "night": 0
+          },
+          {
+            "client": "Dabur",
+            "model": "Basica",
+            "day": 18300,
+            "night": 9000
+          },
+          {
+            "client": "Dabur",
+            "model": "Prima",
+            "day": 18100,
+            "night": 9600
+          },
+          {
+            "client": "DMBH",
+            "model": "Classic Zigzag",
+            "day": 0,
+            "night": 7430
+          }
+        ],
         "packaging": {
           "sealing": [],
           "pouch": [],
