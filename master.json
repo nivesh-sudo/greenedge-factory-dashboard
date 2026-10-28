@@ -469,6 +469,10 @@
     "Assure|Big Case Trans": {
       "w": 29,
       "m": "single"
+    },
+    "NWI|TBSH": {
+      "w": 3.8,
+      "m": "single"
     }
   }
 }
