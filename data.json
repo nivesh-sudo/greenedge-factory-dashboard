@@ -18144,9 +18144,73 @@
           }
         ],
         "packaging": {
-          "sealing": [],
-          "pouch": [],
-          "loose": []
+          "sealing": [
+            {
+              "client": "Vicco",
+              "model": "Senso Clean",
+              "day": 800,
+              "night": 920,
+              "bps": 6
+            },
+            {
+              "client": "Flipkart",
+              "model": "Max Clean",
+              "day": 420,
+              "night": 0,
+              "bps": 20
+            },
+            {
+              "client": "DMBH",
+              "model": "Classic Zigzag",
+              "day": 120,
+              "night": 0,
+              "bps": 12
+            },
+            {
+              "client": "Dabur Int",
+              "model": "Power Clean",
+              "day": 550,
+              "night": 510,
+              "bps": 12
+            },
+            {
+              "client": "Assure",
+              "model": "Senso Max",
+              "day": 460,
+              "night": 0,
+              "bps": 7
+            },
+            {
+              "client": "Flipkart",
+              "model": "Super Flexi",
+              "day": 750,
+              "night": 130,
+              "bps": 18
+            },
+            {
+              "client": "Flipkart",
+              "model": "Gumcare",
+              "day": 0,
+              "night": 650,
+              "bps": 18
+            }
+          ],
+          "pouch": [
+            {
+              "client": "Dabur",
+              "model": "Promise",
+              "day": 20500,
+              "night": 20000
+            }
+          ],
+          "loose": [
+            {
+              "client": "Dabur",
+              "model": "Prima Blue",
+              "day": 88000,
+              "night": 0
+            }
+          ]
         }
       },
       "att": {
