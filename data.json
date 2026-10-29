@@ -18607,6 +18607,91 @@
           "qc_12hr": 0
         }
       }
+    },
+    "2026-10-28": {
+      "prod": {
+        "handles": {
+          "vertical": [],
+          "horizontal": []
+        },
+        "printing": [],
+        "tufting": [
+          {
+            "client": "Dabur Int",
+            "model": "Power Clean",
+            "day": 10500,
+            "night": 16000
+          },
+          {
+            "client": "Dabur",
+            "model": "Promise",
+            "day": 15800,
+            "night": 15100
+          },
+          {
+            "client": "Vicco",
+            "model": "Senso Clean",
+            "day": 8020,
+            "night": 8000
+          },
+          {
+            "client": "Flipkart",
+            "model": "Super Flexi",
+            "day": 8800,
+            "night": 0
+          },
+          {
+            "client": "Flipkart",
+            "model": "Gumcare",
+            "day": 9550,
+            "night": 7600
+          },
+          {
+            "client": "DMBH",
+            "model": "Classic Zigzag",
+            "day": 5600,
+            "night": 0
+          },
+          {
+            "client": "NWI",
+            "model": "TB 28",
+            "day": 8400,
+            "night": 9700
+          }
+        ],
+        "trimming": [],
+        "packaging": {
+          "sealing": [],
+          "pouch": [],
+          "loose": []
+        }
+      },
+      "att": {
+        "moulding": {
+          "day12": 0,
+          "night12": 0,
+          "hr8": 0
+        },
+        "tufting": {
+          "day12": 0,
+          "night12": 0,
+          "hr8": 0
+        },
+        "checking": {
+          "hr12": 0,
+          "hr8": 0
+        },
+        "packaging": {
+          "day12": 0,
+          "hr8": 0,
+          "night12": 0
+        },
+        "overhead": {
+          "cleaning_8hr": 0,
+          "store_12hr": 0,
+          "qc_12hr": 0
+        }
+      }
     }
   }
 }
