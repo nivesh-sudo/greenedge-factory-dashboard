@@ -18659,7 +18659,32 @@
             "night": 9700
           }
         ],
-        "trimming": [],
+        "trimming": [
+          {
+            "client": "Dabur",
+            "model": "Promise",
+            "day": 16200,
+            "night": 17000
+          },
+          {
+            "client": "Flipkart",
+            "model": "Super Flexi",
+            "day": 8800,
+            "night": 0
+          },
+          {
+            "client": "Dabur",
+            "model": "Prima",
+            "day": 7200,
+            "night": 0
+          },
+          {
+            "client": "DMBH",
+            "model": "Classic Zigzag",
+            "day": 5800,
+            "night": 0
+          }
+        ],
         "packaging": {
           "sealing": [],
           "pouch": [],
