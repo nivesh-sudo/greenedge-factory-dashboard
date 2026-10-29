@@ -18658,7 +18658,14 @@
             }
           ]
         },
-        "printing": [],
+        "printing": [
+          {
+            "client": "Dabur",
+            "model": "Prima Blue",
+            "day": 2100,
+            "night": 0
+          }
+        ],
         "tufting": [
           {
             "client": "Dabur Int",
