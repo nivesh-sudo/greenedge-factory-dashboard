@@ -18258,8 +18258,64 @@
     "2026-10-26": {
       "prod": {
         "handles": {
-          "vertical": [],
-          "horizontal": []
+          "vertical": [
+            {
+              "client": "Flipkart",
+              "model": "Gumcare",
+              "day": 13710,
+              "night": 10385
+            },
+            {
+              "client": "Dabur Int",
+              "model": "Power Clean",
+              "day": 10950,
+              "night": 13050
+            },
+            {
+              "client": "Vicco",
+              "model": "Senso Clean",
+              "day": 10430,
+              "night": 8500
+            },
+            {
+              "client": "Dabur",
+              "model": "Prima Blue",
+              "day": 13020,
+              "night": 12660
+            }
+          ],
+          "horizontal": [
+            {
+              "client": "Assure",
+              "model": "Small Cap Hygiene",
+              "day": 11142,
+              "night": 0
+            },
+            {
+              "client": "Dabur",
+              "model": "Promise",
+              "day": 13330,
+              "night": 0
+            },
+            {
+              "client": "NWI",
+              "model": "TB 28",
+              "day": 17100,
+              "night": 19010
+            },
+            {
+              "client": "Assure",
+              "model": "Big Case Trans",
+              "day": 0,
+              "night": 2700
+            },
+            {
+              "client": "NWI",
+              "model": "TBSH",
+              "day": 0,
+              "night": 4420
+            }
+          ]
         },
         "printing": [],
         "tufting": [
