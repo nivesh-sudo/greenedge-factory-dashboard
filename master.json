@@ -477,6 +477,10 @@
     "NWI|TB SEC": {
       "w": 3.8,
       "m": "single"
+    },
+    "Vicco|Senso Clean USA": {
+      "pkg": "hanger",
+      "bps": 6
     }
   }
 }
