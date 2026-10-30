@@ -19221,7 +19221,26 @@
             "night": 10100
           }
         ],
-        "trimming": [],
+        "trimming": [
+          {
+            "client": "Dabur",
+            "model": "Promise",
+            "day": 13200,
+            "night": 0
+          },
+          {
+            "client": "Flipkart",
+            "model": "Super Flexi",
+            "day": 9200,
+            "night": 0
+          },
+          {
+            "client": "Dabur",
+            "model": "Prima",
+            "day": 13000,
+            "night": 16000
+          }
+        ],
         "packaging": {
           "sealing": [],
           "pouch": [],
