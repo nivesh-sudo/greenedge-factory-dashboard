@@ -19232,7 +19232,26 @@
             }
           ]
         },
-        "printing": [],
+        "printing": [
+          {
+            "client": "Dabur",
+            "model": "Prima Blue",
+            "day": 7550,
+            "night": 0
+          },
+          {
+            "client": "Kullisense",
+            "model": "Shine Delta",
+            "day": 500,
+            "night": 8950
+          },
+          {
+            "client": "KPN",
+            "model": "Classique",
+            "day": 6420,
+            "night": 9629
+          }
+        ],
         "tufting": [
           {
             "client": "Dabur Int",
