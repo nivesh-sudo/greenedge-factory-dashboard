@@ -19409,8 +19409,76 @@
     "2026-10-30": {
       "prod": {
         "handles": {
-          "vertical": [],
-          "horizontal": []
+          "vertical": [
+            {
+              "client": "KPN",
+              "model": "Classique",
+              "day": 2400,
+              "night": 0
+            },
+            {
+              "client": "Dabur Int",
+              "model": "Power Clean",
+              "day": 13140,
+              "night": 7700
+            },
+            {
+              "client": "Dabur",
+              "model": "Prima Blue",
+              "day": 7700,
+              "night": 0
+            },
+            {
+              "client": "Dabur",
+              "model": "Prima",
+              "day": 9230,
+              "night": 15795
+            },
+            {
+              "client": "Vicco",
+              "model": "Senso Clean",
+              "day": 8610,
+              "night": 3530
+            },
+            {
+              "client": "Vicco",
+              "model": "Senso Clean",
+              "day": 0,
+              "night": 5990
+            },
+            {
+              "client": "Flipkart",
+              "model": "Super Flexi",
+              "day": 4330,
+              "night": 0
+            },
+            {
+              "client": "Dabur",
+              "model": "Basica",
+              "day": 10610,
+              "night": 9630
+            }
+          ],
+          "horizontal": [
+            {
+              "client": "NWI",
+              "model": "TB 28",
+              "day": 18900,
+              "night": 18540
+            },
+            {
+              "client": "NWI",
+              "model": "TB SEC",
+              "day": 14500,
+              "night": 17930
+            },
+            {
+              "client": "NWI",
+              "model": "TBSH",
+              "day": 21000,
+              "night": 8200
+            }
+          ]
         },
         "printing": [],
         "tufting": [
