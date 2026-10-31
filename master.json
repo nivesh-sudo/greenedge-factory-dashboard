@@ -472,7 +472,8 @@
     },
     "NWI|TBSH": {
       "w": 3.8,
-      "m": "single"
+      "m": "single",
+      "h": 30
     },
     "NWI|TB SEC": {
       "w": 3.8,
