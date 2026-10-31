@@ -19480,7 +19480,20 @@
             }
           ]
         },
-        "printing": [],
+        "printing": [
+          {
+            "client": "KPN",
+            "model": "Classique",
+            "day": 7590,
+            "night": 0
+          },
+          {
+            "client": "oxident",
+            "model": "Shine Delta",
+            "day": 5700,
+            "night": 0
+          }
+        ],
         "tufting": [
           {
             "client": "Dabur Int",
