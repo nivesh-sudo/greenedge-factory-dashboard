@@ -19723,7 +19723,32 @@
             "night": 0
           }
         ],
-        "trimming": [],
+        "trimming": [
+          {
+            "client": "Flipkart",
+            "model": "Super Flexi",
+            "day": 9400,
+            "night": 0
+          },
+          {
+            "client": "Dabur",
+            "model": "Prima",
+            "day": 15000,
+            "night": 6750
+          },
+          {
+            "client": "KPN",
+            "model": "Classique",
+            "day": 0,
+            "night": 9230
+          },
+          {
+            "client": "NWI",
+            "model": "TB 28",
+            "day": 14700,
+            "night": 13200
+          }
+        ],
         "packaging": {
           "sealing": [],
           "pouch": [],
