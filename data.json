@@ -19821,7 +19821,20 @@
             "night": 18700
           }
         ],
-        "trimming": [],
+        "trimming": [
+          {
+            "client": "Dabur",
+            "model": "Prima",
+            "day": 9850,
+            "night": 14100
+          },
+          {
+            "client": "NWI",
+            "model": "TBSH",
+            "day": 0,
+            "night": 15460
+          }
+        ],
         "packaging": {
           "sealing": [],
           "pouch": [],
