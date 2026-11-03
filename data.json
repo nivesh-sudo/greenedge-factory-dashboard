@@ -19930,7 +19930,20 @@
             }
           ]
         },
-        "printing": [],
+        "printing": [
+          {
+            "client": "KPN",
+            "model": "Shine 4 Pack",
+            "day": 0,
+            "night": 9000
+          },
+          {
+            "client": "JLM",
+            "model": "Prima",
+            "day": 0,
+            "night": 8850
+          }
+        ],
         "tufting": [
           {
             "client": "JLM",
