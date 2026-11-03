@@ -20003,7 +20003,50 @@
           }
         ],
         "packaging": {
-          "sealing": [],
+          "sealing": [
+            {
+              "client": "Vicco",
+              "model": "Senso Clean USA",
+              "day": 100,
+              "night": 95,
+              "bps": 6
+            },
+            {
+              "client": "Vicco",
+              "model": "Value Clean",
+              "day": 690,
+              "night": 870,
+              "bps": 12
+            },
+            {
+              "client": "Dabur",
+              "model": "Basica",
+              "day": 2145,
+              "night": 1500,
+              "bps": 12
+            },
+            {
+              "client": "Vicco",
+              "model": "Senso Clean",
+              "day": 206,
+              "night": 0,
+              "bps": 6
+            },
+            {
+              "client": "JLM",
+              "model": "Prima",
+              "day": 445,
+              "night": 405,
+              "bps": 12
+            },
+            {
+              "client": "Dabur Int",
+              "model": "Power Clean",
+              "day": 250,
+              "night": 422,
+              "bps": 12
+            }
+          ],
           "pouch": [],
           "loose": []
         }
