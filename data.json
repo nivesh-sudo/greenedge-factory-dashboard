@@ -20334,26 +20334,7 @@
             "night": 0
           }
         ],
-        "trimming": [
-          {
-            "client": "KPN",
-            "model": "Shine",
-            "day": 3780,
-            "night": 0
-          },
-          {
-            "client": "Dabur",
-            "model": "Basica",
-            "day": 9650,
-            "night": 0
-          },
-          {
-            "client": "Dabur",
-            "model": "Prima",
-            "day": 13300,
-            "night": 0
-          }
-        ],
+        "trimming": [],
         "packaging": {
           "sealing": [],
           "pouch": [],
