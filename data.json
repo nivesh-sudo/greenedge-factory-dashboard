@@ -20491,8 +20491,64 @@
     "2026-11-04": {
       "prod": {
         "handles": {
-          "vertical": [],
-          "horizontal": []
+          "vertical": [
+            {
+              "client": "Flipkart",
+              "model": "Gentle Cavity",
+              "day": 6400,
+              "night": 0
+            },
+            {
+              "client": "Dabur Int",
+              "model": "Power Clean",
+              "day": 12950,
+              "night": 8270
+            },
+            {
+              "client": "JLM",
+              "model": "Prima",
+              "day": 12500,
+              "night": 13750
+            },
+            {
+              "client": "Dabur",
+              "model": "Prima",
+              "day": 3520,
+              "night": 0
+            },
+            {
+              "client": "Dabur",
+              "model": "Basica",
+              "day": 1170,
+              "night": 0
+            },
+            {
+              "client": "Vicco",
+              "model": "Senso Clean",
+              "day": 2770,
+              "night": 0
+            },
+            {
+              "client": "KPN",
+              "model": "Shine 4 Pack",
+              "day": 6180,
+              "night": 7455
+            },
+            {
+              "client": "Dabur",
+              "model": "Prima Blue",
+              "day": 5610,
+              "night": 0
+            }
+          ],
+          "horizontal": [
+            {
+              "client": "Assure",
+              "model": "Big Case Trans",
+              "day": 4390,
+              "night": 2673
+            }
+          ]
         },
         "printing": [],
         "tufting": [],
