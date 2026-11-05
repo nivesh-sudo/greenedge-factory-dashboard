@@ -20550,7 +20550,20 @@
             }
           ]
         },
-        "printing": [],
+        "printing": [
+          {
+            "client": "JLM",
+            "model": "Prima",
+            "day": 8600,
+            "night": 8700
+          },
+          {
+            "client": "KPN",
+            "model": "Shine 4 Pack",
+            "day": 9410,
+            "night": 270
+          }
+        ],
         "tufting": [],
         "trimming": [
           {
