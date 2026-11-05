@@ -20598,9 +20598,73 @@
           }
         ],
         "packaging": {
-          "sealing": [],
+          "sealing": [
+            {
+              "client": "Flipkart",
+              "model": "Daily Defence",
+              "day": 180,
+              "night": 0,
+              "bps": 18
+            },
+            {
+              "client": "KPN",
+              "model": "Shine",
+              "day": 0,
+              "night": 466,
+              "bps": 12
+            },
+            {
+              "client": "Dabur",
+              "model": "Basica",
+              "day": 2000,
+              "night": 1900,
+              "bps": 12
+            },
+            {
+              "client": "JLM",
+              "model": "Prima",
+              "day": 600,
+              "night": 236,
+              "bps": 12
+            },
+            {
+              "client": "KPN",
+              "model": "Classique",
+              "day": 310,
+              "night": 86,
+              "bps": 12
+            },
+            {
+              "client": "Flipkart",
+              "model": "Gumcare",
+              "day": 86,
+              "night": 0,
+              "bps": 18
+            },
+            {
+              "client": "Dabur Int",
+              "model": "Power Clean",
+              "day": 910,
+              "night": 0,
+              "bps": 12
+            },
+            {
+              "client": "DMBH",
+              "model": "Besto 09",
+              "day": 1056,
+              "night": 0,
+              "bps": 6
+            }
+          ],
           "pouch": [],
-          "loose": []
+          "loose": [
+            {
+              "client": "Dabur",
+              "model": "Prima",
+              "day": 25600,
+              "night": 0
+            }
+          ]
         }
       },
       "att": {
