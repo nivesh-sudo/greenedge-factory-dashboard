@@ -20946,7 +20946,38 @@
             "night": 0
           }
         ],
-        "trimming": [],
+        "trimming": [
+          {
+            "client": "KPN",
+            "model": "Shine 4 Pack",
+            "day": 13030,
+            "night": 0
+          },
+          {
+            "client": "Dabur",
+            "model": "Basica",
+            "day": 2750,
+            "night": 0
+          },
+          {
+            "client": "Dabur",
+            "model": "Prima",
+            "day": 9300,
+            "night": 0
+          },
+          {
+            "client": "NWI",
+            "model": "TBSH",
+            "day": 14500,
+            "night": 0
+          },
+          {
+            "client": "NWI",
+            "model": "TB 28",
+            "day": 13000,
+            "night": 0
+          }
+        ],
         "packaging": {
           "sealing": [],
           "pouch": [],
