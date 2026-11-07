@@ -20564,7 +20564,62 @@
             "night": 270
           }
         ],
-        "tufting": [],
+        "tufting": [
+          {
+            "client": "KPN",
+            "model": "Shine 4 Pack",
+            "day": 6400,
+            "night": 0
+          },
+          {
+            "client": "Dabur Int",
+            "model": "Power Clean",
+            "day": 7550,
+            "night": 0
+          },
+          {
+            "client": "Vicco",
+            "model": "Senso Clean",
+            "day": 7200,
+            "night": 0
+          },
+          {
+            "client": "Dabur",
+            "model": "Basica",
+            "day": 14400,
+            "night": 0
+          },
+          {
+            "client": "NWI",
+            "model": "TB SEC",
+            "day": 1000,
+            "night": 0
+          },
+          {
+            "client": "Dabur",
+            "model": "Prima",
+            "day": 15000,
+            "night": 0
+          },
+          {
+            "client": "JLM",
+            "model": "Prima",
+            "day": 6750,
+            "night": 0
+          },
+          {
+            "client": "NWI",
+            "model": "TBSH",
+            "day": 8800,
+            "night": 0
+          },
+          {
+            "client": "NWI",
+            "model": "TB 28",
+            "day": 6200,
+            "night": 0
+          }
+        ],
         "trimming": [
           {
             "client": "KPN",
