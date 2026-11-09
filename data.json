@@ -20752,8 +20752,52 @@
     "2026-11-06": {
       "prod": {
         "handles": {
-          "vertical": [],
-          "horizontal": []
+          "vertical": [
+            {
+              "client": "Assure",
+              "model": "Shine 06 pk",
+              "day": 7150,
+              "night": 0
+            },
+            {
+              "client": "Dabur Int",
+              "model": "Power Clean",
+              "day": 7400,
+              "night": 7975
+            },
+            {
+              "client": "DMBH",
+              "model": "senso x sensitive",
+              "day": 650,
+              "night": 8840
+            },
+            {
+              "client": "Vicco",
+              "model": "Value Clean",
+              "day": 11720,
+              "night": 13595
+            },
+            {
+              "client": "Dmart",
+              "model": "Oraldent Prima",
+              "day": 12410,
+              "night": 9585
+            },
+            {
+              "client": "Dabur",
+              "model": "Prima",
+              "day": 7160,
+              "night": 7030
+            }
+          ],
+          "horizontal": [
+            {
+              "client": "NWI",
+              "model": "TB SEC",
+              "day": 12300,
+              "night": 25500
+            }
+          ]
         },
         "printing": [],
         "tufting": [
