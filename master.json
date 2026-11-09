@@ -499,7 +499,9 @@
     },
     "DMBH|senso x sensitive": {
       "w": 17,
-      "m": "two"
+      "m": "two",
+      "pkg": "dispenser",
+      "bps": 12
     },
     "Dmart|Oraldent Prima": {
       "w": 13.5,
