@@ -16660,7 +16660,7 @@
       },
       "att": {
         "moulding": {
-          "day12": 0,
+          "day12": 11,
           "night12": 0,
           "hr8": 0
         },
@@ -16671,16 +16671,16 @@
         },
         "checking": {
           "hr12": 0,
-          "hr8": 0
+          "hr8": 7
         },
         "packaging": {
-          "day12": 0,
-          "hr8": 0,
+          "day12": 8,
+          "hr8": 31,
           "night12": 0
         },
         "overhead": {
-          "cleaning_8hr": 0,
-          "store_12hr": 0,
+          "cleaning_8hr": 3,
+          "store_12hr": 4,
           "qc_12hr": 0
         }
       }
