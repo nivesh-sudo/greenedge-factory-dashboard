@@ -20799,7 +20799,20 @@
             }
           ]
         },
-        "printing": [],
+        "printing": [
+          {
+            "client": "JLM",
+            "model": "Prima",
+            "day": 5110,
+            "night": 0
+          },
+          {
+            "client": "Assure",
+            "model": "Shine 06 pk",
+            "day": 10120,
+            "night": 0
+          }
+        ],
         "tufting": [
           {
             "client": "KPN",
