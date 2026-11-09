@@ -20920,9 +20920,87 @@
           }
         ],
         "packaging": {
-          "sealing": [],
+          "sealing": [
+            {
+              "client": "Assure",
+              "model": "Shine 06 pk",
+              "day": 600,
+              "night": 0,
+              "bps": 6
+            },
+            {
+              "client": "KPN",
+              "model": "Shine 4 Pack",
+              "day": 175,
+              "night": 0,
+              "bps": 20
+            },
+            {
+              "client": "Vicco",
+              "model": "Senso Clean",
+              "day": 0,
+              "night": 815,
+              "bps": 6
+            },
+            {
+              "client": "KPN",
+              "model": "Shine",
+              "day": 0,
+              "night": 710,
+              "bps": 12
+            },
+            {
+              "client": "JLM",
+              "model": "Prima",
+              "day": 900,
+              "night": 300,
+              "bps": 12
+            },
+            {
+              "client": "Vicco",
+              "model": "Senso 4 Pack",
+              "day": 140,
+              "night": 0,
+              "bps": 20
+            },
+            {
+              "client": "Dabur",
+              "model": "Basica",
+              "day": 1000,
+              "night": 0,
+              "bps": 12
+            },
+            {
+              "client": "Dabur Int",
+              "model": "Power Clean",
+              "day": 430,
+              "night": 55,
+              "bps": 12
+            },
+            {
+              "client": "Vicco",
+              "model": "Senso Free",
+              "day": 6240,
+              "night": 0,
+              "bps": 6
+            },
+            {
+              "client": "DMBH",
+              "model": "senso x sensitive",
+              "day": 576,
+              "night": 0,
+              "bps": 12
+            }
+          ],
           "pouch": [],
-          "loose": []
+          "loose": [
+            {
+              "client": "Dabur",
+              "model": "Prima",
+              "day": 37200,
+              "night": 0
+            }
+          ]
         }
       },
       "att": {
