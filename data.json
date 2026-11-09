@@ -17360,28 +17360,28 @@
       },
       "att": {
         "moulding": {
-          "day12": 0,
-          "night12": 0,
+          "day12": 10,
+          "night12": 13,
           "hr8": 0
         },
         "tufting": {
-          "day12": 0,
-          "night12": 0,
+          "day12": 7,
+          "night12": 6,
           "hr8": 0
         },
         "checking": {
           "hr12": 0,
-          "hr8": 0
+          "hr8": 9
         },
         "packaging": {
-          "day12": 0,
-          "hr8": 0,
-          "night12": 0
+          "day12": 7,
+          "hr8": 30,
+          "night12": 3
         },
         "overhead": {
-          "cleaning_8hr": 0,
-          "store_12hr": 0,
-          "qc_12hr": 0
+          "cleaning_8hr": 3,
+          "store_12hr": 3,
+          "qc_12hr": 1
         }
       }
     },
