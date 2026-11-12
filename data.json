@@ -21227,7 +21227,56 @@
             "night": 0
           }
         ],
-        "trimming": [],
+        "trimming": [
+          {
+            "client": "KPN",
+            "model": "Shine 4 Pack",
+            "day": 15000,
+            "night": 0
+          },
+          {
+            "client": "Assure",
+            "model": "Shine 06 pk",
+            "day": 7600,
+            "night": 0
+          },
+          {
+            "client": "Dmart",
+            "model": "Oraldent Blue",
+            "day": 4250,
+            "night": 0
+          },
+          {
+            "client": "Dmart",
+            "model": "Oraldent Pink",
+            "day": 3800,
+            "night": 0
+          },
+          {
+            "client": "Vicco",
+            "model": "Value Clean",
+            "day": 9870,
+            "night": 0
+          },
+          {
+            "client": "Dabur",
+            "model": "Prima",
+            "day": 13000,
+            "night": 0
+          },
+          {
+            "client": "NWI",
+            "model": "TBSH",
+            "day": 6500,
+            "night": 0
+          },
+          {
+            "client": "NWI",
+            "model": "TB 28",
+            "day": 10500,
+            "night": 0
+          }
+        ],
         "packaging": {
           "sealing": [],
           "pouch": [],
